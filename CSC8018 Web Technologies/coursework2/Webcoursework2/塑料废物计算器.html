@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- saved from url=(0107)http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/ocean_cleanup/specification/plastic_calculator.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title _msthash="149916" _msttexthash="25189515">塑料废物计算器</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="plastic_calculator.css">
+  <script src="plastic_calculator.js"></script>
+
+
+
+</head>
+
+<body>
+  <header>
+    <h1 _msthash="360763" _msttexthash="25189515">塑料废物计算器</h1>
+  </header>
+
+  <main>
+    <section id="sec_food">
+      <h2 _msthash="207857" _msttexthash="15520362">食物和厨房</h2>
+
+      <table>
+        <tbody><tr>
+          <td><label for="in_bottles" _msthash="968175" _msttexthash="8265569">塑料瓶</label></td>
+          <td><input id="in_bottles" name="bottles" type="number" value="0" min="0" data-weight="0.730"><font _mstmutation="1" _msthash="968305" _msttexthash="2251509">/ 周</font></td>
+        </tr><tr>
+          <td><label for="in_bags" _msthash="968176" _msttexthash="8852090">塑料袋</label></td>
+          <td><input id="in_bags" name="bags" type="number" value="0" min="0" data-weight="0.417"><font _mstmutation="1" _msthash="968306" _msttexthash="2251509">/ 周</font></td>
+        </tr><tr>
+          <td><label for="in_wrapping" _msthash="968177" _msttexthash="12856064">食品包装</label></td>
+          <td><input id="in_wrapping" name="wrapping" type="number" value="0" min="0" data-weight="0.583"><font _mstmutation="1" _msthash="968307" _msttexthash="2251509">/ 周</font></td>
+        </tr><tr>
+          <td><label for="in_yogurt" _msthash="968178" _msttexthash="27083485">酸奶、奶油等容器</label></td>
+          <td><input id="in_yogurt" name="yogurt" type="number" value="0" min="0" data-weight="0.383"><font _mstmutation="1" _msthash="968308" _msttexthash="2251509">/ 周</font></td>
+        </tr>
+      </tbody></table>
+    
+    </section>
+
+    <section id="sec_packaging">
+      <h2 _msthash="354159" _msttexthash="27105520">一次性容器和包装</h2>
+
+      <table>
+        <tbody><tr>
+          <td><label for="in_takeout" _msthash="1253434" _msttexthash="14670279">外卖塑料盒</label></td>
+          <td><input id="in_takeout" name="takeout" type="number" value="0" min="0" data-weight="0.383"><font _mstmutation="1" _msthash="1253564" _msttexthash="2747381">/ 月</font></td>
+        </tr><tr>
+          <td><label for="in_cups" _msthash="1253435" _msttexthash="7392125">外卖杯</label></td>
+          <td><input id="in_cups" name="cups" type="number" value="0" min="0" data-weight="0.240"><font _mstmutation="1" _msthash="1253565" _msttexthash="2747381">/ 月</font></td>
+        </tr><tr>
+          <td><label for="in_packaging" _msthash="1253436" _msttexthash="20301853">塑料包装包装</label></td>
+          <td><input id="in_packaging" name="packaging" type="number" value="0" min="0" data-weight="0.834"><font _mstmutation="1" _msthash="1253566" _msttexthash="2747381">/ 月</font></td>
+        </tr>
+      </tbody></table>
+    </section>
+
+    <section id="sec_washing">
+      <h2 _msthash="297011" _msttexthash="20068919">浴室和洗衣房</h2>
+
+      <table>
+        <tbody><tr>
+          <td><label for="in_detergent" _msthash="1147146" _msttexthash="29500939">洗涤剂 + 清洁产品瓶</label></td>
+          <td><input id="in_detergent" name="detergent" type="number" value="0" min="0" data-weight="0.120"><font _mstmutation="1" _msthash="1147276" _msttexthash="4884854">/ 年份</font></td>
+        </tr><tr>
+          <td><label for="in_shampoo" _msthash="1147147" _msttexthash="48901554">洗发水、护发素和洗浴用品</label></td>
+          <td><input id="in_shampoo" name="shampoo" type="number" value="0" min="0" data-weight="0.080"><font _mstmutation="1" _msthash="1147277" _msttexthash="4884854">/ 年份</font></td>
+        </tr><tr>
+          <td><label for="in_toothbrushes" _msthash="1147148" _msttexthash="10923406">塑料牙刷</label></td>
+          <td><input id="in_toothbrushes" name="toothbrushes" type="number" value="0" min="0" data-weight="0.020"><font _mstmutation="1" _msthash="1147278" _msttexthash="4884854">/ 年份</font></td>
+        </tr><tr>
+          <td><label for="in_toothpaste" _msthash="1147149" _msttexthash="6113211">牙膏</label></td>
+          <td><input id="in_toothpaste" name="toothpaste" type="number" value="0" min="0" data-weight="0.015"><font _mstmutation="1" _msthash="1147279" _msttexthash="4884854">/ 年份</font></td>
+        </tr>
+      </tbody></table>
+    </section>
+
+    <section id="household">
+      <h2 _msthash="241228" _msttexthash="12315472">家庭规模</h2>
+
+      <table>
+        <tbody><tr>
+          <td><label for="in_household" _msthash="1038947" _msttexthash="54711020">您与多少人分享上述产品？</label></td>
+          <td>
+            <select id="in_household" name="household">
+              <option value="1" selected="" _msthash="475137" _msttexthash="4459">1</option>
+              <option value="2" _msthash="475319" _msttexthash="4550">2</option>
+              <option value="3" _msthash="475501" _msttexthash="4641">3</option>
+              <option value="4" _msthash="475683" _msttexthash="4732">4</option>
+              <option value="5" _msthash="475865" _msttexthash="4823">5</option>
+              <option value="6" _msthash="476047" _msttexthash="4914">6</option>
+              <option value="7" _msthash="476229" _msttexthash="5005">7</option>
+              <option value="8" _msthash="476411" _msttexthash="5096">8</option>
+              <option value="9" _msthash="476593" _msttexthash="5187">9</option>
+              <option value="10" _msthash="502385" _msttexthash="9451">10</option>
+            </select>
+          </td>
+        </tr>
+      </tbody></table>
+    </section>
+
+    <section id="sec_result">
+      <h2 _msthash="273026" _msttexthash="22370504">您的塑料足迹</h2>
+
+      <p _msthash="252161" _msttexthash="46231679">您估计的塑料足迹为<span id="total_per_year" _istranslated="1">0</span> kg/年。</p>
+      <p _msthash="252278" _msttexthash="27664507">钴的平均值为 +50 kg/年。</p>
+      <p _msthash="252395" _msttexthash="46025317">美国的平均值为每年84公斤。</p>
+      <p _msthash="252512" _msttexthash="47475857">欧皮亚的平均值为 +30 公斤/年。</p>
+
+      <p><button id="reset" _msthash="64051" _msttexthash="18247658">重置计算器</button></p>
+    </section>
+
+    <section id="sec_tip">
+      <h2 _msthash="184977" _msttexthash="5552768">提示</h2>
+      <p _msthash="168506" _msttexthash="120707808">减少塑料废物足迹对习惯的影响最大是什么？</p>
+      <p _msthash="168623" _msttexthash="85896733">你的大多数塑料废物来自<span id="biggest-category" _istranslated="1">未知的来源</span>。</p>
+      <p id="tip_bottles" class="tip" _msthash="186459" _msttexthash="278927493">许多饮料可以用玻璃瓶购买。考虑在外出时携带可重复使用的瓶装水和热饮。</p>
+      <p id="tip_bags" class="tip" _msthash="114413" _msttexthash="193620752">携带可重复使用的织物手提包购物，并在提供时拒绝塑料袋。</p>
+      <p id="tip_wrapping" class="tip" _msthash="210600" _msttexthash="94407365">考虑在当地市场购买更多未包装的食品。</p>
+      <p id="tip_yogurt" class="tip" _msthash="166608" _msttexthash="269248889">有些地方在玻璃容器中提供乳制品。你甚至可以探索食谱，使自己的酸奶。</p>
+      <p id="tip_takeout" class="tip" _msthash="186732" _msttexthash="100643218">通过在家准备更多的饭菜来减少外卖包装。</p>
+      <p id="tip_cups" class="tip" _msthash="119197" _msttexthash="61981920">订购热饮时，请自带滚筒。</p>
+      <p id="tip_packaging" class="tip" _msthash="229008" _msttexthash="107269032">尝试在商店购买更多的产品，而不是在线。</p>
+      <p id="tip_detergent" class="tip" _msthash="235339" _msttexthash="163182682">探索您附近的加油站，以减少洗涤剂和清洁产品的瓶子。</p>
+      <p id="tip_shampoo" class="tip" _msthash="185289" _msttexthash="141510746">探索您附近的补充站，以减少化妆品中的塑料废物。</p>
+      <p id="tip_toothbrushes" class="tip" _msthash="329849" _msttexthash="188723743">认真地？你多久刷一次牙？你知道有用木头做的牙刷吗？</p>
+      <p id="tip_toothpaste" class="tip" _msthash="267540" _msttexthash="179118719">认真地？你用多少牙膏？你知道有无塑料的替代品吗？</p>
+    </section>
+  </main>
+
+  <footer><font _mstmutation="1" _msthash="239538" _msttexthash="42133078">来自<a href="https://www.omnicalculator.com/ecology/plastic-footprint" _mstmutation="1" _istranslated="1">综合计算器的数据</a></font>
+  </footer>
+
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;" _msthidden="1">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option" _msthash="1432487" _msttexthash="14842321" _msthidden="1">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body></html>

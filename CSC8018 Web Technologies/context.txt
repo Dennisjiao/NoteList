@@ -1,0 +1,91 @@
+The Ocean Cleanup
+
+    * Marine Plastic Debris
+    * History
+    * Technology
+        * Ocean Cleanup
+        * River Interception
+        * Plastic Recycling
+    * Mitigation
+
+Summary
+
+The Ocean Cleanup is a nonprofit engineering environmental organization based in the Netherlands, founded in 2013 by Boyan Slat, a Dutch-born inventor-entrepreneur of Croatian and Dutch origin who serves as its CEO. It develops technology to extract plastic pollution from the oceans and intercept it in rivers before it can reach the ocean. The organization conducts scientific research into oceanic plastic pollution. It has conducted two expeditions to the North Pacific Gyre, the Mega Expedition and the Aerial Expedition, and continues to publish scientific papers.
+
+
+Marine Plastic Debris
+
+It is estimated that there is a stock of 86 million tons of plastic marine debris in the worldwide ocean as of the end of 2013, assuming that 1.4% of global plastics produced from 1950 to 2013 has entered the ocean and has accumulated there. 8.8 million metric tons of plastic waste are dumped in the world's oceans each year. Asia was the leading source of mismanaged plastic waste, with China alone accounting for 2.4 million metric tons. In 2017 the UN estimated that by 2050 there will be more plastic than fish in the oceans, if substantial measures are not taken.
+
+Plastic waste has reached all the world's oceans. However, it has been found that plastic debris concentrates in the oceanic gyres where it forms extensive garbage patches. Of those, the North Pacific garbage patch is the biggest, with an estimated area of 1.6 million square kilometers. Plastic accumulating in these patches photodegrades into smaller and smaller particles and releases toxic and endocrine chemicals such as bisphenol A (BPA).
+
+Plastic pollution harms an estimated 100,000 sea turtles and marine mammals and 1,000,000 sea creatures each year. Larger plastics (called "macroplastics") such as plastic shopping bags can clog the digestive tracts of larger animals when consumed by them and can cause starvation through restricting the movement of food, or by filling the stomach and tricking the animal into thinking it is full. Microplastics on the other hand harm smaller marine life. For example, pelagic plastic pieces in the center of our ocean’s gyres outnumber live marine plankton, and are passed up the food chain to reach all marine life as well as human consumers.
+
+How long until it's gone?
+Decomposition times of common marine debris
+
+2-4 weeks    Paper towel
+6 weeks      Newspaper
+2 months     Apple core, cardboard box
+3 months     Waxed carton
+2-5 months   Cotton shirt
+1-3 years    Plywood
+1-5 years    Cigarette butt, wool socks
+50 years     Plastic beverage holder, styrofoam cup, tin can, foam buoy
+200 years    Aluminum can
+450 years    Plastic bottle, disposable nappies
+600 years    Fishing line
+undetermined Glass bottle
+
+
+History
+
+In 2011, aged 16, Dutch Boyan Slat came across more plastic than fish while diving in Greece. He decided to devote a high school project for deeper investigation into ocean plastic pollution and why it was considered impossible to clean up.
+
+Slat discontinued his aerospace engineering studies at TU Delft to devote his time to developing his idea. He founded The Ocean Cleanup in 2013. The group's mission is to develop advanced technologies to rid the world's oceans of plastic. In June 2014, the Ocean Cleanup published a 528-page feasibility study about the project's potential.
+
+The Ocean Cleanup is mainly funded by donations and sponsors. As of November 2019 it has made a little over $35 million from sponsors including Salesforce chief executive Marc Benioff, philanthropist Peter Thiel, Julius Baer Foundation and Royal DSM. The Ocean Cleanup raised over $2 million with the help of a crowdfunding campaign in 2014.
+
+
+Technological Approaches
+
+"Technology is the most potent agent of change. It is an amplifier of our human capabilities" -- Boyan Slat
+
+
+Ocean Cleanup
+The filtering system uses passive floating structures localized in the ocean gyres. These structures act as a containment boom. The floater drifts with the wind, waves and ocean currents to capture marine debris. A permeable screen underneath the float catches subsurface debris.
+
+System 001, deployed in September 2018, consisted of a 600 meters long barrier with a 3 meters wide skirt that hangs beneath it. It was unmanned and incorporates solar-powered monitoring and navigation systems, including GPS, cameras, lanterns and an automatic identification system (AIS) for vessel traffic services. System 001 encountered difficulties retaining the plastic collected. After two month of operation, during which the system had collected 2,000 kilograms of plastic, mechanical stress caused an 18-meter section of the structure to detach, and the rig was taken to Hawaii for repair.
+
+In June 2019 after four months of root cause analyses and redesign, a new revamped System 001/B was deployed. In August, the team announced that after trying multiple alternatives, a water-borne parachute attached to slow the system, and expanding the cork line used to hold the screen in place would be tested. In October they announced that the new system successfully captured and collected plastic, and even microplastics. The model was also more efficient and smaller, making offshore adjustments possible.
+
+
+River Interception
+
+Responding to criticism that filtering devices closer to shore are easier to maintain, and likely to recover more plastic per dollar spent, the organization introduced an additional technology in October 2019 &mdash; the River Interpector. Solar-powered Interceptor vessels use floating arms to direct floating waste into the collection conveyor, which dumps trash into dumpsters on a detachable barge below. When full, the collection stops until the barge is removed, emptied and returned to the Interceptor.
+
+The first three Interceptor systems have been deployed in Indonesia, Malaysia and the Dominican Republic. In June 2021, the organization announced the deployment of 15 further Interceptors thanks to a partnership with the Coca Cola Company &mdash; the world's largest producer of plastic waste.
+
+
+Plastic Recycling
+In October 2020, The Ocean Cleanup launched their first product made from plastic collected from the Great Pacific Garbage Patch, The Ocean Cleanup Sunglasses. The organization worked with DNV GL to develop a certification for plastic from water sources and the sunglasses were certified to originate from the GPGP. Revenue from the sale of recycling products go into their continued cleanup projects.
+
+
+Mitigation
+
+While the cleanup of existing plastic pollution is important, it is equally vital to tackle the problem at its source. The problem is not "out there" in the ocean, it is with each and every one of us.
+
+Here are some simple suggestions to reduce your contribution to plastic debris:
+
+    * Bring reusable bags and totes when shopping.
+    * Use a reusable bottle or mug for your beverages, even when ordering from a to-go shop.
+    * Avoid plastic straws and disposable cutlery.
+    * Cook more often to reduce your use of plastic-heavy takeout containers.
+    * Bring your own container for take-out or your restaurant doggy-bag.
+    * Buy in bulk. Avoid individually packaged goods.
+    * Buy local, unwrapped produce.
+    * Use refill stations for cleaning products.
+
+
+
+Text and images adapted from Wikipedia.

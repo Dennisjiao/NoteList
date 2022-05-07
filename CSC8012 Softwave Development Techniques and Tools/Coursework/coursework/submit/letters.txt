@@ -1,0 +1,7 @@
+----------------Ticket Error----------------------
+Sorry Anna Jones, There are only 4 tickets left
+Please buy ticket under this quantity.
+--------------------------------------------------
+----------------Client Error----------------------
+Sorry, there's no one named that. Please check your name.
+--------------------------------------------------

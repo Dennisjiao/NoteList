@@ -1,0 +1,246 @@
+/**
+ * @class AdVisibilityMonitor omnicalculator
+*/
+// values polyfil for ie11 just in case
+if (typeof Object.values !== "function") {
+    Object.values = function objectValues(obj) {
+        var res = [];
+        for (var i in obj) { if (obj.hasOwnProperty(i)) { res.push(obj[i]); } }
+        return res;
+    }
+}
+// element visibility checker helper for initial view check
+function isElementVisible(el) {
+    var bcr = el.getBoundingClientRect();
+    var vw = window.innerWidth || doc.documentElement.clientWidth;
+    var vh = window.innerHeight || doc.documentElement.clientHeight;
+    return bcr.bottom > 0 && bcr.right > 0 && bcr.left < vw && bcr.top < vh;
+}
+function AdVisibilityMonitor(onRefresh, targetIds, options) {
+    if (!window.IntersectionObserver || !window.Map) {
+        console && console.warn("AdVisibilityMonitor not supported by the browser");
+        return false;
+    }
+    options = options || {};
+    this.refreshTimeThreshold = options.refreshTimeThreshold || 0.05;
+    this.options = {
+        root: options.root || null, // where the scroll is registered, usually body for awkward DOM structures can be elsewhere
+        rootMargin: options.rootMargin || '0px',
+        threshold: options.threshold || 1.0, // in 0..1 how many % of object is visible
+    };
+    this.adLifetime = options.adLifetime || 30000;
+    this.observer = new IntersectionObserver(this.onIntersectionChanged.bind(this), this.options);
+    this.trackers = {};
+    this.onRefresh = onRefresh;
+    if (document.readyState === "complete") {
+        this.registerTarget(targetIds);
+    } else {
+        window.onload = function () {
+            this.registerTarget(targetIds);
+        }.bind(this);
+    }
+    document.addEventListener("visibilitychange", this.handleVisibilityChange.bind(this));
+    this.startTrackers();
+}
+AdVisibilityMonitor.prototype = {
+    // gets called when ad enters the view
+    onEnterView: function (tracker) {
+        tracker.inViewCount += 1;
+        tracker.isVisible = true;
+        tracker.visibleAt = Date.now();
+    },
+    onLeaveView: function (tracker) {
+        this.updateTrackerVisibleTime(tracker);
+        tracker.isVisible = false;
+    },
+    onTrackerRefresh: function (tracker) {
+        tracker.visibleTime = 0;
+        tracker.refreshCount += 1;
+    },
+    updateTrackerVisibleTime: function (tracker) {
+        if (tracker.isVisible) {
+            tracker.isVisible = true;
+            tracker.visibleTime += tracker.visibleAt ? Date.now() - tracker.visibleAt : 0;
+            tracker.visibleAt = Date.now();
+        }
+    },
+    refreshAds: function () {
+        var readyTrackers = {};
+        this.startedAt = Date.now();
+        Object.values(this.trackers).forEach(function (tracker) {
+            this.updateTrackerVisibleTime(tracker);
+            if (tracker.visibleTime >= (1 - this.refreshTimeThreshold) * this.adLifetime) {
+                readyTrackers[tracker.id] = tracker;
+                this.onTrackerRefresh(tracker);
+            }
+        }.bind(this));
+        this.onRefresh(readyTrackers);
+    },
+    startTrackers: function (offset) {
+        this.startedAt = Date.now();
+        if (this.refreshTimer) {
+            clearInterval(this.refreshTimer);
+        }
+        this.refreshTimer = setInterval(function () {
+            this.refreshAds();
+        }.bind(this), !offset ? this.adLifetime : Math.min(0, this.adLifetime - offset));
+    },
+    pauseTrackers: function () {
+        this.pausedAt = Date.now();
+        clearInterval(this.refreshTimer);
+    },
+    resumeTrackers: function () {
+        this.startTrackers(this.pausedAt - this.startedAt);
+    },
+    onIntersectionChanged: function (entries) {
+        entries.forEach(function (entry) {
+            if (this.trackers[entry.target.id]) {
+                const tracker = this.trackers[entry.target.id];
+                if (entry.isIntersecting) {
+                    if (!tracker.isVisible) {
+                        this.onEnterView(tracker);
+                    }
+                } else {
+                    this.onLeaveView(tracker);
+                }
+            }
+        }.bind(this));
+    },
+    registerTarget: function (id) {
+        if (Array.isArray(id)) {
+            id.forEach(this.registerTarget.bind(this));
+            return;
+        }
+        if (typeof id !== "string") {
+            throw "AdVisibilityMonitor.registerTarget accepts only query selector string";
+        }
+        const target = document.getElementById(id);
+        if (target) {
+            if (!this.trackers[id]) {
+                this.trackers[id] = {
+                    id: id,
+                    target: target,
+                    visibleTime: 0,
+                    inViewCount: 0,
+                    refreshCount: 0,
+                };
+            }
+            const tracker = this.trackers[id];
+            this.observer.observe(tracker.target);
+        }
+    },
+    clear: function () {
+        this.observer.disconnect();
+        this.pauseTrackers();
+        this.trackers = {};
+    },
+    handleVisibilityChange: function () {
+        if (document.hidden) {
+            this.pauseTrackers();
+        } else {
+            this.resumeTrackers();
+        }
+    }
+}
+var refreshCount = 1;
+//////////////////////////////////x
+var onRefresh = function (targets) {
+    if (typeof googletag !== 'undefined') {
+        googletag.pubads().setTargeting('yb_split', 'false');
+        googletag.pubads().getSlots().forEach(function (slot) { slot.setTargeting('kw', 'reviveYB'); });
+        var slots = googletag.pubads().getSlots();
+        var slotsToRefresh = [];
+        for (var i = 0; i < slots.length; i++) {
+            var slotId = slots[i].getSlotElementId();
+            if (targets[slotId]) {
+                slotsToRefresh.push(slots[i]);
+                slots[i].setTargeting('reviveYB', 'true');
+            }
+        }
+        if (slotsToRefresh.length) {
+            slotsToRefresh.forEach(function (slot) { slot.setTargeting('refreshCount', refreshCount); });
+            refreshCount++;
+            Yieldbird.refresh(slotsToRefresh);
+        }
+    }
+}
+
+window.Yieldbird = window.Yieldbird || { cmd: [] };
+
+var _YB = _YB || {
+    ab: function () {
+    	return(_YB.dool ? 'b' : 'a' + Math.floor(Math.random() * 10));
+    },
+    dool: Math.random() >= 0.1
+};
+
+
+// tymczasowo powtorzona logika na szybki test bez ybab onRefreshWithoutYbAb
+
+var onRefreshWithoutYbAb = function (targets) {
+    if (typeof googletag !== 'undefined') {
+        googletag.pubads().setTargeting('yb_split', 'false');
+        googletag.pubads().getSlots().forEach(function (slot) { slot.setTargeting('kw', 'reviveYB'); });
+        var slots = googletag.pubads().getSlots();
+        var slotsToRefresh = [];
+        for (var i = 0; i < slots.length; i++) {
+            var slotId = slots[i].getSlotElementId();
+            if (targets[slotId]) {
+                slotsToRefresh.push(slots[i]);
+                slots[i].setTargeting('reviveYB', 'true');
+            }
+        }
+        if (slotsToRefresh.length) {
+            slotsToRefresh.forEach(function (slot) { slot.setTargeting('refreshCount', refreshCount); });
+            refreshCount++;
+            Yieldbird.cmd.push(function () {
+                Yieldbird.retarget(slotsToRefresh);
+            });
+            googletag.cmd.push(function () {
+                googletag.pubads().clearTargeting("yb_ab");
+                slotsToRefresh.forEach(function (slot) { slot.clearTargeting("yb_ab"); });
+                slotsToRefresh.forEach(function (slot) { slot.setTargeting('yb_ab',  'revive_' + _YB.ab()); });
+                googletag.pubads().refresh(slotsToRefresh);
+            });
+        }
+    }
+}
+
+var targets, monitor, monitorTest;
+(function waitForGpt() {
+    if (typeof window.googletag !== "undefined" & typeof window.googletag.pubads !== "undefined") {
+        setTimeout(function () {
+            targets = [];
+            monitor = new AdVisibilityMonitor(onRefresh, targets, {
+                adLifetime: 30000,
+                threshold: 0.9
+            });
+            if (document.querySelector('.IconButton') !== null) {
+                document.querySelector('.IconButton').addEventListener('click', function () {
+                    monitor.clear();
+                    monitor = new AdVisibilityMonitor(onRefresh, targets, {
+                        adLifetime: 30000,
+                        threshold: 0.9
+                    });
+                });
+            };
+            targets2 = ["omnicalculator.com_320x50_mobile", "omnicalculator.com_300x250_mobile_1", "omnicalculator.com_300x250_mobile_2", "omnicalculator.com_300x250_mobile_3","omnicalculator.com_300x600_atf_1", "omnicalculator.com_300x600_1", "omnicalculator.com_300x600_2", "omnicalculator.com_300x600_3", "omnicalculator.com_300x600_4", "omnicalculator.com_300x250_1", "omnicalculator.com_300x600_btf_right", "omnicalculator.com_728x90_atf_1"];
+            monitorTest = new AdVisibilityMonitor(onRefreshWithoutYbAb, targets2, {
+                adLifetime: 30000,
+                threshold: 0.9
+            });
+            if (document.querySelector('.IconButton') !== null) {
+                document.querySelector('.IconButton').addEventListener('click', function () {
+                    monitorTest.clear();
+                    monitorTest = new AdVisibilityMonitor(onRefreshWithoutYbAb, targets2, {
+                        adLifetime: 30000,
+                        threshold: 0.9
+                    });
+                });
+            }
+        }, 5000)
+    }
+    else {
+        setTimeout(waitForGpt, 500);
+    }
+})();

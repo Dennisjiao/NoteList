@@ -1,0 +1,521 @@
+/*@charset "utf-8";*/
+/* CSS Document */
+/*font-family: 'Darker Grotesque', sans-serif;
+font-family: 'Special Elite', cursive;
+font-family: 'EB Garamond', serif;*/
+/*Start*/
+*{
+	margin:0;
+	padding:0;
+	border:0;
+  
+}
+body{font-family: 'EB Garamond', serif;
+	 font-size:16pt;
+     position:absolute;
+     top:0px;
+	 left:0px;
+    width:100%;
+	margin:0px;
+}
+
+/*title*/
+#oceantop{position:relative;
+          bottom:0px;
+		  font-family: 'Darker Grotesque', sans-serif;
+          background-image:url('http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/ocean_cleanup/resources/ocean.jpg'); 
+		  background-position:bottom;
+		  background-size:100% 150%;
+          height:300px;    
+		   
+		  }
+
+.title{color:#FFFFFF;
+          text-align:center;
+		  position:relative;
+		  line-height:250px;
+		  height:300px;
+		  top:0%;
+		  }
+.the{
+     text-transform:uppercase;
+     vertical-align:top;
+	 margin:0 0 0 0;
+	 height:30px;
+     font-size:20px;
+	 font-family: 'Darker Grotesque', sans-serif;
+	 text-shadow:5px 5px 8px black;
+	 font-variant: small-caps;
+ 	 }
+
+.ocean{text-transform:uppercase;
+       text-shadow:5px 5px 8px black;
+       font-size:90px;
+	   font-weight: lighter;
+	   
+	   }
+.cleanup{text-transform:uppercase;
+         text-shadow:5px 5px 8px black;
+         font-size:90px;
+		 font-weight:bold;
+		 }
+/*finish title*/
+/*Menu box begin*/
+
+.mainbox{
+         background-color:#00000054;
+	     height:50px;
+	     position:absolute;
+         left:0px;
+		 bottom:0px;
+		 width:100%;
+		 text-align:center;
+		 transition-duration: 0s; 
+		 }
+.mainbox a{
+	display:block;
+	font-family: 'Darker Grotesque', sans-serif;
+	text-decoration:none;
+	position:relative;
+	color:#FFFFFF;
+	text-align: center;
+	height:50px;
+	font-size:19px;	
+	line-height:44px;
+}
+.mainbox>ul{
+            top:0;
+			position:absolute;
+			height:50px;			
+			width:607px;
+			text-align:center;   
+			display:inline-block;
+			margin:0 auto;
+			}
+.mainbox>ul>li{
+	float:left;
+	position:relative;
+	text-align:center;
+	left:-50%;
+	list-style-type:none;
+	width:150px;
+	font-weight:bold;
+  }
+.mainbox>ul>li>ul{
+	position:absolute;
+	left:-999em;
+	background-color:#0da0a0a6;
+	list-style-type:none;
+	text-align:center;
+	padding:0px;
+	width:auto;
+	border-radius: 3px;
+	transition-duration: 1s;
+	/*Default color for drawer opening*/
+  }
+.mainbox>ul>li>ul a{
+	width:150px;
+	position:relative;
+	height:50px;
+	padding:0px;
+  }
+.mainbox>ul>li>ul>li{
+                     display:block;
+					 border-radius: 3px;
+					 }
+
+.mainbox>ul>li:hover ul{
+	left:auto;
+	
+  }
+.mainbox>ul>li:hover{
+	background-color:#ffffffbf;
+	border-radius: 2px;
+	color:#00CCCC;
+	/*Hover color*/
+  }
+.mainbox>ul>li>ul:hover li{
+transition-duration: 1s;
+border-radius: 15px;
+}
+.mainbox>ul>li>ul a:hover{
+	background-color:#3891d0;
+	border-radius: 3px;
+	/*Word background color*/
+  }
+.mainbox>ul>li a:hover{
+color:#00CCCC;
+}
+.mainbox>ul>li>ul>li a:hover{
+transition-duration: 1s;
+}
+  
+/*title adaptation*/
+@media screen and (max-width:1050px){
+.ocean{
+font-size:46px;
+height:80px;
+}
+.cleanup{
+font-size:46px;
+}
+#oceantop{
+          height:500px;   
+		  }		  
+.title{   
+height:500px;
+max-width:100%;
+line-height:300px;		    
+		  }
+.mainbox{
+height:200px;
+}	
+.mainbox>ul{
+position:absolute;
+height:200px;
+max-width:100%;
+max-width:180px;
+}	  
+.mainbox>ul>li{
+width:100%;
+position:relative;
+}
+
+.mainbox>ul>li:hover ul{
+left:5000px;
+}
+.mainbox>ul>li>ul{
+width:150px;
+position:absolute;
+}
+
+#video{
+position:relative;
+text-align:center;
+}
+#video iframe{
+max-width:100%;
+}
+}
+/*finish title adaptation*/
+
+  
+/*Begin text*/
+#bodyall{
+         max-width:80ch;
+         margin:0 auto;
+		 
+	     }
+#summary>h2{visibility:hidden;
+            margin-top:0%;
+            }
+			
+			
+.summarytext>p{margin:30px 0 30px 0;
+               }
+
+#video>iframe{text-align:center;
+		  position:relative;}
+#video{margin:0 0 50px 0;}
+#marine p{margin:16px 0 16px 0}
+#marine{
+    margin:36px 0 36px 0;
+}
+/*Marine block*/
+/*1marine picture*/
+.marinetitle{margin:40px 0 35px 0;
+font-family: 'Special Elite', cursive;
+           }
+#picturegyres{
+              float:left;
+              width:446px;
+			  height:325px;
+              background-color:#FFFFFF;
+			  margin:16px 0 16px 0;
+              }
+.picgyres{
+          
+          position:relative;
+		  border-radius:3px;
+		  box-shadow:4px 4px 15px #999;
+		  transform:rotate(-3deg);
+          border:3px solid #dcd8d8;
+          text-align:center;
+          max-width:396px;
+		  height:324px;
+          }
+.picgyres img{top:8px;
+              position:relative;
+              max-width:373px;
+              }
+.picgyres dt{top:15px;
+             position:relative;
+             font-size:18px;
+			 margin:18px 10px 0 0;
+			 color:#6a6a6ad4;
+			 font-family: 'Special Elite', cursive;
+             text-align:right;
+			 }
+/*1marine finish*/
+.textdownpic p{
+             margin:16px 0 16px 0;
+			 }
+
+/*2history picture*/
+.marinetitle{margin:16px 0 16px 0;
+           }
+#picturehistory{
+              float:right;
+              width:297px;
+			  height:300px;
+              background-color:#FFFFFF;
+			  margin:16px 0 16px 0;
+              }
+.history{
+          
+          position:relative;
+		  border-radius:3px;
+		  box-shadow:4px 4px 15px #999;
+		  transform:rotate(4deg);
+          border:3px solid #dcd8d8;
+          text-align:center;
+          max-width:290px;
+		  height:283px;
+          }
+#history h2{font-family: 'Special Elite', cursive;}
+.history img{top:8px;
+              position:relative;
+              max-width:268px;
+              }
+.history dt{top:15px;
+             position:relative;
+			 font-family: 'Special Elite', cursive;
+			 color:#6a6a6ad4;
+			 font-size:18px;
+             margin:18px 10px 0 0;
+             text-align:right;
+			 }
+.historytxt p{
+margin:16px 0 16px 0;
+
+}
+/*2history finish*/
+
+/*3technoloical picture*/
+.oceancleanup{margin:16px 0 16px 0;
+           }
+#Technological{
+margin:46px 0 0 0;
+
+} 
+#Technological h2{font-family: 'Special Elite', cursive;
+margin:0 0 46px 0;
+}
+
+#Technological>ul{
+  color:#27C9C5;
+  font-size:42px;
+  text-align:center;
+  margin:40px 60px 40px 60px;
+}
+
+.oceancleanup h3{font-family: 'Special Elite', cursive;
+margin:59px 0 23px 0;
+
+}
+.oceancleanup p{margin:16px 0 16px 0;
+
+}
+#picturesystem{
+              float:left;
+              width:456px;
+			  height:330px;
+              background-color:#FFFFFF;
+			  margin:36px 0 16px 0;
+              }
+.system{position:relative;
+		border-radius:3px;
+		box-shadow:4px 4px 15px #999;
+		transform:rotate(-3deg);
+        border:3px solid #dcd8d8;
+        text-align:center;
+        max-width:376px;
+		height:263px;
+}
+.system img{top:8px;
+            position:relative;
+            max-width:352px;
+            }
+.system dt{top:15px;
+           position:relative;
+		   font-family: 'Special Elite', cursive;
+		   color:#6a6a6ad4;
+		   font-size:16px;
+           margin:24px 5px 0 0;
+           text-align:right;
+}
+/*3technoloical finish*/
+/*4river picture*/
+.river{margin:16px 0 16px 0;
+           }
+.river h3{font-family: 'Special Elite', cursive;
+          margin:60px 0 22px 0;}
+#pictureriv{
+              float:right;
+              width:372px;
+			  height:301px;
+              background-color:#FFFFFF;
+			  margin:25px 0 16px 16px;
+              }
+.river p{margin:16px 0 16px 0;}
+
+.pictureriver{
+          
+          position:relative;
+		  border-radius:3px;
+		  box-shadow:4px 4px 15px #999;
+		  transform:rotate(3deg);
+          border:3px solid #dcd8d8;
+          text-align:center;
+          max-width:336px;
+		  height:288px;
+          }
+.pictureriver img{top:8px;
+              position:relative;
+              max-width:312px;
+              }
+.pictureriver dt{top:25px;
+             position:relative;
+			 font-family: 'Special Elite', cursive;
+			 color:#6a6a6ad4;
+             margin:13px 15px 0 20px;
+			 font-size:17px;
+             text-align:right;
+			 }
+/*4river finish*/
+
+/*last block*/
+.mitigation h2{font-family: 'Special Elite', cursive;
+margin:54px 0 26px 0;
+}
+.mitigation>ul{padding:0 0 0 40px;}
+.mitigation p{margin:16px 0 16px 0;}
+.mitigation h4{margin:16px 0 16px 0;}
+
+
+
+/*table*/
+#tablethree{
+       left:15%;
+	   position:relative;
+	   margin:36px 0 52px 0;
+       }
+.toptext{border-top: 2px solid #000000;}
+.bottomtext{border-bottom: 2px solid #000000;}
+.lasttableline{border-bottom: 2px solid #000000;}
+tr{position:relative;}
+#tablethree td{height:32px;   
+			  }
+table, td, tr{
+border-collapse:collapse;
+border:1px solid #000000;
+border-left: none;
+border-right: none;
+
+}
+/*table finish*/
+
+
+/*page final bottom picture*/
+#finishpic{margin:30px 0 0 0;
+           position:relative;
+          bottom:0px;
+          background-image:url('http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/ocean_cleanup/resources/ocean.jpg'); 
+		  background-position:bottom;
+		  background-size:100% 200%;
+          height:200px;        
+		  }
+.finishpicclass{
+                text-align:center;
+				top:45%;
+				position:relative;
+                
+				}
+#finishpic a{
+             font-size:18px;
+			 color:#000000;
+			 text-decoration:none
+             
+			 }
+
+/*Picture and content adaptation*/
+@media screen and (max-width:1050px){
+
+/*pic1*/
+#picturegyres{
+width:320px;
+height:299px;
+margin:-6px 0 16px 22px;
+}
+
+.picgyres{
+max-width:396px;
+height:272px;
+}
+
+.picgyres img{
+max-width:280px;
+}
+/*pic2*/
+#picturehistory{
+width:325px;
+height:300px;
+margin:11px 0 6px 17px;
+}
+
+.history{
+max-width:279px;
+height:285px;
+}
+
+.history img{
+max-width:259px;
+}
+/*pic3*/
+#picturesystem{
+width:328px;
+height:246px;
+margin:12px 0 16px 17px;
+}
+
+.system{
+max-width:298px;
+height:219px;
+}
+
+.system img{
+max-width:270px;
+}
+/*pic4*/
+#pictureriv{
+width:320px;
+height:292px;
+margin:25px 18px 16px 3px;
+}
+
+.pictureriver{
+max-width:343px;
+height:267px;
+}
+
+.pictureriver img{
+max-width:271px;
+
+}
+
+#tablethree{
+margin:36px 95px 52px 0;
+
+}
+}
+/*End*/

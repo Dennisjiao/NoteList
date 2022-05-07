@@ -1,0 +1,37 @@
+		  
+#mainbox {display:block;
+	text-decoration:none;
+	color:#ccc;
+	padding:0 30px;
+	line-height:50px;	   
+	   }
+#mainbox a{
+	display:block;
+	text-decoration:none;
+	color:#ccc;
+	padding:0 30px;
+	line-height:50px;
+  }
+  #mainbox>ul>li{
+	float:left;
+  }
+  #mainbox>ul>li:hover{
+	background-color:#9982BC;
+  
+  }
+  #mainbox>ul>li>ul a:hover{
+	background-color:#533B77;
+  }
+  #mainbox>ul>li>ul a{
+	height:35px;
+	line-height:35px;
+  }
+  #mainbox>ul>li>ul{
+	position:absolute;
+	left:-999em;
+	background-color:#9982BC;
+  
+  }
+  #mainbox>ul>li:hover ul{
+	left:auto;
+  }

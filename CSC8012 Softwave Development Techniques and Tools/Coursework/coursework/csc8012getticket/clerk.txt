@@ -1,0 +1,269 @@
+------------------------------------------
+-------Welcome to the ticket System-------
+------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+e
+Bobsleigh: 41
+Curling: 8
+Figure Skating: 7
+Ice Hockey: 2
+Ski Jumping: 66
+Snowboarding: 4
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+ok or yes or any key
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+c
+Anna Jones
+Michael Jones
+Ted Smith
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+y
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+b
+Please input the user name
+Anna Jones
+Please input the event name
+Curling
+How many tickets do you want to buy?
+4
+You successfully bought the ticket
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+b
+Please input the user name
+Anna Jones
+Please input the event name
+Snowboarding
+How many tickets do you want to buy?
+5
+Sorry, we do not have enough ticket!
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+b
+Please input the user name
+Anna Jones
+Please input the event name
+Snowboarding
+How many tickets do you want to buy?
+1
+You successfully bought the ticket
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+b
+Please input the user name
+Ice Hockey
+There is nobody called Ice Hockey
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+b
+Please input the user name
+Anna Jones
+Please input the event name
+Ice Hockey
+How many tickets do you want to buy?
+1
+You successfully bought the ticket
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+b
+Please input the user name
+Anna Jones
+Please input the event name
+Bobsleigh
+Sorry! This user has already purchased three tickets about different events.
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+b
+Please input the user name
+Ted Smith
+Please input the event name
+Bobsleigh
+How many tickets do you want to buy?
+7
+You successfully bought the ticket
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+e
+Bobsleigh: 34
+Curling: 4
+Figure Skating: 7
+Ice Hockey: 1
+Ski Jumping: 66
+Snowboarding: 3
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+c
+Anna Jones
+  |-Curling: 4
+  |-Ice Hockey: 1
+  |-Snowboarding: 1
+Michael Jones
+Ted Smith
+  |-Bobsleigh: 7
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+r
+Please input the user name
+Ted Smith
+Please input the event name
+Bobsleigh
+How many tickets do you want to refund?
+2
+You successfully refund the ticket
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+c
+Anna Jones
+  |-Curling: 4
+  |-Ice Hockey: 1
+  |-Snowboarding: 1
+Michael Jones
+Ted Smith
+  |-Bobsleigh: 5
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+e
+Bobsleigh: 36
+Curling: 4
+Figure Skating: 7
+Ice Hockey: 1
+Ski Jumping: 66
+Snowboarding: 3
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+r
+Please input the user name
+Anna Jones
+Please input the event name
+Ice Hockey
+How many tickets do you want to refund?
+1
+You successfully refund the ticket
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+e
+Bobsleigh: 36
+Curling: 4
+Figure Skating: 7
+Ice Hockey: 2
+Ski Jumping: 66
+Snowboarding: 3
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+c
+Anna Jones
+  |-Curling: 4
+  |-Ice Hockey: 0
+  |-Snowboarding: 1
+Michael Jones
+Ted Smith
+  |-Bobsleigh: 5
+Do you want to continue? (If you want to Stop. Please press N or n. If not, Press any key to continue)
+yes
+-------------------------------------------------------
+Please press 'e' to display all the events detail
+Please press 'c' to display all the clients detail
+Please press 'b' to buy the events ticket
+Please press 'r' to refund the ticket
+Please press 'f' to finish the system
+f
+
+进程已结束，退出代码 0

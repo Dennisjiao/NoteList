@@ -1,0 +1,72 @@
+window.onload=function(){
+
+
+    let sum=0;
+    let input1 = document.getElementById('in_bottles');
+input1.onmouseleave=function(){
+    sum =0;
+   let avg=0;
+   //console.log(input1);
+   var dw = input1.getAttribute('data-weight');
+   console.log(dw);
+   let in1 = input1.value;
+   //let in1 = input1.getAttribute('value');
+   console.log(in1);
+    sum = in1*dw;
+   //sum=input1.getAttribute('data-weight')*input1.getAttribute('value');
+   document.getElementById('total_per_year').innerHTML = sum;
+   console.log(sum);
+}
+
+}
+
+
+---------------------------------------------------------------------
+备份
+window.onload=function(){
+
+    let sum = 0;
+    let average = 0;
+    let allarray = document.getElementsByTagName('input');
+
+    for(let i=0;i < allarray.length;i++){
+        allarray[i].onchange = function() {
+            let arrneed = [];
+            let householdnum = document.getElementById('in_household');
+            //console.log(householdnum);
+            num = householdnum.selectedIndex;
+            //console.log(num);
+            householdtip = householdnum.options[num].value;
+            //console.log(householdtip);
+
+            for (let j = 0; j < allarray.length; j++) {
+                sum = sum + allarray[j].getAttribute('data-weight') * allarray[j].value;
+                nname = allarray[j].getAttribute('name');
+                nvalue = allarray[j].value;
+                arrneed.push({'id': j, 'name': nname, 'value': nvalue * allarray[j].getAttribute('data-weight')});
+            }
+            console.log(sum);
+
+            console.log(arrneed);
+
+            max = arrneed[0]['value'];
+            maxIndex = 0;
+            for (let k = 0; k < arrneed.length; k++) {
+                if (arrneed[k]['value'] > max) {
+                    max = arrneed[k]['value'];
+                    maxIndex = k;
+                }
+            }
+            console.log(arrneed[maxIndex]);
+            console.log(maxIndex);
+
+            average = sum / householdtip;
+            console.log(sum);
+
+            document.getElementById('total_per_year').innerHTML = average.toFixed(2);
+            //console.log(average);
+        }
+
+
+    }
+}

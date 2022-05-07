@@ -1,0 +1,134 @@
+/*Start*/
+/*hide tip block*/
+.tip{
+    display:none;
+}
+
+/*----Begin whole page definition----*/
+body{
+    background:linear-gradient(to bottom right,#707cb4b3 18%,transparent 33%);
+    position:relative;
+    width:100%;
+}
+
+main{
+    position:relative;
+    width:90%;
+    left:5%;
+}
+
+#reset{
+    font-size:20px;
+}
+input{
+    height:20px;
+
+}
+
+select{
+    width:40px;
+    height:30px;
+}
+
+header{
+    position: relative;
+    float: right;
+    top:40px;
+    right:114px;
+}
+
+h1{
+    font-size:50px;
+}
+
+footer{
+    margin:400px 0 0 0;
+    position:relative;
+    text-align: center;
+    font-size:40px;
+    font-weight:bold;
+    bottom:0px;
+    background-image:url('http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/ocean_cleanup/resources/ocean.jpg');
+    background-position:bottom;
+    background-size:100% 200%;
+
+
+    height:50px;
+}
+
+footer a{
+    text-decoration:none;
+}
+
+/*----Finish whole page definition----*/
+/*-------Begin each block style-------*/
+#sec_tip{
+    border-radius:20px;
+    text-align:right;
+    position: absolute;
+    top:200px;
+    right:0px;
+    max-width: 600px;
+    font-size:20px;
+    box-shadow:6px -2px 20px 7px #2585a0db;
+}
+
+
+#sec_food{
+    border-radius:20px;
+    box-shadow:20px 11px 20px 10px #31777e;
+    border:3px solid #5a4a4a00;
+    height:283px;
+    max-width:645px;
+    position:relative;
+    top: 40px;
+    font-size:24px;
+
+}
+#sec_packaging{
+    border-radius:20px;
+    box-shadow:20px 11px 20px 10px #31777e;
+    border:3px solid #5a4a4a00;
+    height:283px;
+    max-width:645px;
+    position:relative;
+    top: 100px;
+    font-size:24px;
+}
+#sec_washing{
+    border-radius:20px;
+    box-shadow:20px 11px 20px 10px #31777e;
+    border:3px solid #5a4a4a00;
+    height:283px;
+    max-width:693px;
+    position:relative;
+    top: 160px;
+    font-size:24px;
+}
+#household{
+    border-radius:20px;
+    box-shadow:-12px 8px 20px 10px #88a668;
+    border:3px solid #5a4a4a00;
+    height:227px;
+    max-width:555px;
+    position:absolute;
+    right:0px;
+    top: 546px;
+    font-size:24px;
+    float:right;
+}
+#sec_result{
+    border-radius:20px;
+    box-shadow:-6px 7px 20px 10px #88a668;
+    border:3px solid #5a4a4a00;
+    height:377px;
+    max-width:645px;
+    position:absolute;
+    right:0px;
+    top: 842px;
+    font-size:24px;
+    float:right;
+}
+
+/*-------Finish each block style-------*/
+/*End*/

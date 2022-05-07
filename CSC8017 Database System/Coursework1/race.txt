@@ -1,0 +1,206 @@
+/*==============================================================*/
+/* DBMS name:      MySQL 5.0                                    */
+/* Created on:     2021/10/7 22:58:22                           */
+/*==============================================================*/
+
+
+drop database if exists race;
+create database race;
+use race;
+
+
+
+/*==============================================================*/
+/* Table: Athlete                                               */
+/*==============================================================*/
+create table Athlete
+(
+   VenueID              char(10) not null  comment '',
+   EventID              char(10) not null  comment '',
+   AgentID              char(10) not null  comment '',
+   TeamID               char(10) not null  comment '',
+   AthleteID            char(10) not null  comment '',
+   AthleteName          char(50) not null  comment '',
+   Biography            char(200) not null  comment '',
+   primary key (AthleteID)
+);
+
+INSERT INTO `athlete` VALUES ('V1', 'E1', '1', 'N1', 'Ac001', 'JIAORUIPENG', 'Mr.nobody');
+INSERT INTO `athlete` VALUES ('V1', 'E1', '2', 'N3', 'Ac052', 'Dennisjiao', 'Mr.right');
+INSERT INTO `athlete` VALUES ('V2', 'E4', '3', 'N5', 'Am100', 'SuBingtian', 'Greatman');
+INSERT INTO `athlete` VALUES ('V2', 'E4', '4', 'N4', 'Am105', 'Jackson', 'UUS');
+
+/*==============================================================*/
+/* Table: Customer                                              */
+/*==============================================================*/
+create table Customer
+(
+   VenueID              char(10) not null  comment '',
+   TicketID             char(20) not null  comment '',
+   CustomerID           int not null  comment '',
+   CustomerName         char(20) not null  comment '',
+   CustomerAddress      char(50) not null  comment '',
+   CustomerTelephone    int not null  comment '',
+   CustomerOther        char(100) comment '',
+   primary key (VenueID, TicketID, CustomerID)
+);
+
+INSERT INTO `customer` VALUES ('V1', 'TV001', 546, 'jackson', 'NE1 1TT', 451313513, '');
+INSERT INTO `customer` VALUES ('V1', 'TV002', 13, 'DAJIDA', 'NE1 1TT', 435131, NULL);
+INSERT INTO `customer` VALUES ('V2', 'TN001', 20, 'dawd', 'NE1 1AD', 4863, NULL);
+INSERT INTO `customer` VALUES ('V2', 'TN002', 123, 'ADAWD', 'NE1 1TT', 54684, 'VIP');
+INSERT INTO `customer` VALUES ('V2', 'TV005', 7, 'QWDA', 'NE1 11M', 515543, NULL);
+
+/*==============================================================*/
+/* Table: RaceEvent                                             */
+/*==============================================================*/
+create table RaceEvent
+(
+   EventID              char(10) not null  comment '',
+   VenueID              char(10) not null  comment '',
+   EventName            char(100) not null  comment '',
+   EventDescription     char(100) not null  comment '',
+   primary key (EventID)
+);
+
+INSERT INTO `raceevent` VALUES ('E1', 'V1', 'Men\'s Marathon','This is MEN race event');
+INSERT INTO `raceevent` VALUES ('E2', 'V2', 'Women\'s Marathon','This is WOMEN race event');
+INSERT INTO `raceevent` VALUES ('E4', 'V4', '100 Meters','This is 100 Meter race event');
+
+/*==============================================================*/
+/* Table: Staff                                                 */
+/*==============================================================*/
+create table Staff
+(
+   VenueID              char(10) not null  comment '',
+   StaffID              char(10) not null  comment '',
+   StaffName            char(50) not null  comment '',
+   StaffTelephone       int not null  comment '',
+   JobTitle             char(50) not null  comment '',
+   primary key (StaffID)
+);
+
+INSERT INTO `staff` VALUES ('V1', 'S12', 'StaffNO1', 1135431, 'Highlevel');
+INSERT INTO `staff` VALUES ('V2', 'S123', 'john', 16549, 'Mid');
+INSERT INTO `staff` VALUES ('V1', 'S32', 'sno2', 13532, 'low');
+
+/*==============================================================*/
+/* Table: Team                                                  */
+/*==============================================================*/
+create table Team
+(
+   AgentID              char(10) not null  comment '',
+   TeamID               char(10) not null  comment '',
+   TeamName             char(20) not null  comment '',
+   TeamTelephone        int not null  comment '',
+   TeamDescription      char(100) not null  comment '',
+   TeamPeopleNumber     int not null  comment '',
+   TeamOther            char(100) not null  comment '',
+   TeamEmail            char(50) not null  comment '',
+   primary key (AgentID, TeamID)
+);
+
+INSERT INTO `team` VALUES ('1', 'N1', 'RNG', 123123, 'OK', 32113, '123DAD', '123DA');
+INSERT INTO `team` VALUES ('1', 'N2', 'OMG', 32151, 'Nice', 123123, 'asd123', 'dawd1');
+INSERT INTO `team` VALUES ('2', 'N3', 'IG', 123546, 'GREAT', 131215, 'AWD1', '12EDA');
+INSERT INTO `team` VALUES ('3', 'N5', 'FPX', 456123, 'TEST', 15656, 'DAW12', '12DAWD');
+INSERT INTO `team` VALUES ('4', 'N4', 'EDG', 654123, 'FINE', 54654, 'DASD123', '124A');
+
+
+
+/*==============================================================*/
+/* Table: TeamAgent                                             */
+/*==============================================================*/
+create table TeamAgent
+(
+   AgentID              char(10) not null  comment '',
+   AgentName            char(50) not null  comment '',
+   AgentTelephone       int not null  comment '',
+   primary key (AgentID)
+);
+
+
+
+INSERT INTO `teamagent` VALUES ('1', 'Kiven', 123123);
+INSERT INTO `teamagent` VALUES ('2', 'John', 123232);
+INSERT INTO `teamagent` VALUES ('3', 'Mike', 323121);
+INSERT INTO `teamagent` VALUES ('4', 'Jack', 123123);
+
+/*==============================================================*/
+/* Table: Ticket                                                */
+/*==============================================================*/
+create table Ticket
+(
+   VenueID              char(10) not null  comment '',
+   TicketID             char(20) not null  comment '',
+   primary key (VenueID, TicketID)
+);
+
+INSERT INTO `ticket` VALUES ('V1', 'TV001');
+INSERT INTO `ticket` VALUES ('V1', 'TV002');
+INSERT INTO `ticket` VALUES ('V1', 'TV003');
+INSERT INTO `ticket` VALUES ('V1', 'TV004');
+INSERT INTO `ticket` VALUES ('V2', 'TN001');
+INSERT INTO `ticket` VALUES ('V2', 'TN002');
+INSERT INTO `ticket` VALUES ('V2', 'TV005');
+
+/*==============================================================*/
+/* Table: Venue                                                 */
+/*==============================================================*/
+create table Venue
+(
+   EventID              char(10) not null  comment '',
+   VenueID              char(10) not null  comment '',
+   VenueName            char(50) not null  comment '',
+   VenueTelephone      int not null  comment '',
+   VenueAddress        char(40) not null  comment '',
+   TicketSellNumber     int not null  comment '',
+   Date                 date not null  comment '',
+   StratTime            datetime not null  comment '',
+   FinishTime           datetime not null  comment '',
+   MaxCustomerNumber    int not null  comment '',
+   StaffNumber          int not null  comment '',
+   StratlineAddress     char(50) not null  comment '',
+   FinishlineAddress    char(50) not null  comment '',
+   CHECK (staffNumber<=5),
+   primary key (VenueID)
+);
+
+INSERT INTO `venue` VALUES ('E1', 'V1', 'NCL', 1512315618, 'address1', 500, '2021-10-06', '2021-10-07 23:26:32', '2021-10-08 23:26:37', 1000, 2, 'strataddress', 'finishaddress');
+INSERT INTO `venue` VALUES ('E2', 'V2', 'NCL001', 153153, 'address2', 530, '2021-10-04', '2021-10-04 09:00:00', '2021-10-04 12:00:00', 2000, 1, 'strataddress1', 'finishaddress1');
+
+alter table Athlete add constraint FK_ATHLETE_ADMINISTR_TEAM foreign key (AgentID, TeamID)
+      references Team (AgentID, TeamID) on delete restrict on update restrict;
+
+alter table Athlete add constraint FK_ATHLETE_MATCH_RACEEVEN foreign key (EventID)
+      references RaceEvent (EventID) on delete restrict on update restrict;
+
+alter table Athlete add constraint FK_ATHLETE_MATCH2_VENUE foreign key (VenueID)
+      references Venue (VenueID) on delete restrict on update restrict;
+
+alter table Customer add constraint FK_CUSTOMER_SELL_TICKET foreign key (VenueID, TicketID)
+      references Ticket (VenueID, TicketID) on delete restrict on update restrict;
+
+alter table Staff add constraint FK_STAFF_ADMINISTR_VENUE foreign key (VenueID)
+      references Venue (VenueID) on delete restrict on update restrict;
+
+alter table Team add constraint FK_TEAM_REPRESENT_TEAMAGEN foreign key (AgentID)
+      references TeamAgent (AgentID) on delete restrict on update restrict;
+
+alter table Ticket add constraint FK_TICKET_SUPPLY_VENUE foreign key (VenueID)
+      references Venue (VenueID) on delete restrict on update restrict;
+
+alter table Venue add constraint FK_VENUE_MATCH3_RACEEVEN foreign key (EventID)
+      references RaceEvent (EventID) on delete restrict on update restrict;
+	  
+	  
+SELECT * from athlete;
+SELECT * from customer;
+SELECT * from raceevent;
+SELECT * from staff;
+SELECT * from team;
+SELECT * from teamagent;
+SELECT * from ticket;
+SELECT * from venue;
+
+
