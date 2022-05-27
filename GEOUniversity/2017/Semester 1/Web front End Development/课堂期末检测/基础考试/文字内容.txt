@@ -1,0 +1,42 @@
+
+
+Style of jeans
+The jeans have become a fashion statement.  
+
+CELEB YOH
+The attention on denim may also represent designers and retailers inability in the past year to come up with styles or must-have items that consumers can get excited about.
+
+Copyright@Hebei GEO University
+
+
+
+
+/*页面公用样式*/
+body{
+	font:14px "microsoft yahei",Arial,Helvetica,sans-serif;
+	color:#666;
+	margin:0px;
+	padding:0px;
+}
+ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+input{
+	border:none;
+}
+img{
+	vertical-align:bottom;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+a{
+	color:#666;
+	text-decoration:none;
+}
+a:hover{
+	color:#FF0700;
+	text-decoration:underline;
+}

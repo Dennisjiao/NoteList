@@ -1,0 +1,41 @@
+
+Beauty of Fashion
+The fashion world does not mind what the real world thinks.
+
+CELEB AYS
+My philosophy of fashion is that I like to make clothes that flatter. We are becoming one of the market leaders in the fashion industry.
+
+Copyright@Hebei GEO University
+
+
+
+
+/*页面公用样式*/
+body{
+	font:14px "microsoft yahei",Arial,Helvetica,sans-serif;
+	color:#666;
+	margin:0px;
+	padding:0px;
+}
+ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+input{
+	border:none;
+}
+img{
+	vertical-align:bottom;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+a{
+	color:#666;
+	text-decoration:none;
+}
+a:hover{
+	color:#FF0700;
+	text-decoration:underline;
+}

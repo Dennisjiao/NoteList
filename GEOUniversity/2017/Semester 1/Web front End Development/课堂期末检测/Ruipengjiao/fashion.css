@@ -1,0 +1,94 @@
+/* CSS Document */
+body{
+    width:1000px;
+	font:14px "microsoft yahei",Arial,Helvetica,sans-serif;
+	color:#666;
+	margin:0 auto;
+	padding:0px;
+}
+.cl{clear:both}
+ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+#title>.left{width:70px;
+             height:60px;
+             margin-left:50px;
+			 background-color:#000000;
+			 line-height:60px;}
+#title>.left{font-size:24px;
+             text-align:center;
+			 color:#FFFFFF;
+			 }
+#title>.right{float:right;
+              margin-top:-20px;
+			  margin-right:60px;
+			  }
+#title>.right>p{font-size:16px;
+                }
+#title>.right>p a{text-decoration:none;
+                  color:#999999;}
+				  
+
+
+#jeans{width:1000px;
+       height:500px;
+	   }
+#ly{width:600px;}
+#ly>.word{text-align:center;
+          
+		  line-height:500px;
+		  h}
+#ly>.word>p{height:10px;
+            font-size:26px;
+			}
+#ly>.wordt{text-align:center;
+           
+		  line-height:500px;}
+#ly>.wordt>p{height:10px;
+             margin-top:10px;}
+#jeans>.pi>img{margin-left:660px;}
+
+
+/*CELEBYOU*/
+#celeb{width:1000px;
+       height:100px;}
+#celeb>.ti{width:200px;
+           text-align:center;
+		   background-color:#006633;
+		   margin-left:400px;}
+#celeb>.tin{width:100px;
+            text-align:center;
+			}
+#celeb>.ti>.tin>p{background-color:#000000;
+                  height:40px;
+				  line-height:40px;
+				  font-size:18px;
+				  color:#FFFFFF;}
+				  
+#celeb>.wo{width:600px;
+           text-align:center;
+		   margin-left:200px;
+		   margin-top:20px;
+           }
+#celeb>.wo>p{font-size:14px;
+            text-align:center;}
+#p{width:1000px;
+   height:320px;}
+#p>.o{width:250px;
+      float:left;}
+#p>.t{width:250px;
+float:left;}
+#p>.s{width:250px;
+float:left;}
+#p>.f{width:250px;
+float:left;}
+
+
+#fin{width:1000px;
+     height:30px;}
+#fin>p{text-align:center;}
+
+

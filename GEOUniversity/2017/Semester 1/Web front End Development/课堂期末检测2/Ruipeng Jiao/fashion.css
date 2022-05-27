@@ -1,0 +1,100 @@
+/* CSS Document */
+
+body{
+    width:1000px;
+	font:14px "microsoft yahei",Arial,Helvetica,sans-serif;
+	color:#666;
+	margin:0 auto;
+	padding:0px;
+}
+.cl{clear:both}
+ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+/*以下为正文*/
+
+#topic>.left{width:70px;
+           height:60px;
+           margin-left:50px;
+		   background-color:#000000;
+		   line-height:60px;}
+#topic>.left{font-size:24px;
+             text-align:center;
+			 color:#FFFFFF;
+			 }
+#topic>.right{float:right;
+              margin-top:-20px;
+			  margin-right:60px;
+			  }
+#topic>.right>p{font-size:16px;
+                }
+#topic>.right>p a{text-decoration:none;
+                  color:#999999;}
+				  
+/*下面是图字div	*/		
+#picm{width:1000px;
+      height:470px;}
+#picm>.a{width:300px;
+         margin-left:100px;
+		 margin-top:20px;}
+#wenzi>.b{
+          width:150px;
+		  margin-top:-250px;
+		  margin-left:600px;}
+#wenzi>.b>p{font-size:24px;
+            width:150px;}
+
+#wenzi>.c{margin-left:600px;
+          width:140px;}	  
+		  
+/*下面是字最多的地方*/
+#tit{width:1000px;
+     height:100px;
+	 }
+#tit>.one{text-align:center;
+          margin-left:420px;
+		  margin-top:10px;
+		  height:30px;
+          }
+          
+#tit>.one>p{font-size:18px;
+            background:#000000;
+			width:150px;
+			color:#FFFFFF;
+			text-align:center;
+			height:30px;
+			line-height:30px;}
+#tit>.two{width:600px;
+          margin-left:220px;
+		  margin-top:5px;}
+		  
+/*四个图*/
+#low{width:1000px;
+   height:320px;}
+
+#low>.a{width:250px;
+      float:left;}
+#low>.b{width:250px;
+      float:left;}
+#low>.c{width:250px;
+      float:left;}
+#low>.d{width:250px;
+      float:left;}
+				  
+#fin{width:1000px;
+     height:60px;}
+#fin>p{text-align:center;
+       margin-top:10px;}				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
