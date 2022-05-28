@@ -1,0 +1,88 @@
+# depslib dependency file v1.0
+1461136997 source:d:\c\student\main.c
+	"stu.h"
+
+1461136899 d:\c\student\stu.h
+	<stdio.h>
+	<stdlib.h>
+
+1461138304 source:e:\cyuyan\student\main.c
+	"stu.h"
+
+1461140887 e:\cyuyan\student\stu.h
+	<stdio.h>
+	<stdlib.h>
+
+1461138306 source:e:\cyuyan\student\stu.c
+	"stu.h"
+
+1493866085 source:e:\c_program\student无文件操作\main.c
+	"stu.h"
+
+1493866067 e:\c_program\student无文件操作\stu.h
+	<stdio.h>
+	<stdlib.h>
+
+1493866193 source:e:\c_program\student无文件操作\stu.c
+	"stu.h"
+
+1493866258 source:e:\c_program\student\main.c
+	"stu.h"
+
+1493866067 e:\c_program\student\stu.h
+	<stdio.h>
+	<stdlib.h>
+
+1493866193 source:e:\c_program\student\stu.c
+	"stu.h"
+
+1493866260 source:e:\c pro\student\main.c
+	"stu.h"
+
+1493866068 e:\c pro\student\stu.h
+	<stdio.h>
+	<stdlib.h>
+
+1494231508 source:e:\c pro\student\stu.c
+	"stu.h"
+
+1525919964 source:f:\学习用的课件什么乱七八糟的\大一下学期\c语言\大系统v1.0\student\main.c
+	"stu.h"
+
+1493866068 f:\学习用的课件什么乱七八糟的\大一下学期\c语言\大系统v1.0\student\stu.h
+	<stdio.h>
+	<stdlib.h>
+
+1526384053 source:f:\学习用的课件什么乱七八糟的\大一下学期\c语言\大系统v1.0\student\stu.c
+	"stu.h"
+
+1527403661 source:f:\学习用的课件什么乱七八糟的\大一下学期\c语言\超tm大的系统v3.0\student\main.c
+	"stu.h"
+
+1527402427 f:\学习用的课件什么乱七八糟的\大一下学期\c语言\超tm大的系统v3.0\student\stu.h
+	<stdio.h>
+	<stdlib.h>
+
+1527402313 source:f:\学习用的课件什么乱七八糟的\大一下学期\c语言\超tm大的系统v3.0\student\stu.c
+	"stu.h"
+
+1529244022 source:f:\学习用的课件什么乱七八糟的\大一下学期\c语言\更tm大的学生管理系统v5.0\student\main.c
+	"stu.h"
+
+1529244033 f:\学习用的课件什么乱七八糟的\大一下学期\c语言\更tm大的学生管理系统v5.0\student\stu.h
+	<stdio.h>
+	<stdlib.h>
+
+1529240345 source:f:\学习用的课件什么乱七八糟的\大一下学期\c语言\更tm大的学生管理系统v5.0\student\stu.c
+	"stu.h"
+
+1529244022 source:f:\学习用的课件什么乱七八糟的\大一下学期\c语言\417109070107焦瑞鹏v5.0\student\main.c
+	"stu.h"
+
+1529244232 f:\学习用的课件什么乱七八糟的\大一下学期\c语言\417109070107焦瑞鹏v5.0\student\stu.h
+	<stdio.h>
+	<stdlib.h>
+
+1529247109 source:f:\学习用的课件什么乱七八糟的\大一下学期\c语言\417109070107焦瑞鹏v5.0\student\stu.c
+	"stu.h"
+

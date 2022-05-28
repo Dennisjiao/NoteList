@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1520497607 source:f:\学习用的课件什么乱七八糟的\大一下学期\c语言\three number\three\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
