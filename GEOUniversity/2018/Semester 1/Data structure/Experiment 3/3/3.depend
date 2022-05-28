@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1546918547 source:f:\学习用的课件什么乱七八糟的\大二上学期\数据结构\shiyan3\3\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h.>
+	<malloc.h>
+	<stack>
+	<string.h>
+	<queue>
+

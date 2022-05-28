@@ -1,0 +1,8 @@
+|YHM
+F <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A => inst4.IN0
+A => inst.IN0
+B => inst1.IN1
+B => inst5.IN0
+
+

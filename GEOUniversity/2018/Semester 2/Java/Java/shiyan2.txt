@@ -1,0 +1,98 @@
+import java.util.Scanner;
+import java.io.*;
+
+class NotSanjiaoException extends Exception{
+    NotSanjiaoException(){
+      super("Exception happen!");
+    }
+
+};
+class sanj
+{
+    double x,y,z;
+    public sanj()
+    {
+       this(3,4,5);
+    }
+    public sanj(double a,double b,double c)
+    {
+       x=a;
+       y=b;
+       z=c;
+    }
+    public double getX()
+    {
+       return x;
+    }
+    public double getY()
+    {
+       return y;
+    }
+    public double getZ()
+    {
+       return z;
+    }
+    public void setX(double newx)
+    {
+       x=newx;
+    }
+    public void setY(double newy)
+    {
+       y=newy;
+    }
+    public void setZ(double newz)
+    {
+       z=newz;
+    }
+    public double getArea()throws NotSanjiaoException
+    {
+       double p,area;
+       if(x+y<=z||x+z<=y||y+z<=x)
+       {
+           throw new NotSanjiaoException();
+       }
+       else
+       {
+           p=(x+y+z)/2;
+           area = Math.sqrt(p*(p-x)*(p-y)*(p-z));
+       }
+       return area;
+    }
+    public String showInfo()throws NotSanjiaoException
+    {
+       if(x+y<=z||x+z<=y||y+z<=x)
+       {
+           throw new NotSanjiaoException();
+       }
+       return(x+" "+y+" "+z);
+    }
+}
+
+public class triangle
+{
+   public static void main(String[] args)
+   {
+       sanj s=new sanj(3,4,5);
+
+       Scanner in=new Scanner(System.in);
+       System.out.println("请输入第一条边的信息:");
+       double x=in.nextDouble();
+       s.setX(x);
+       System.out.println("请输入第二条边的信息:");
+       double y=in.nextDouble();
+       s.setY(y);
+       System.out.println("请输入第三条边的信息:");
+       double z=in.nextDouble();
+       s.setZ(z);
+
+       try
+       {
+           System.out.println("三角形的边长信息为:"+s.showInfo());
+           System.out.println("三角形的面积为:"+s.getArea());
+       }catch(NotSanjiaoException ex){
+           System.out.println("输入的三个边不能构成三角形！");
+           System.exit(-1);
+       }
+
+   }
+}

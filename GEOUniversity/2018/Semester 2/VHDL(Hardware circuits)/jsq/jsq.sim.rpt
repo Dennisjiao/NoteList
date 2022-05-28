@@ -1,0 +1,217 @@
+Simulator report for jsq
+Wed May 29 20:22:31 2019
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 53 nodes     ;
+; Simulation Coverage         ;      78.18 % ;
+; Total Number of Transitions ; 455          ;
+; Family                      ; Stratix      ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                           ;
++-----------------------------------------------------------------+------------+---------------+
+; Option                                                          ; Setting    ; Default Value ;
++-----------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                 ; Functional ; Timing        ;
+; Start time                                                      ; 0 ns       ; 0 ns          ;
+; Vector input source                                             ; jsq.vwf    ;               ;
+; Add pins automatically to simulation output waveforms           ; On         ; On            ;
+; Check outputs                                                   ; Off        ; Off           ;
+; Report simulation coverage                                      ; On         ; On            ;
+; Detect setup and hold time violations                           ; Off        ; Off           ;
+; Detect glitches                                                 ; Off        ; Off           ;
+; Automatically save/load simulation netlist                      ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                      ; Off        ; Off           ;
+; Generate Signal Activity File                                   ; Off        ; Off           ;
+; Group bus channels in simulation results                        ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements ; On         ; On            ;
+; Overwrite Waveform Inputs With Simulation Outputs               ; Off        ;               ;
++-----------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      78.18 % ;
+; Total nodes checked                                 ; 53           ;
+; Total output ports checked                          ; 55           ;
+; Total output ports with complete 1/0-value coverage ; 43           ;
+; Total output ports with no 1/0-value coverage       ; 12           ;
+; Total output ports with no 1-value coverage         ; 12           ;
+; Total output ports with no 0-value coverage         ; 12           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                 ;
++--------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+; Node Name                                                                ; Output Port Name                                                              ; Output Port Type ;
++--------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+; |jsq|process0~0                                                          ; |jsq|process0~0                                                               ; out0             ;
+; |jsq|iq~0                                                                ; |jsq|iq~0                                                                     ; out              ;
+; |jsq|iq~1                                                                ; |jsq|iq~1                                                                     ; out              ;
+; |jsq|iq~2                                                                ; |jsq|iq~2                                                                     ; out              ;
+; |jsq|iq~3                                                                ; |jsq|iq~3                                                                     ; out              ;
+; |jsq|iq~4                                                                ; |jsq|iq~4                                                                     ; out              ;
+; |jsq|iq~5                                                                ; |jsq|iq~5                                                                     ; out              ;
+; |jsq|iq[1]                                                               ; |jsq|iq[1]                                                                    ; out              ;
+; |jsq|iq[0]                                                               ; |jsq|iq[0]                                                                    ; out              ;
+; |jsq|process0~1                                                          ; |jsq|process0~1                                                               ; out0             ;
+; |jsq|iq[2]                                                               ; |jsq|iq[2]                                                                    ; out              ;
+; |jsq|clk                                                                 ; |jsq|clk                                                                      ; out              ;
+; |jsq|clr_l                                                               ; |jsq|clr_l                                                                    ; out              ;
+; |jsq|ld_l                                                                ; |jsq|ld_l                                                                     ; out              ;
+; |jsq|enp                                                                 ; |jsq|enp                                                                      ; out              ;
+; |jsq|ent                                                                 ; |jsq|ent                                                                      ; out              ;
+; |jsq|q[0]                                                                ; |jsq|q[0]                                                                     ; pin_out          ;
+; |jsq|q[1]                                                                ; |jsq|q[1]                                                                     ; pin_out          ;
+; |jsq|q[2]                                                                ; |jsq|q[2]                                                                     ; pin_out          ;
+; |jsq|rco                                                                 ; |jsq|rco                                                                      ; pin_out          ;
+; |jsq|rtl~0                                                               ; |jsq|rtl~0                                                                    ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|result_node[0]                                ; |jsq|lpm_add_sub:add_rtl_0|result_node[0]                                     ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|result_node[1]                                ; |jsq|lpm_add_sub:add_rtl_0|result_node[1]                                     ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|result_node[2]                                ; |jsq|lpm_add_sub:add_rtl_0|result_node[2]                                     ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|unreg_res_node[0]~0             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|unreg_res_node[0]~0                  ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|unreg_res_node[0]               ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|unreg_res_node[0]                    ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~0                             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~0                                  ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~3                             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~3                                  ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|unreg_res_node[2]~1             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|unreg_res_node[2]~1                  ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|unreg_res_node[1]~2             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|unreg_res_node[1]~2                  ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|unreg_res_node[2]               ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|unreg_res_node[2]                    ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|unreg_res_node[1]               ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|unreg_res_node[1]                    ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~6                             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~6                                  ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~7                             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~7                                  ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~8                             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~8                                  ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~9                             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~9                                  ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~10                            ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~10                                 ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~11                            ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~11                                 ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|a_csnbuffer:result_node|cout[2] ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; sout             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|a_csnbuffer:result_node|cout[1] ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|a_csnbuffer:result_node|cout[1]      ; cout             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|a_csnbuffer:result_node|cout[1] ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; sout             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|a_csnbuffer:result_node|cout[0] ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|a_csnbuffer:result_node|cout[0]      ; cout             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|a_csnbuffer:result_node|cout[0] ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; sout             ;
++--------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                               ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; Node Name                                                ; Output Port Name                                         ; Output Port Type ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; |jsq|d[0]                                                ; |jsq|d[0]                                                ; out              ;
+; |jsq|d[1]                                                ; |jsq|d[1]                                                ; out              ;
+; |jsq|d[2]                                                ; |jsq|d[2]                                                ; out              ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[0]~0 ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[0]~0 ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[0]   ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[0]   ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~1             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~1             ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~2             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~2             ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[2]~1 ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[2]~1 ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[2]   ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[2]   ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[1]   ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[1]   ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~4             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~4             ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~5             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~5             ; out0             ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                               ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; Node Name                                                ; Output Port Name                                         ; Output Port Type ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; |jsq|d[0]                                                ; |jsq|d[0]                                                ; out              ;
+; |jsq|d[1]                                                ; |jsq|d[1]                                                ; out              ;
+; |jsq|d[2]                                                ; |jsq|d[2]                                                ; out              ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[0]~0 ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[0]~0 ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[0]   ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[0]   ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~1             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~1             ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~2             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~2             ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[2]~1 ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[2]~1 ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[2]   ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[2]   ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[1]   ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|datab_node[1]   ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~4             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~4             ; out0             ;
+; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~5             ; |jsq|lpm_add_sub:add_rtl_0|addcore:adder|_~5             ; out0             ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 5.1 Build 176 10/26/2005 SJ Full Version
+    Info: Processing started: Wed May 29 20:22:31 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off jsq -c jsq
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      78.18 %
+Info: Number of transitions in simulation is 455
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Processing ended: Wed May 29 20:22:31 2019
+    Info: Elapsed time: 00:00:01
+
+

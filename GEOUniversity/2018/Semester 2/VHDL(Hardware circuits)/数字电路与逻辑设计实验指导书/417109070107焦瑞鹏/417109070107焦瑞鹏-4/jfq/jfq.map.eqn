@@ -1,0 +1,145 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B4L1 is adder:inst3|ci~64
+--operation mode is normal
+
+B4L1 = B[1] & (A[1] # CIN) # !B[1] & A[1] & CIN;
+
+
+--B3L1 is adder:inst2|ci~128
+--operation mode is normal
+
+B3L1 = B[2] & (A[2] # B4L1) # !B[2] & A[2] & B4L1;
+
+
+--B2L1 is adder:inst1|ci~182
+--operation mode is normal
+
+B2L1 = B[3] & (A[3] # B3L1) # !B[3] & A[3] & B3L1;
+
+
+--B1L1 is adder:inst|ci~60
+--operation mode is normal
+
+B1L1 = B[4] & (A[4] # B2L1) # !B[4] & A[4] & B2L1;
+
+
+--B1L2 is adder:inst|si~19
+--operation mode is normal
+
+B1L2 = B[4] $ A[4] $ B2L1;
+
+
+--B2L2 is adder:inst1|si~19
+--operation mode is normal
+
+B2L2 = B[3] $ A[3] $ B3L1;
+
+
+--B3L2 is adder:inst2|si~81
+--operation mode is normal
+
+B3L2 = B[2] $ A[2] $ B4L1;
+
+
+--B4L2 is adder:inst3|si~24
+--operation mode is normal
+
+B4L2 = B[1] $ A[1] $ CIN;
+
+
+--B[4] is B[4]
+--operation mode is input
+
+B[4] = INPUT();
+
+
+--A[4] is A[4]
+--operation mode is input
+
+A[4] = INPUT();
+
+
+--B[3] is B[3]
+--operation mode is input
+
+B[3] = INPUT();
+
+
+--A[3] is A[3]
+--operation mode is input
+
+A[3] = INPUT();
+
+
+--B[2] is B[2]
+--operation mode is input
+
+B[2] = INPUT();
+
+
+--A[2] is A[2]
+--operation mode is input
+
+A[2] = INPUT();
+
+
+--B[1] is B[1]
+--operation mode is input
+
+B[1] = INPUT();
+
+
+--A[1] is A[1]
+--operation mode is input
+
+A[1] = INPUT();
+
+
+--CIN is CIN
+--operation mode is input
+
+CIN = INPUT();
+
+
+--COUT is COUT
+--operation mode is output
+
+COUT = OUTPUT(B1L1);
+
+
+--S[4] is S[4]
+--operation mode is output
+
+S[4] = OUTPUT(B1L2);
+
+
+--S[3] is S[3]
+--operation mode is output
+
+S[3] = OUTPUT(B2L2);
+
+
+--S[2] is S[2]
+--operation mode is output
+
+S[2] = OUTPUT(B3L2);
+
+
+--S[1] is S[1]
+--operation mode is output
+
+S[1] = OUTPUT(B4L2);
+
+

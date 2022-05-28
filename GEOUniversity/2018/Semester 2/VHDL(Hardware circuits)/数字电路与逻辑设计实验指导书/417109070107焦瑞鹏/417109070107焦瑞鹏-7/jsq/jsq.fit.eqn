@@ -1,0 +1,131 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--iq[0] is iq[0] at LC_X17_Y30_N0
+--operation mode is normal
+
+iq[0]_lut_out = ld_l & (A1L16 $ iq[0]) # !ld_l & d[0];
+iq[0] = DFFEAS(iq[0]_lut_out, !GLOBAL(clk), GLOBAL(clr_l), , , , , , );
+
+
+--iq[1] is iq[1] at LC_X17_Y30_N6
+--operation mode is normal
+
+iq[1]_lut_out = ld_l & (A1L1 $ (iq[1])) # !ld_l & (d[1]);
+iq[1] = DFFEAS(iq[1]_lut_out, !GLOBAL(clk), GLOBAL(clr_l), , , , , , );
+
+
+--iq[2] is iq[2] at LC_X17_Y30_N7
+--operation mode is normal
+
+iq[2]_lut_out = ld_l & (iq[2] $ A1L14) # !ld_l & d[2];
+iq[2] = DFFEAS(iq[2]_lut_out, !GLOBAL(clk), GLOBAL(clr_l), , , , , , );
+
+
+--A1L17 is process0~33 at LC_X17_Y30_N2
+--operation mode is normal
+
+A1L17 = ent & iq[1] & iq[2] & iq[0];
+
+
+--A1L16 is process0~0 at LC_X17_Y30_N9
+--operation mode is normal
+
+A1L16 = ent & enp;
+
+
+--A1L1 is add~97 at LC_X17_Y30_N8
+--operation mode is normal
+
+A1L1 = enp & (ent & iq[0]);
+
+
+--A1L14 is iq~284 at LC_X17_Y30_N4
+--operation mode is normal
+
+A1L14 = enp & iq[1] & ent & iq[0];
+
+
+--ent is ent at PIN_L16
+--operation mode is input
+
+ent = INPUT();
+
+
+--d[0] is d[0] at PIN_A15
+--operation mode is input
+
+d[0] = INPUT();
+
+
+--ld_l is ld_l at PIN_E14
+--operation mode is input
+
+ld_l = INPUT();
+
+
+--enp is enp at PIN_D14
+--operation mode is input
+
+enp = INPUT();
+
+
+--clk is clk at PIN_L2
+--operation mode is input
+
+clk = INPUT();
+
+
+--clr_l is clr_l at PIN_L3
+--operation mode is input
+
+clr_l = INPUT();
+
+
+--d[1] is d[1] at PIN_J15
+--operation mode is input
+
+d[1] = INPUT();
+
+
+--d[2] is d[2] at PIN_F14
+--operation mode is input
+
+d[2] = INPUT();
+
+
+--q[0] is q[0] at PIN_F15
+--operation mode is output
+
+q[0] = OUTPUT(iq[0]);
+
+
+--q[1] is q[1] at PIN_D15
+--operation mode is output
+
+q[1] = OUTPUT(iq[1]);
+
+
+--q[2] is q[2] at PIN_C15
+--operation mode is output
+
+q[2] = OUTPUT(iq[2]);
+
+
+--rco is rco at PIN_M15
+--operation mode is output
+
+rco = OUTPUT(A1L17);
+
+
+

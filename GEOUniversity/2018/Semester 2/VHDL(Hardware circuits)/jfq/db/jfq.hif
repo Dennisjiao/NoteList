@@ -1,0 +1,60 @@
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+37
+2006
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+# entity
+adder
+# storage
+db|jfq.(1).cnf
+db|jfq.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+adder.vhd
+7a5e3969adad53ef8688ddcd5f542a6
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+adder:inst
+adder:inst1
+adder:inst2
+adder:inst3
+}
+# end
+# entity
+jfq
+# storage
+db|jfq.(0).cnf
+db|jfq.(0).cnf
+# case_insensitive
+# source_file
+jfq.bdf
+f395165dfeb1f43da43cef3d944a38
+23
+# hierarchies {
+|
+}
+# end
+# complete
+

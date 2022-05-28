@@ -1,0 +1,26 @@
+LIBRARY IEEE;
+USE IEEE STD_LOGIC_1164.ALL;
+ENTITY kk is
+	port(a,b:in std_logic;
+	     f:out std_logic);
+ARCHITECTURE BB of kk is
+BEGIN
+  process(a,b)
+  variable x:std_logic_vector(1 downto 0)
+  BEGIN
+  	x:a&b;
+  	case x is
+  	  when "01"=>f<='1';
+  	  when "10"=>f<='1';
+	  when "00"=>f<='0';
+	  when "11"=>f<='0';
+  	end case;
+  end process;
+ end BB;
+
+//
+//
+ARCHITECTURE BB of kk is
+ BEGIN
+   f<=a xor b;
+  end BB;

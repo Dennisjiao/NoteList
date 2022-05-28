@@ -1,0 +1,7 @@
+
+State Machine - |zhsj|state
+Name state.s101 state.s10 state.s1 state.s 
+state.s 0 0 0 0 
+state.s1 0 0 1 1 
+state.s10 0 1 0 1 
+state.s101 1 0 0 1 

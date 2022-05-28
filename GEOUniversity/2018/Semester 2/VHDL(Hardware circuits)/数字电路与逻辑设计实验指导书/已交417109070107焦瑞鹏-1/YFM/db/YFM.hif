@@ -1,0 +1,33 @@
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+37
+2006
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+# entity
+YFM
+# storage
+db|YFM.(0).cnf
+db|YFM.(0).cnf
+# case_insensitive
+# source_file
+YFM.bdf
+73d6aef098881f9bfaf1c8e87c2e9e9f
+23
+# hierarchies {
+|
+}
+# end
+# complete
+

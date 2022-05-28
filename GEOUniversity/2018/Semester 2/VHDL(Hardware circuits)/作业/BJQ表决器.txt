@@ -1,0 +1,41 @@
+LIBRARY IEEE;
+USE IEEE STD_LOGIC_1164.ALL;
+ENTITY bjq is
+	port(a,b,c:in std_logic;
+	     f:out std_logic);
+ARCHITECTURE BB of bjq is
+BEGIN
+  process(a,b,c)
+  variable x:std_logic_vector(2 downto 0)
+  BEGIN
+  	x:a&b&c;
+  	case x is
+  	  when "011"=>f<='1';
+  	  when "101"=>f<='1';
+  	  when "110"=>f<='1';
+  	  when "111"=>f<='1';
+  	end case;
+  end process;
+ end BB;
+
+
+
+LIBRARY IEEE;
+USE IEEE STD_LOGIC_1164.ALL;
+use std.standard.all;
+ENTITY dsbj is
+	port(a,b,c:in std_logic;
+	     f:out std_logic);
+end dsbj;
+ARCHITECTURE BB of dsbj is
+BEGIN
+    f<='0'when a='0'and b='0'and c='0'
+    else '0'when a='0'and b='0'and c='1'
+else '0'when a='0'and b='1'and c='0'
+else '1'when a='0'and b='1'and c='1'
+else '0'when a='1'and b='0'and c='0'
+else '1'when a='1'and b='0'and c='1'
+else '1'when a='1'and b='1'and c='0'
+else '1'when a='1'and b='1'and c='1'
+     
+end BB;

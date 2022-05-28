@@ -1,0 +1,22 @@
+|jsq
+clk => iq[1].CLK
+clk => iq[0].CLK
+clk => iq[2].CLK
+clr_l => iq[1].ACLR
+clr_l => iq[0].ACLR
+clr_l => iq[2].ACLR
+ld_l => iq~3.OUTPUTSELECT
+ld_l => iq~4.OUTPUTSELECT
+ld_l => iq~5.OUTPUTSELECT
+enp => process0~0.IN1
+ent => process0~0.IN0
+ent => process0~1.IN0
+d[0] => iq~5.DATAB
+d[1] => iq~4.DATAB
+d[2] => iq~3.DATAB
+q[0] <= iq[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= iq[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= iq[2].DB_MAX_OUTPUT_PORT_TYPE
+rco <= process0~1.DB_MAX_OUTPUT_PORT_TYPE
+
+

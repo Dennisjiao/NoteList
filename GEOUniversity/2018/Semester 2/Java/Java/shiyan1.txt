@@ -1,0 +1,101 @@
+enum Grade
+{
+    VIP,
+    General;
+}
+
+class BankAccount
+{
+    private static int LAST_ACCOUNT_NUMBER=0;
+    String accountname;
+    int accountNumber;
+    float balance;
+    Grade grade;
+
+    public BankAccount()
+    {
+        accountname = "zhangsan";
+        accountNumber=000000;
+        balance=0;
+        grade=Grade.General;
+    }
+    public BankAccount(String initname,float initbalance,Grade g)
+    {
+        accountname = initname;
+        accountNumber = ++LAST_ACCOUNT_NUMBER;
+        balance = initbalance;
+        grade = g;
+    }
+    public String getAccountname()
+    {
+        return accountname;
+    }
+    public int getAccountNumber()
+    {
+        return accountNumber;
+    }
+    public float getBalance()
+    {
+        return balance;
+    }
+    public Grade getGrade()
+    {
+        return grade;
+    }
+    public void setAccountname(String accountname)
+    {
+        this.accountname = accountname;
+    }
+    public void setAccountNumber(int accountNumber)
+    {
+        this.accountNumber = accountNumber;
+    }
+    public void setBalance(float balance)
+    {
+        this.balance = balance;
+    }
+    public void setGrade(Grade grade)
+    {
+        this.grade = grade;
+    }
+
+    public String toString()
+    {
+        return(grade+" account "+accountname+" "+new java.text.DecimalFormat("000000").format(accountNumber)+" with balance $ "+balance);
+    }
+    public float deposit(float anAmount)
+    {
+        balance=balance+anAmount;
+        return balance;
+    }
+    public float withdraw(float anAmount)
+    {
+        balance=balance-anAmount;
+        return balance;
+    }
+}
+
+public class account3
+{
+    public static void main(String[] args)
+    {
+        BankAccount anAccount1,anAccount2,anAccount3;
+        anAccount1 = new BankAccount("",0,Grade.General);
+        anAccount2 = new BankAccount("",0,Grade.General);
+        anAccount3 = new BankAccount("",0,Grade.General);
+
+        anAccount1.setAccountname("Mary");
+        anAccount2.setAccountname("Bob");
+        anAccount3.setAccountname("John");
+
+        anAccount1.setBalance(anAccount1.getBalance()+100);
+        System.out.println(anAccount1.toString());
+
+        anAccount2.deposit(300.00f);
+        System.out.println(anAccount2.toString());
+
+        anAccount3.deposit(500.00f);
+        anAccount3.withdraw(400.17f);
+        System.out.println(anAccount3.toString());
+    }
+}

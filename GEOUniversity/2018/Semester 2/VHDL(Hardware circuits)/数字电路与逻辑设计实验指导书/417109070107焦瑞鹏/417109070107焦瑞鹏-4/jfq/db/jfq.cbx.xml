@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="jfq">
+		<CBX_INST_ENTRY INSTANCE_NAME="|jfq|adder:inst3|si" CBX_FILE_NAME="mux_ldc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|jfq|adder:inst2|si" CBX_FILE_NAME="mux_ldc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|jfq|adder:inst2|ci" CBX_FILE_NAME="mux_ldc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|jfq|adder:inst1|ci" CBX_FILE_NAME="mux_ldc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|jfq|adder:inst|lpm_mux:ci" CBX_FILE_NAME="mux_ldc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|jfq|adder:inst1|si" CBX_FILE_NAME="mux_ldc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|jfq|adder:inst3|ci" CBX_FILE_NAME="mux_ldc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|jfq|adder:inst|lpm_mux:si" CBX_FILE_NAME="mux_ldc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

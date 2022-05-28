@@ -1,0 +1,10 @@
+|dsbj
+a => f~0.IN0
+a => f~3.IN0
+b => f~0.IN1
+b => f~1.IN0
+c => f~1.IN1
+c => f~3.IN1
+f <= f~4.DB_MAX_OUTPUT_PORT_TYPE
+
+

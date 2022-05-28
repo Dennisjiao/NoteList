@@ -1,0 +1,61 @@
+|jfq
+COUT <= adder:inst.ci
+A[1] => adder:inst3.a
+A[2] => adder:inst2.a
+A[3] => adder:inst1.a
+A[4] => adder:inst.a
+B[1] => adder:inst3.b
+B[2] => adder:inst2.b
+B[3] => adder:inst1.b
+B[4] => adder:inst.b
+CIN => adder:inst3.c
+S[1] <= adder:inst3.si
+S[2] <= adder:inst2.si
+S[3] <= adder:inst1.si
+S[4] <= adder:inst.si
+
+
+|jfq|adder:inst
+a => Mux~0.IN8
+a => Mux~1.IN8
+b => Mux~0.IN9
+b => Mux~1.IN9
+c => Mux~0.IN10
+c => Mux~1.IN10
+ci <= Mux~1.DB_MAX_OUTPUT_PORT_TYPE
+si <= Mux~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jfq|adder:inst1
+a => Mux~0.IN8
+a => Mux~1.IN8
+b => Mux~0.IN9
+b => Mux~1.IN9
+c => Mux~0.IN10
+c => Mux~1.IN10
+ci <= Mux~1.DB_MAX_OUTPUT_PORT_TYPE
+si <= Mux~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jfq|adder:inst2
+a => Mux~0.IN8
+a => Mux~1.IN8
+b => Mux~0.IN9
+b => Mux~1.IN9
+c => Mux~0.IN10
+c => Mux~1.IN10
+ci <= Mux~1.DB_MAX_OUTPUT_PORT_TYPE
+si <= Mux~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jfq|adder:inst3
+a => Mux~0.IN8
+a => Mux~1.IN8
+b => Mux~0.IN9
+b => Mux~1.IN9
+c => Mux~0.IN10
+c => Mux~1.IN10
+ci <= Mux~1.DB_MAX_OUTPUT_PORT_TYPE
+si <= Mux~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
