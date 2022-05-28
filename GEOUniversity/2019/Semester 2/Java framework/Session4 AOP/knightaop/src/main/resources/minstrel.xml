@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop 
+      http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 定义骑士bean,用于依赖生成骑士对象 -->
+	<bean id="knight" class="sia.knights.BraveKnight">
+		<constructor-arg ref="quest" />
+	</bean>
+
+	<!-- 定义探险任务bean,用于依赖生成探险任务 -->
+	<bean id="quest" class="sia.knights.SlayDragonQuest">
+		<constructor-arg value="#{T(System).out}" />
+	</bean>
+	
+	<!-- 定义游吟诗人bean,用于依赖生成游吟诗人 -->
+	<bean id="minstrel" class="sia.knights.Minstrel">
+		<constructor-arg value="#{T(System).out}" />
+	</bean>
+	
+	<!-- aop配置 -->
+	<aop:config>
+		<!-- 定义切面，通知的处理方法定义在minstrel Bean中 -->
+		<aop:aspect ref="minstrel">
+			<!-- 定义切点，切点定义的探险任务的embarkOnQuest方法上 -->
+			<aop:pointcut id="embark" expression="execution(* *.embarkOnQuest(..))" />
+			<!-- 定义前置通知 -->
+			<aop:before pointcut-ref="embark" method="singBeforeQuest" />
+			<!-- 定义后置通知 -->
+			<aop:after pointcut-ref="embark" method="singAfterQuest" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>

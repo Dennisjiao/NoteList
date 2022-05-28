@@ -1,0 +1,106 @@
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+37
+2006
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+# entity
+reg
+# storage
+db|regs.(0).cnf
+db|regs.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+reg.vhd
+a5a35b7ae4778bb1b7ed7781ce811a4
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+reg:MAR
+reg:IR
+}
+# end
+# entity
+MDR
+# storage
+db|regs.(1).cnf
+db|regs.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+MDR.vhd
+59b89e3fa85cdd1b792ba63099bc3b
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+MDR:MDR
+}
+# end
+# entity
+pc
+# storage
+db|regs.(2).cnf
+db|regs.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+PC.vhd
+f3dbf3a4368b663cb5c66239dbc180
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+pc:PC
+}
+# end
+# entity
+regs
+# storage
+db|regs.(3).cnf
+db|regs.(3).cnf
+# case_insensitive
+# source_file
+regs.bdf
+f2cd547d4d399563e838ec2ca16127bc
+23
+# hierarchies {
+|
+}
+# end
+# complete
+

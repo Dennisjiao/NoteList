@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1575365078 source:d:\memoryallocation\memoryallocation\main.cpp
+	<iostream>
+	<string>
+	<vector>
+
+1577762000 source:f:\学习用的课件什么乱七八糟的\大三上学期\操作系统-张翠军\memoryallocation\memoryallocation\main.cpp
+	<iostream>
+	<string>
+	<vector>
+

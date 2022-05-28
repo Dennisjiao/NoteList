@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1572339280 source:d:\scheduling\scheduling\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1572945828 source:c:\documents and settings\administrator\桌面\scheduling\scheduling\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1577780318 source:f:\学习用的课件什么乱七八糟的\大三上学期\操作系统-张翠军\scheduling\scheduling\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,14 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<body>
+    <%
+	/*
+	* 定义变量msg
+	*/
+	String msg="欢迎您来到教务管理系统！";
+	out.print(msg); //输出给客户端
+	%>	
+	<br>	
+</body>
+</html>

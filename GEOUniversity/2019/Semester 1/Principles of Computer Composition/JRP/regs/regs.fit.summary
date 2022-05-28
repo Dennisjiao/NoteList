@@ -1,0 +1,14 @@
+Fitter Status : Successful - Fri Nov 22 18:21:32 2019
+Quartus II Version : 5.1 Build 176 10/26/2005 SJ Full Version
+Revision Name : regs
+Top-level Entity Name : regs
+Family : Stratix
+Device : EP1S10F484C5
+Timing Models : Final
+Total logic elements : 49 / 10,570 ( < 1 % )
+Total pins : 58 / 336 ( 17 % )
+Total virtual pins : 0
+Total memory bits : 0 / 920,448 ( 0 % )
+DSP block 9-bit elements : 0 / 48 ( 0 % )
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

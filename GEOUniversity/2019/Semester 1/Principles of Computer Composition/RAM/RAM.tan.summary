@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.848 ns
+From           : MAR[2]
+To             : MDR_OUT[2]~reg0
+From Clock     : --
+To Clock       : cs
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.537 ns
+From           : MDR_OUT[3]~reg0
+To             : MDR_OUT[3]
+From Clock     : cs
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.995 ns
+From           : MDR_IN[1]
+To             : ram[20][6]
+From Clock     : --
+To Clock       : cs
+Failed Paths   : 0
+
+Type           : Clock Setup: 'cs'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 179.57 MHz ( period = 5.569 ns )
+From           : ram[4][5]
+To             : MDR_OUT[2]~reg0
+From Clock     : cs
+To Clock       : cs
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

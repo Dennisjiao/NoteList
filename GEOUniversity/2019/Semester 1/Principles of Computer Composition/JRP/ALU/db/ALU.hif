@@ -1,0 +1,96 @@
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+37
+2006
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+# entity
+ALU
+# storage
+db|ALU.(0).cnf
+db|ALU.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ALU.vhd
+aa1d1ceb917b1745cafc371840bc90
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# end
+# entity
+reg
+# storage
+db|ALU.(1).cnf
+db|ALU.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+reg.vhd
+a5a35b7ae4778bb1b7ed7781ce811a4
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# end
+# entity
+YSQ
+# storage
+db|ALU.(2).cnf
+db|ALU.(2).cnf
+# case_insensitive
+# source_file
+YSQ.bdf
+f7178c3245ce8787e969c65f85618687
+23
+# end
+# entity
+MDR
+# storage
+db|ALU.(3).cnf
+db|ALU.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+MDR.vhd
+eba9ca6a921a97673192a791bba2ea4f
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+|
+}
+# end
+# complete
+

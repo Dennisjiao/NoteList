@@ -1,0 +1,20 @@
+#MyEclipse Hibernate Properties
+#Mon May 18 14:38:52 GMT+08:00 2020
+genBasicCompId=true
+sessionFactoryName=hsf.HibernateSessionFactory
+profile=
+daoSFId=
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=false
+keyGenerator=assigned
+genVersionTag=true
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=true
+reSettingsFile=
+configFile=/TransactionDemo/src/hibernate.cfg.xml
+createConfigFile=true

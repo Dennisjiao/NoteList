@@ -1,0 +1,114 @@
+GED
+
+	Undo Commands
+	     1.	Move
+	     2.	Properties
+	     3.	Insert Symbol
+	     4.	Properties
+	     5.	Insert Node
+	     6.	Insert Bus
+	     7.	Resize
+	     8.	Resize
+	     9.	Resize
+	    10.	Insert Bus
+	    11.	Insert Bus
+	    12.	Properties
+	    13.	Properties
+	    14.	Insert Symbol
+	    15.	Insert Symbol
+	    16.	Delete
+	    17.	Properties
+	    18.	Insert Node
+	    19.	Properties
+	    20.	Insert Symbol
+	    21.	Properties
+	    22.	Insert Node
+	    23.	Properties
+	    24.	Insert Bus
+	    25.	Properties
+	    26.	Insert Bus
+	    27.	Properties
+	    28.	Insert Bus
+	    29.	Move
+	    30.	Move
+	    31.	Move
+	    32.	Move
+	    33.	Properties
+	    34.	Properties
+	    35.	Properties
+	    36.	Properties
+	    37.	Move
+	    38.	Insert Symbol
+	    39.	Insert Symbol
+	    40.	Insert Symbol
+	    41.	Insert Bus
+	    42.	Delete
+	    43.	Move
+	    44.	Move
+	    45.	Insert Bus
+	    46.	Move
+	    47.	Insert Symbol
+	    48.	Insert Symbol
+
+
+WED
+
+	Undo Commands
+	     1.	Invert
+	     2.	Edit Waveform
+	     3.	Invert
+	     4.	Node or Bus Properties
+			 *** 
+	     5.	Node or Bus Properties
+			 *** 
+	     6.	Invert
+	     7.	Invert
+	     8.	Invert
+	     9.	Invert
+	    10.	Edit Waveform
+	    11.	Edit Waveform
+	    12.	Invert
+	    13.	Invert
+	    14.	Invert
+	    15.	Invert
+	    16.	Invert
+	    17.	Invert
+	    18.	Invert
+	    19.	Invert
+	    20.	Edit Waveform
+	    21.	Invert
+	    22.	Invert
+	    23.	Invert
+	    24.	Invert
+	    25.	Invert
+	    26.	Edit Waveform
+	    27.	Invert
+	    28.	Invert
+	    29.	Invert
+	    30.	Invert
+	    31.	Invert
+	    32.	Invert
+	    33.	Invert
+	    34.	Invert
+	    35.	Invert
+	    36.	Invert
+	    37.	Invert
+	    38.	Invert
+	    39.	Invert
+	    40.	Invert
+	    41.	Invert
+	    42.	Node or Bus Properties
+			 *** 
+	    43.	Move Node(s)
+	    44.	Move Node(s)
+	    45.	Move Node(s)
+	    46.	Move Node(s)
+	    47.	Insert Node or Bus
+
+
+RPW
+
+	Undo Commands
+	     1.	||Simulation Report||Simulator||Simulation Waveforms
+
+

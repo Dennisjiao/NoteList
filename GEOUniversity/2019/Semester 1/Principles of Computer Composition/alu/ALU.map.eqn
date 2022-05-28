@@ -1,0 +1,512 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L71 is process0~1125
+--operation mode is normal
+
+A1L71 = choice[1] & (a[0] # choice[0]);
+
+
+--A1L72 is process0~1126
+--operation mode is normal
+
+A1L72 = A1L71 & (b[0] # c1[0] & !choice[1]) # !A1L71 & (c1[0] & !choice[1]);
+
+
+--A1L73 is process0~1127
+--operation mode is normal
+
+A1L73 = choice[1] & (choice[0] # a[1]);
+
+
+--A1L74 is process0~1128
+--operation mode is normal
+
+A1L74 = A1L73 & (b[1] # c1[1] & !choice[1]) # !A1L73 & (c1[1] & !choice[1]);
+
+
+--A1L75 is process0~1129
+--operation mode is normal
+
+A1L75 = choice[1] & (choice[0] # a[2]);
+
+
+--A1L76 is process0~1130
+--operation mode is normal
+
+A1L76 = A1L75 & (b[2] # c1[2] & !choice[1]) # !A1L75 & (c1[2] & !choice[1]);
+
+
+--A1L77 is process0~1131
+--operation mode is normal
+
+A1L77 = choice[1] & (choice[0] # a[3]);
+
+
+--A1L78 is process0~1132
+--operation mode is normal
+
+A1L78 = A1L77 & (b[3] # c1[3] & !choice[1]) # !A1L77 & (c1[3] & !choice[1]);
+
+
+--A1L79 is process0~1133
+--operation mode is normal
+
+A1L79 = choice[1] & (choice[0] # a[4]);
+
+
+--A1L80 is process0~1134
+--operation mode is normal
+
+A1L80 = A1L79 & (b[4] # c1[4] & !choice[1]) # !A1L79 & (c1[4] & !choice[1]);
+
+
+--A1L81 is process0~1135
+--operation mode is normal
+
+A1L81 = choice[1] & (choice[0] # a[5]);
+
+
+--A1L82 is process0~1136
+--operation mode is normal
+
+A1L82 = A1L81 & (b[5] # c1[5] & !choice[1]) # !A1L81 & (c1[5] & !choice[1]);
+
+
+--A1L83 is process0~1137
+--operation mode is normal
+
+A1L83 = choice[1] & (choice[0] # a[6]);
+
+
+--A1L84 is process0~1138
+--operation mode is normal
+
+A1L84 = A1L83 & (b[6] # c1[6] & !choice[1]) # !A1L83 & (c1[6] & !choice[1]);
+
+
+--A1L85 is process0~1139
+--operation mode is normal
+
+A1L85 = choice[1] & (choice[0] # a[7]);
+
+
+--A1L86 is process0~1140
+--operation mode is normal
+
+A1L86 = A1L85 & (b[7] # c1[7] & !choice[1]) # !A1L85 & (c1[7] & !choice[1]);
+
+
+--A1L87 is process0~1141
+--operation mode is normal
+
+A1L87 = c1[8] & (!choice[1]);
+
+
+--A1L88 is process0~1142
+--operation mode is normal
+
+A1L88 = !A1L72 & !A1L74 & (choice[1] # !c1[8]);
+
+
+--A1L89 is process0~1143
+--operation mode is normal
+
+A1L89 = !A1L80 & !A1L82 & !A1L84 & !A1L86;
+
+
+--A1L70 is process0~0
+--operation mode is normal
+
+A1L70 = A1L88 & A1L89 & !A1L76 & !A1L78;
+
+
+--A1L10 is add~297
+--operation mode is arithmetic
+
+A1L10_carry_eqn = A1L29;
+A1L10 = A1L27 $ a[0] $ A1L10_carry_eqn;
+
+--A1L11 is add~299
+--operation mode is arithmetic
+
+A1L11 = CARRY(A1L27 & !a[0] & !A1L29 # !A1L27 & (!A1L29 # !a[0]));
+
+
+--A1L12 is add~302
+--operation mode is arithmetic
+
+A1L12_carry_eqn = A1L11;
+A1L12 = A1L30 $ a[1] $ !A1L12_carry_eqn;
+
+--A1L13 is add~304
+--operation mode is arithmetic
+
+A1L13 = CARRY(A1L30 & (a[1] # !A1L11) # !A1L30 & a[1] & !A1L11);
+
+
+--A1L14 is add~307
+--operation mode is arithmetic
+
+A1L14_carry_eqn = A1L13;
+A1L14 = A1L31 $ a[2] $ A1L14_carry_eqn;
+
+--A1L15 is add~309
+--operation mode is arithmetic
+
+A1L15 = CARRY(A1L31 & !a[2] & !A1L13 # !A1L31 & (!A1L13 # !a[2]));
+
+
+--A1L16 is add~312
+--operation mode is arithmetic
+
+A1L16_carry_eqn = A1L15;
+A1L16 = A1L32 $ a[3] $ !A1L16_carry_eqn;
+
+--A1L17 is add~314
+--operation mode is arithmetic
+
+A1L17 = CARRY(A1L32 & (a[3] # !A1L15) # !A1L32 & a[3] & !A1L15);
+
+
+--A1L18 is add~317
+--operation mode is arithmetic
+
+A1L18_carry_eqn = A1L17;
+A1L18 = A1L33 $ a[4] $ A1L18_carry_eqn;
+
+--A1L19 is add~319
+--operation mode is arithmetic
+
+A1L19 = CARRY(A1L33 & !a[4] & !A1L17 # !A1L33 & (!A1L17 # !a[4]));
+
+
+--A1L20 is add~322
+--operation mode is arithmetic
+
+A1L20_carry_eqn = A1L19;
+A1L20 = A1L34 $ a[5] $ !A1L20_carry_eqn;
+
+--A1L21 is add~324
+--operation mode is arithmetic
+
+A1L21 = CARRY(A1L34 & (a[5] # !A1L19) # !A1L34 & a[5] & !A1L19);
+
+
+--A1L22 is add~327
+--operation mode is arithmetic
+
+A1L22_carry_eqn = A1L21;
+A1L22 = A1L35 $ a[6] $ A1L22_carry_eqn;
+
+--A1L23 is add~329
+--operation mode is arithmetic
+
+A1L23 = CARRY(A1L35 & !a[6] & !A1L21 # !A1L35 & (!A1L21 # !a[6]));
+
+
+--A1L24 is add~332
+--operation mode is arithmetic
+
+A1L24_carry_eqn = A1L23;
+A1L24 = A1L36 $ a[7] $ !A1L24_carry_eqn;
+
+--A1L25 is add~334
+--operation mode is arithmetic
+
+A1L25 = CARRY(A1L36 & (a[7] # !A1L23) # !A1L36 & a[7] & !A1L23);
+
+
+--A1L26 is add~337
+--operation mode is normal
+
+A1L26_carry_eqn = A1L25;
+A1L26 = A1L26_carry_eqn $ (choice[1] # choice[0]);
+
+
+--A1L27 is add~342
+--operation mode is normal
+
+A1L27 = b[0] $ (choice[1] # choice[0]);
+
+
+--A1L29 is add~345
+--operation mode is arithmetic
+
+A1L29 = CARRY(choice[1] # choice[0]);
+
+
+--A1L30 is add~348
+--operation mode is normal
+
+A1L30 = b[1] $ (choice[1] # choice[0]);
+
+
+--A1L31 is add~349
+--operation mode is normal
+
+A1L31 = b[2] $ (choice[1] # choice[0]);
+
+
+--A1L32 is add~350
+--operation mode is normal
+
+A1L32 = b[3] $ (choice[1] # choice[0]);
+
+
+--A1L33 is add~351
+--operation mode is normal
+
+A1L33 = b[4] $ (choice[1] # choice[0]);
+
+
+--A1L34 is add~352
+--operation mode is normal
+
+A1L34 = b[5] $ (choice[1] # choice[0]);
+
+
+--A1L35 is add~353
+--operation mode is normal
+
+A1L35 = b[6] $ (choice[1] # choice[0]);
+
+
+--A1L36 is add~354
+--operation mode is normal
+
+A1L36 = b[7] $ (choice[1] # choice[0]);
+
+
+--c1[0] is c1[0]
+--operation mode is normal
+
+c1[0] = choice[1] & (c1[0]) # !choice[1] & A1L10;
+
+
+--c1[1] is c1[1]
+--operation mode is normal
+
+c1[1] = choice[1] & (c1[1]) # !choice[1] & A1L12;
+
+
+--c1[2] is c1[2]
+--operation mode is normal
+
+c1[2] = choice[1] & (c1[2]) # !choice[1] & A1L14;
+
+
+--c1[3] is c1[3]
+--operation mode is normal
+
+c1[3] = choice[1] & (c1[3]) # !choice[1] & A1L16;
+
+
+--c1[4] is c1[4]
+--operation mode is normal
+
+c1[4] = choice[1] & (c1[4]) # !choice[1] & A1L18;
+
+
+--c1[5] is c1[5]
+--operation mode is normal
+
+c1[5] = choice[1] & (c1[5]) # !choice[1] & A1L20;
+
+
+--c1[6] is c1[6]
+--operation mode is normal
+
+c1[6] = choice[1] & (c1[6]) # !choice[1] & A1L22;
+
+
+--c1[7] is c1[7]
+--operation mode is normal
+
+c1[7] = choice[1] & (c1[7]) # !choice[1] & A1L24;
+
+
+--c1[8] is c1[8]
+--operation mode is normal
+
+c1[8] = choice[1] & (c1[8]) # !choice[1] & A1L26;
+
+
+--choice[1] is choice[1]
+--operation mode is input
+
+choice[1] = INPUT();
+
+
+--a[0] is a[0]
+--operation mode is input
+
+a[0] = INPUT();
+
+
+--choice[0] is choice[0]
+--operation mode is input
+
+choice[0] = INPUT();
+
+
+--b[0] is b[0]
+--operation mode is input
+
+b[0] = INPUT();
+
+
+--a[1] is a[1]
+--operation mode is input
+
+a[1] = INPUT();
+
+
+--b[1] is b[1]
+--operation mode is input
+
+b[1] = INPUT();
+
+
+--a[2] is a[2]
+--operation mode is input
+
+a[2] = INPUT();
+
+
+--b[2] is b[2]
+--operation mode is input
+
+b[2] = INPUT();
+
+
+--a[3] is a[3]
+--operation mode is input
+
+a[3] = INPUT();
+
+
+--b[3] is b[3]
+--operation mode is input
+
+b[3] = INPUT();
+
+
+--a[4] is a[4]
+--operation mode is input
+
+a[4] = INPUT();
+
+
+--b[4] is b[4]
+--operation mode is input
+
+b[4] = INPUT();
+
+
+--a[5] is a[5]
+--operation mode is input
+
+a[5] = INPUT();
+
+
+--b[5] is b[5]
+--operation mode is input
+
+b[5] = INPUT();
+
+
+--a[6] is a[6]
+--operation mode is input
+
+a[6] = INPUT();
+
+
+--b[6] is b[6]
+--operation mode is input
+
+b[6] = INPUT();
+
+
+--a[7] is a[7]
+--operation mode is input
+
+a[7] = INPUT();
+
+
+--b[7] is b[7]
+--operation mode is input
+
+b[7] = INPUT();
+
+
+--c[0] is c[0]
+--operation mode is output
+
+c[0] = OUTPUT(A1L72);
+
+
+--c[1] is c[1]
+--operation mode is output
+
+c[1] = OUTPUT(A1L74);
+
+
+--c[2] is c[2]
+--operation mode is output
+
+c[2] = OUTPUT(A1L76);
+
+
+--c[3] is c[3]
+--operation mode is output
+
+c[3] = OUTPUT(A1L78);
+
+
+--c[4] is c[4]
+--operation mode is output
+
+c[4] = OUTPUT(A1L80);
+
+
+--c[5] is c[5]
+--operation mode is output
+
+c[5] = OUTPUT(A1L82);
+
+
+--c[6] is c[6]
+--operation mode is output
+
+c[6] = OUTPUT(A1L84);
+
+
+--c[7] is c[7]
+--operation mode is output
+
+c[7] = OUTPUT(A1L86);
+
+
+--cin is cin
+--operation mode is output
+
+cin = OUTPUT(A1L87);
+
+
+--flag is flag
+--operation mode is output
+
+flag = OUTPUT(A1L70);
+
+

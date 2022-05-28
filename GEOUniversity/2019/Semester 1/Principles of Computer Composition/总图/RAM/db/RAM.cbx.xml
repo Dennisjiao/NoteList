@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="RAM">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ram_256|lpm_mux:Mux_rtl_6" CBX_FILE_NAME="mux_4fc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ram_256|lpm_mux:Mux_rtl_7" CBX_FILE_NAME="mux_4fc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ram_256|lpm_mux:Mux_rtl_4" CBX_FILE_NAME="mux_4fc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ram_256|lpm_mux:Mux_rtl_5" CBX_FILE_NAME="mux_4fc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ram_256|lpm_mux:Mux_rtl_2" CBX_FILE_NAME="mux_4fc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ram_256|lpm_mux:Mux_rtl_3" CBX_FILE_NAME="mux_4fc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ram_256|lpm_mux:Mux_rtl_0" CBX_FILE_NAME="mux_4fc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ram_256|lpm_mux:Mux_rtl_1" CBX_FILE_NAME="mux_4fc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

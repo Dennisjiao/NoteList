@@ -1,0 +1,532 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1L41 is ALU:inst|process0~1049
+--operation mode is normal
+
+B1L41 = B1_c1[8] & (!choice[1]);
+
+
+--C1_ACC[0] is yang:inst4|ACC[0]
+--operation mode is normal
+
+C1_ACC[0]_lut_out = B1L43;
+C1_ACC[0] = DFFEAS(C1_ACC[0]_lut_out, load_ACC, reset, , , , , , );
+
+
+--B1L42 is ALU:inst|process0~1050
+--operation mode is normal
+
+B1L42 = choice[1] & (choice[0] # a[0]);
+
+
+--B1L43 is ALU:inst|process0~1051
+--operation mode is normal
+
+B1L43 = C1_ACC[0] & (B1L42 # B1_c1[0] & !choice[1]) # !C1_ACC[0] & (B1_c1[0] & !choice[1]);
+
+
+--C1_ACC[2] is yang:inst4|ACC[2]
+--operation mode is normal
+
+C1_ACC[2]_lut_out = B1L45;
+C1_ACC[2] = DFFEAS(C1_ACC[2]_lut_out, load_ACC, reset, , , , , , );
+
+
+--B1L44 is ALU:inst|process0~1052
+--operation mode is normal
+
+B1L44 = choice[1] & (choice[0] # a[2]);
+
+
+--B1L45 is ALU:inst|process0~1053
+--operation mode is normal
+
+B1L45 = C1_ACC[2] & (B1L44 # B1_c1[2] & !choice[1]) # !C1_ACC[2] & (B1_c1[2] & !choice[1]);
+
+
+--B1L39 is ALU:inst|flag~78
+--operation mode is normal
+
+B1L39 = !B1L43 & !B1L45 & (choice[1] # !B1_c1[8]);
+
+
+--C1_ACC[6] is yang:inst4|ACC[6]
+--operation mode is normal
+
+C1_ACC[6]_lut_out = B1L47;
+C1_ACC[6] = DFFEAS(C1_ACC[6]_lut_out, load_ACC, reset, , , , , , );
+
+
+--B1L46 is ALU:inst|process0~1054
+--operation mode is normal
+
+B1L46 = choice[1] & (choice[0] # a[6]);
+
+
+--B1L47 is ALU:inst|process0~1055
+--operation mode is normal
+
+B1L47 = C1_ACC[6] & (B1L46 # B1_c1[6] & !choice[1]) # !C1_ACC[6] & (B1_c1[6] & !choice[1]);
+
+
+--C1_ACC[5] is yang:inst4|ACC[5]
+--operation mode is normal
+
+C1_ACC[5]_lut_out = B1L49;
+C1_ACC[5] = DFFEAS(C1_ACC[5]_lut_out, load_ACC, reset, , , , , , );
+
+
+--B1L48 is ALU:inst|process0~1056
+--operation mode is normal
+
+B1L48 = choice[1] & (choice[0] # a[5]);
+
+
+--B1L49 is ALU:inst|process0~1057
+--operation mode is normal
+
+B1L49 = C1_ACC[5] & (B1L48 # B1_c1[5] & !choice[1]) # !C1_ACC[5] & (B1_c1[5] & !choice[1]);
+
+
+--C1_ACC[4] is yang:inst4|ACC[4]
+--operation mode is normal
+
+C1_ACC[4]_lut_out = B1L51;
+C1_ACC[4] = DFFEAS(C1_ACC[4]_lut_out, load_ACC, reset, , , , , , );
+
+
+--B1L50 is ALU:inst|process0~1058
+--operation mode is normal
+
+B1L50 = choice[1] & (choice[0] # a[4]);
+
+
+--B1L51 is ALU:inst|process0~1059
+--operation mode is normal
+
+B1L51 = C1_ACC[4] & (B1L50 # B1_c1[4] & !choice[1]) # !C1_ACC[4] & (B1_c1[4] & !choice[1]);
+
+
+--C1_ACC[7] is yang:inst4|ACC[7]
+--operation mode is normal
+
+C1_ACC[7]_lut_out = B1L53;
+C1_ACC[7] = DFFEAS(C1_ACC[7]_lut_out, load_ACC, reset, , , , , , );
+
+
+--B1L52 is ALU:inst|process0~1060
+--operation mode is normal
+
+B1L52 = choice[1] & (choice[0] # a[7]);
+
+
+--B1L53 is ALU:inst|process0~1061
+--operation mode is normal
+
+B1L53 = C1_ACC[7] & (B1L52 # B1_c1[7] & !choice[1]) # !C1_ACC[7] & (B1_c1[7] & !choice[1]);
+
+
+--B1L40 is ALU:inst|flag~79
+--operation mode is normal
+
+B1L40 = !B1L47 & !B1L49 & !B1L51 & !B1L53;
+
+
+--C1_ACC[1] is yang:inst4|ACC[1]
+--operation mode is normal
+
+C1_ACC[1]_lut_out = B1L55;
+C1_ACC[1] = DFFEAS(C1_ACC[1]_lut_out, load_ACC, reset, , , , , , );
+
+
+--B1L54 is ALU:inst|process0~1062
+--operation mode is normal
+
+B1L54 = choice[1] & (choice[0] # a[1]);
+
+
+--B1L55 is ALU:inst|process0~1063
+--operation mode is normal
+
+B1L55 = C1_ACC[1] & (B1L54 # B1_c1[1] & !choice[1]) # !C1_ACC[1] & (B1_c1[1] & !choice[1]);
+
+
+--C1_ACC[3] is yang:inst4|ACC[3]
+--operation mode is normal
+
+C1_ACC[3]_lut_out = B1L57;
+C1_ACC[3] = DFFEAS(C1_ACC[3]_lut_out, load_ACC, reset, , , , , , );
+
+
+--B1L56 is ALU:inst|process0~1064
+--operation mode is normal
+
+B1L56 = choice[1] & (choice[0] # a[3]);
+
+
+--B1L57 is ALU:inst|process0~1065
+--operation mode is normal
+
+B1L57 = C1_ACC[3] & (B1L56 # B1_c1[3] & !choice[1]) # !C1_ACC[3] & (B1_c1[3] & !choice[1]);
+
+
+--B1_flag is ALU:inst|flag
+--operation mode is normal
+
+B1_flag = B1L39 & B1L40 & !B1L55 & !B1L57;
+
+
+--B1L1 is ALU:inst|add~442
+--operation mode is normal
+
+B1L1_carry_eqn = B1L13;
+B1L1 = B1L1_carry_eqn $ (choice[1] # choice[0]);
+
+
+--B1L2 is ALU:inst|add~447
+--operation mode is arithmetic
+
+B1L2_carry_eqn = B1L20;
+B1L2 = B1L18 $ a[0] $ B1L2_carry_eqn;
+
+--B1L3 is ALU:inst|add~449
+--operation mode is arithmetic
+
+B1L3 = CARRY(B1L18 & !a[0] & !B1L20 # !B1L18 & (!B1L20 # !a[0]));
+
+
+--B1L4 is ALU:inst|add~452
+--operation mode is arithmetic
+
+B1L4_carry_eqn = B1L15;
+B1L4 = B1L21 $ a[2] $ B1L4_carry_eqn;
+
+--B1L5 is ALU:inst|add~454
+--operation mode is arithmetic
+
+B1L5 = CARRY(B1L21 & !a[2] & !B1L15 # !B1L21 & (!B1L15 # !a[2]));
+
+
+--B1L6 is ALU:inst|add~457
+--operation mode is arithmetic
+
+B1L6_carry_eqn = B1L9;
+B1L6 = B1L22 $ a[6] $ B1L6_carry_eqn;
+
+--B1L7 is ALU:inst|add~459
+--operation mode is arithmetic
+
+B1L7 = CARRY(B1L22 & !a[6] & !B1L9 # !B1L22 & (!B1L9 # !a[6]));
+
+
+--B1L8 is ALU:inst|add~462
+--operation mode is arithmetic
+
+B1L8_carry_eqn = B1L11;
+B1L8 = B1L23 $ a[5] $ !B1L8_carry_eqn;
+
+--B1L9 is ALU:inst|add~464
+--operation mode is arithmetic
+
+B1L9 = CARRY(B1L23 & (a[5] # !B1L11) # !B1L23 & a[5] & !B1L11);
+
+
+--B1L10 is ALU:inst|add~467
+--operation mode is arithmetic
+
+B1L10_carry_eqn = B1L17;
+B1L10 = B1L24 $ a[4] $ B1L10_carry_eqn;
+
+--B1L11 is ALU:inst|add~469
+--operation mode is arithmetic
+
+B1L11 = CARRY(B1L24 & !a[4] & !B1L17 # !B1L24 & (!B1L17 # !a[4]));
+
+
+--B1L12 is ALU:inst|add~472
+--operation mode is arithmetic
+
+B1L12_carry_eqn = B1L7;
+B1L12 = B1L25 $ a[7] $ !B1L12_carry_eqn;
+
+--B1L13 is ALU:inst|add~474
+--operation mode is arithmetic
+
+B1L13 = CARRY(B1L25 & (a[7] # !B1L7) # !B1L25 & a[7] & !B1L7);
+
+
+--B1L14 is ALU:inst|add~477
+--operation mode is arithmetic
+
+B1L14_carry_eqn = B1L3;
+B1L14 = B1L26 $ a[1] $ !B1L14_carry_eqn;
+
+--B1L15 is ALU:inst|add~479
+--operation mode is arithmetic
+
+B1L15 = CARRY(B1L26 & (a[1] # !B1L3) # !B1L26 & a[1] & !B1L3);
+
+
+--B1L16 is ALU:inst|add~482
+--operation mode is arithmetic
+
+B1L16_carry_eqn = B1L5;
+B1L16 = B1L27 $ a[3] $ !B1L16_carry_eqn;
+
+--B1L17 is ALU:inst|add~484
+--operation mode is arithmetic
+
+B1L17 = CARRY(B1L27 & (a[3] # !B1L5) # !B1L27 & a[3] & !B1L5);
+
+
+--B1L18 is ALU:inst|add~487
+--operation mode is normal
+
+B1L18 = C1_ACC[0] $ (choice[1] # choice[0]);
+
+
+--B1L20 is ALU:inst|add~490
+--operation mode is arithmetic
+
+B1L20 = CARRY(choice[1] # choice[0]);
+
+
+--B1L21 is ALU:inst|add~493
+--operation mode is normal
+
+B1L21 = C1_ACC[2] $ (choice[1] # choice[0]);
+
+
+--B1L22 is ALU:inst|add~494
+--operation mode is normal
+
+B1L22 = C1_ACC[6] $ (choice[1] # choice[0]);
+
+
+--B1L23 is ALU:inst|add~495
+--operation mode is normal
+
+B1L23 = C1_ACC[5] $ (choice[1] # choice[0]);
+
+
+--B1L24 is ALU:inst|add~496
+--operation mode is normal
+
+B1L24 = C1_ACC[4] $ (choice[1] # choice[0]);
+
+
+--B1L25 is ALU:inst|add~497
+--operation mode is normal
+
+B1L25 = C1_ACC[7] $ (choice[1] # choice[0]);
+
+
+--B1L26 is ALU:inst|add~498
+--operation mode is normal
+
+B1L26 = C1_ACC[1] $ (choice[1] # choice[0]);
+
+
+--B1L27 is ALU:inst|add~499
+--operation mode is normal
+
+B1L27 = C1_ACC[3] $ (choice[1] # choice[0]);
+
+
+--B1_c1[8] is ALU:inst|c1[8]
+--operation mode is normal
+
+B1_c1[8] = choice[1] & (B1_c1[8]) # !choice[1] & B1L1;
+
+
+--B1_c1[0] is ALU:inst|c1[0]
+--operation mode is normal
+
+B1_c1[0] = choice[1] & (B1_c1[0]) # !choice[1] & B1L2;
+
+
+--B1_c1[2] is ALU:inst|c1[2]
+--operation mode is normal
+
+B1_c1[2] = choice[1] & (B1_c1[2]) # !choice[1] & B1L4;
+
+
+--B1_c1[6] is ALU:inst|c1[6]
+--operation mode is normal
+
+B1_c1[6] = choice[1] & (B1_c1[6]) # !choice[1] & B1L6;
+
+
+--B1_c1[5] is ALU:inst|c1[5]
+--operation mode is normal
+
+B1_c1[5] = choice[1] & (B1_c1[5]) # !choice[1] & B1L8;
+
+
+--B1_c1[4] is ALU:inst|c1[4]
+--operation mode is normal
+
+B1_c1[4] = choice[1] & (B1_c1[4]) # !choice[1] & B1L10;
+
+
+--B1_c1[7] is ALU:inst|c1[7]
+--operation mode is normal
+
+B1_c1[7] = choice[1] & (B1_c1[7]) # !choice[1] & B1L12;
+
+
+--B1_c1[1] is ALU:inst|c1[1]
+--operation mode is normal
+
+B1_c1[1] = choice[1] & (B1_c1[1]) # !choice[1] & B1L14;
+
+
+--B1_c1[3] is ALU:inst|c1[3]
+--operation mode is normal
+
+B1_c1[3] = choice[1] & (B1_c1[3]) # !choice[1] & B1L16;
+
+
+--choice[1] is choice[1]
+--operation mode is input
+
+choice[1] = INPUT();
+
+
+--choice[0] is choice[0]
+--operation mode is input
+
+choice[0] = INPUT();
+
+
+--a[0] is a[0]
+--operation mode is input
+
+a[0] = INPUT();
+
+
+--a[2] is a[2]
+--operation mode is input
+
+a[2] = INPUT();
+
+
+--a[6] is a[6]
+--operation mode is input
+
+a[6] = INPUT();
+
+
+--a[5] is a[5]
+--operation mode is input
+
+a[5] = INPUT();
+
+
+--a[4] is a[4]
+--operation mode is input
+
+a[4] = INPUT();
+
+
+--a[7] is a[7]
+--operation mode is input
+
+a[7] = INPUT();
+
+
+--a[1] is a[1]
+--operation mode is input
+
+a[1] = INPUT();
+
+
+--a[3] is a[3]
+--operation mode is input
+
+a[3] = INPUT();
+
+
+--load_ACC is load_ACC
+--operation mode is input
+
+load_ACC = INPUT();
+
+
+--reset is reset
+--operation mode is input
+
+reset = INPUT();
+
+
+--cin is cin
+--operation mode is output
+
+cin = OUTPUT(B1L41);
+
+
+--flag is flag
+--operation mode is output
+
+flag = OUTPUT(B1_flag);
+
+
+--ACC[7] is ACC[7]
+--operation mode is output
+
+ACC[7] = OUTPUT(C1_ACC[7]);
+
+
+--ACC[6] is ACC[6]
+--operation mode is output
+
+ACC[6] = OUTPUT(C1_ACC[6]);
+
+
+--ACC[5] is ACC[5]
+--operation mode is output
+
+ACC[5] = OUTPUT(C1_ACC[5]);
+
+
+--ACC[4] is ACC[4]
+--operation mode is output
+
+ACC[4] = OUTPUT(C1_ACC[4]);
+
+
+--ACC[3] is ACC[3]
+--operation mode is output
+
+ACC[3] = OUTPUT(C1_ACC[3]);
+
+
+--ACC[2] is ACC[2]
+--operation mode is output
+
+ACC[2] = OUTPUT(C1_ACC[2]);
+
+
+--ACC[1] is ACC[1]
+--operation mode is output
+
+ACC[1] = OUTPUT(C1_ACC[1]);
+
+
+--ACC[0] is ACC[0]
+--operation mode is output
+
+ACC[0] = OUTPUT(C1_ACC[0]);
+
+

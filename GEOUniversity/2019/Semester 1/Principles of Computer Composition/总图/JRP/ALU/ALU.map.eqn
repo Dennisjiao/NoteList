@@ -1,0 +1,231 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L22Q is P[0]~reg0
+--operation mode is normal
+
+A1L22Q_lut_out = R_NW & D2[0] # !R_NW & (D1[0]);
+A1L22Q = DFFEAS(A1L22Q_lut_out, LOAD_MDR, RESET, , , , , , );
+
+
+--A1L24Q is P[1]~reg0
+--operation mode is normal
+
+A1L24Q_lut_out = R_NW & D2[1] # !R_NW & (D1[1]);
+A1L24Q = DFFEAS(A1L24Q_lut_out, LOAD_MDR, RESET, , , , , , );
+
+
+--A1L26Q is P[2]~reg0
+--operation mode is normal
+
+A1L26Q_lut_out = R_NW & D2[2] # !R_NW & (D1[2]);
+A1L26Q = DFFEAS(A1L26Q_lut_out, LOAD_MDR, RESET, , , , , , );
+
+
+--A1L28Q is P[3]~reg0
+--operation mode is normal
+
+A1L28Q_lut_out = R_NW & D2[3] # !R_NW & (D1[3]);
+A1L28Q = DFFEAS(A1L28Q_lut_out, LOAD_MDR, RESET, , , , , , );
+
+
+--A1L30Q is P[4]~reg0
+--operation mode is normal
+
+A1L30Q_lut_out = R_NW & D2[4] # !R_NW & (D1[4]);
+A1L30Q = DFFEAS(A1L30Q_lut_out, LOAD_MDR, RESET, , , , , , );
+
+
+--A1L32Q is P[5]~reg0
+--operation mode is normal
+
+A1L32Q_lut_out = R_NW & D2[5] # !R_NW & (D1[5]);
+A1L32Q = DFFEAS(A1L32Q_lut_out, LOAD_MDR, RESET, , , , , , );
+
+
+--A1L34Q is P[6]~reg0
+--operation mode is normal
+
+A1L34Q_lut_out = R_NW & D2[6] # !R_NW & (D1[6]);
+A1L34Q = DFFEAS(A1L34Q_lut_out, LOAD_MDR, RESET, , , , , , );
+
+
+--A1L36Q is P[7]~reg0
+--operation mode is normal
+
+A1L36Q_lut_out = R_NW & D2[7] # !R_NW & (D1[7]);
+A1L36Q = DFFEAS(A1L36Q_lut_out, LOAD_MDR, RESET, , , , , , );
+
+
+--D2[0] is D2[0]
+--operation mode is input
+
+D2[0] = INPUT();
+
+
+--D1[0] is D1[0]
+--operation mode is input
+
+D1[0] = INPUT();
+
+
+--R_NW is R_NW
+--operation mode is input
+
+R_NW = INPUT();
+
+
+--LOAD_MDR is LOAD_MDR
+--operation mode is input
+
+LOAD_MDR = INPUT();
+
+
+--RESET is RESET
+--operation mode is input
+
+RESET = INPUT();
+
+
+--D2[1] is D2[1]
+--operation mode is input
+
+D2[1] = INPUT();
+
+
+--D1[1] is D1[1]
+--operation mode is input
+
+D1[1] = INPUT();
+
+
+--D2[2] is D2[2]
+--operation mode is input
+
+D2[2] = INPUT();
+
+
+--D1[2] is D1[2]
+--operation mode is input
+
+D1[2] = INPUT();
+
+
+--D2[3] is D2[3]
+--operation mode is input
+
+D2[3] = INPUT();
+
+
+--D1[3] is D1[3]
+--operation mode is input
+
+D1[3] = INPUT();
+
+
+--D2[4] is D2[4]
+--operation mode is input
+
+D2[4] = INPUT();
+
+
+--D1[4] is D1[4]
+--operation mode is input
+
+D1[4] = INPUT();
+
+
+--D2[5] is D2[5]
+--operation mode is input
+
+D2[5] = INPUT();
+
+
+--D1[5] is D1[5]
+--operation mode is input
+
+D1[5] = INPUT();
+
+
+--D2[6] is D2[6]
+--operation mode is input
+
+D2[6] = INPUT();
+
+
+--D1[6] is D1[6]
+--operation mode is input
+
+D1[6] = INPUT();
+
+
+--D2[7] is D2[7]
+--operation mode is input
+
+D2[7] = INPUT();
+
+
+--D1[7] is D1[7]
+--operation mode is input
+
+D1[7] = INPUT();
+
+
+--P[0] is P[0]
+--operation mode is output
+
+P[0] = OUTPUT(A1L22Q);
+
+
+--P[1] is P[1]
+--operation mode is output
+
+P[1] = OUTPUT(A1L24Q);
+
+
+--P[2] is P[2]
+--operation mode is output
+
+P[2] = OUTPUT(A1L26Q);
+
+
+--P[3] is P[3]
+--operation mode is output
+
+P[3] = OUTPUT(A1L28Q);
+
+
+--P[4] is P[4]
+--operation mode is output
+
+P[4] = OUTPUT(A1L30Q);
+
+
+--P[5] is P[5]
+--operation mode is output
+
+P[5] = OUTPUT(A1L32Q);
+
+
+--P[6] is P[6]
+--operation mode is output
+
+P[6] = OUTPUT(A1L34Q);
+
+
+--P[7] is P[7]
+--operation mode is output
+
+P[7] = OUTPUT(A1L36Q);
+
+

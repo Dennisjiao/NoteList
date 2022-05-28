@@ -1,0 +1,3475 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L70Q is MDR_OUT[0]~reg0 at LC_X24_Y24_N4
+--operation mode is normal
+
+A1L70Q_lut_out = MAR[0] & (A1L104) # !MAR[0] & A1L94;
+A1L70Q = DFFEAS(A1L70Q_lut_out, GLOBAL(cs), GLOBAL(reset), , , MDR_IN[0], , , !R_NW);
+
+
+--A1L72Q is MDR_OUT[1]~reg0 at LC_X24_Y24_N3
+--operation mode is normal
+
+A1L72Q_lut_out = MAR[0] & (A1L124) # !MAR[0] & A1L114;
+A1L72Q = DFFEAS(A1L72Q_lut_out, GLOBAL(cs), GLOBAL(reset), , , MDR_IN[1], , , !R_NW);
+
+
+--A1L74Q is MDR_OUT[2]~reg0 at LC_X24_Y23_N6
+--operation mode is normal
+
+A1L74Q_lut_out = MAR[0] & (A1L144) # !MAR[0] & A1L134;
+A1L74Q = DFFEAS(A1L74Q_lut_out, GLOBAL(cs), GLOBAL(reset), , , MDR_IN[2], , , !R_NW);
+
+
+--A1L76Q is MDR_OUT[3]~reg0 at LC_X23_Y25_N2
+--operation mode is normal
+
+A1L76Q_lut_out = MAR[0] & A1L164 # !MAR[0] & (A1L154);
+A1L76Q = DFFEAS(A1L76Q_lut_out, GLOBAL(cs), GLOBAL(reset), , , MDR_IN[3], , , !R_NW);
+
+
+--A1L78Q is MDR_OUT[4]~reg0 at LC_X24_Y23_N4
+--operation mode is normal
+
+A1L78Q_lut_out = MAR[0] & (A1L184) # !MAR[0] & A1L174;
+A1L78Q = DFFEAS(A1L78Q_lut_out, GLOBAL(cs), GLOBAL(reset), , , MDR_IN[4], , , !R_NW);
+
+
+--A1L80Q is MDR_OUT[5]~reg0 at LC_X27_Y24_N4
+--operation mode is normal
+
+A1L80Q_lut_out = MAR[0] & (A1L204) # !MAR[0] & A1L194;
+A1L80Q = DFFEAS(A1L80Q_lut_out, GLOBAL(cs), GLOBAL(reset), , , MDR_IN[5], , , !R_NW);
+
+
+--A1L82Q is MDR_OUT[6]~reg0 at LC_X28_Y23_N3
+--operation mode is normal
+
+A1L82Q_lut_out = MAR[0] & (A1L224) # !MAR[0] & A1L214;
+A1L82Q = DFFEAS(A1L82Q_lut_out, GLOBAL(cs), GLOBAL(reset), , , MDR_IN[6], , , !R_NW);
+
+
+--A1L84Q is MDR_OUT[7]~reg0 at LC_X28_Y26_N3
+--operation mode is normal
+
+A1L84Q_lut_out = MAR[0] & (A1L244) # !MAR[0] & A1L234;
+A1L84Q = DFFEAS(A1L84Q_lut_out, GLOBAL(cs), GLOBAL(reset), , , MDR_IN[7], , , !R_NW);
+
+
+--ram[2][7] is ram[2][7] at LC_X28_Y22_N5
+--operation mode is normal
+
+ram[2][7]_lut_out = MDR_IN[0];
+ram[2][7] = DFFEAS(ram[2][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L7, , , , );
+
+
+--A1L85 is MDR_OUT~832 at LC_X28_Y24_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][7]_qfbk = ram[10][7];
+A1L85 = MAR[2] & (MAR[3]) # !MAR[2] & (MAR[3] & (ram[10][7]_qfbk) # !MAR[3] & ram[2][7]);
+
+--ram[10][7] is ram[10][7] at LC_X28_Y24_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][7] = DFFEAS(A1L85, GLOBAL(cs), GLOBAL(reset), , A1L5, MDR_IN[0], , , VCC);
+
+
+--ram[14][7] is ram[14][7] at LC_X29_Y24_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[14][7]_lut_out = GND;
+ram[14][7] = DFFEAS(ram[14][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L9, MDR_IN[0], , , VCC);
+
+
+--A1L86 is MDR_OUT~833 at LC_X23_Y24_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[6][7]_qfbk = ram[6][7];
+A1L86 = MAR[2] & (A1L85 & ram[14][7] # !A1L85 & (ram[6][7]_qfbk)) # !MAR[2] & (A1L85);
+
+--ram[6][7] is ram[6][7] at LC_X23_Y24_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[6][7] = DFFEAS(A1L86, GLOBAL(cs), GLOBAL(reset), , A1L3, MDR_IN[0], , , VCC);
+
+
+--ram[16][7] is ram[16][7] at LC_X27_Y22_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[16][7]_lut_out = GND;
+ram[16][7] = DFFEAS(ram[16][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L15, MDR_IN[0], , , VCC);
+
+
+--A1L87 is MDR_OUT~834 at LC_X25_Y25_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[24][7]_qfbk = ram[24][7];
+A1L87 = MAR[2] & MAR[3] # !MAR[2] & (MAR[3] & ram[24][7]_qfbk # !MAR[3] & (ram[16][7]));
+
+--ram[24][7] is ram[24][7] at LC_X25_Y25_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[24][7] = DFFEAS(A1L87, GLOBAL(cs), GLOBAL(reset), , A1L13, MDR_IN[0], , , VCC);
+
+
+--ram[28][7] is ram[28][7] at LC_X29_Y23_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][7]_lut_out = GND;
+ram[28][7] = DFFEAS(ram[28][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L17, MDR_IN[0], , , VCC);
+
+
+--A1L88 is MDR_OUT~835 at LC_X27_Y25_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][7]_qfbk = ram[20][7];
+A1L88 = MAR[2] & (A1L87 & (ram[28][7]) # !A1L87 & ram[20][7]_qfbk) # !MAR[2] & A1L87;
+
+--ram[20][7] is ram[20][7] at LC_X27_Y25_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][7] = DFFEAS(A1L88, GLOBAL(cs), GLOBAL(reset), , A1L11, MDR_IN[0], , , VCC);
+
+
+--ram[4][7] is ram[4][7] at LC_X25_Y25_N4
+--operation mode is normal
+
+ram[4][7]_lut_out = !MDR_IN[0];
+ram[4][7] = DFFEAS(ram[4][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L18, , , , );
+
+
+--ram[0][7] is ram[0][7] at LC_X27_Y25_N8
+--operation mode is normal
+
+ram[0][7]_lut_out = !MDR_IN[0];
+ram[0][7] = DFFEAS(ram[0][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L20, , , , );
+
+
+--A1L89 is MDR_OUT~836 at LC_X25_Y24_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[8][7]_qfbk = ram[8][7];
+A1L89 = MAR[2] & MAR[3] # !MAR[2] & (MAR[3] & ram[8][7]_qfbk # !MAR[3] & (!ram[0][7]));
+
+--ram[8][7] is ram[8][7] at LC_X25_Y24_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[8][7] = DFFEAS(A1L89, GLOBAL(cs), GLOBAL(reset), , A1L19, MDR_IN[0], , , VCC);
+
+
+--A1L90 is MDR_OUT~837 at LC_X25_Y24_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][7]_qfbk = ram[12][7];
+A1L90 = MAR[2] & (A1L89 & (ram[12][7]_qfbk) # !A1L89 & !ram[4][7]) # !MAR[2] & (A1L89);
+
+--ram[12][7] is ram[12][7] at LC_X25_Y24_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][7] = DFFEAS(A1L90, GLOBAL(cs), GLOBAL(reset), , A1L21, MDR_IN[0], , , VCC);
+
+
+--A1L91 is MDR_OUT~838 at LC_X24_Y24_N6
+--operation mode is normal
+
+A1L91 = MAR[4] & (MAR[1] # A1L88) # !MAR[4] & A1L90 & !MAR[1];
+
+
+--ram[18][7] is ram[18][7] at LC_X28_Y25_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][7]_lut_out = GND;
+ram[18][7] = DFFEAS(ram[18][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L24, MDR_IN[0], , , VCC);
+
+
+--A1L92 is MDR_OUT~839 at LC_X29_Y22_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[22][7]_qfbk = ram[22][7];
+A1L92 = MAR[3] & MAR[2] # !MAR[3] & (MAR[2] & ram[22][7]_qfbk # !MAR[2] & (ram[18][7]));
+
+--ram[22][7] is ram[22][7] at LC_X29_Y22_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[22][7] = DFFEAS(A1L92, GLOBAL(cs), GLOBAL(reset), , A1L23, MDR_IN[0], , , VCC);
+
+
+--ram[30][7] is ram[30][7] at LC_X29_Y22_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[30][7]_lut_out = GND;
+ram[30][7] = DFFEAS(ram[30][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L25, MDR_IN[0], , , VCC);
+
+
+--A1L93 is MDR_OUT~840 at LC_X29_Y26_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][7]_qfbk = ram[26][7];
+A1L93 = MAR[3] & (A1L92 & (ram[30][7]) # !A1L92 & ram[26][7]_qfbk) # !MAR[3] & A1L92;
+
+--ram[26][7] is ram[26][7] at LC_X29_Y26_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][7] = DFFEAS(A1L93, GLOBAL(cs), GLOBAL(reset), , A1L22, MDR_IN[0], , , VCC);
+
+
+--A1L94 is MDR_OUT~841 at LC_X24_Y24_N9
+--operation mode is normal
+
+A1L94 = MAR[1] & (A1L91 & (A1L93) # !A1L91 & A1L86) # !MAR[1] & A1L91;
+
+
+--ram[17][7] is ram[17][7] at LC_X22_Y22_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[17][7]_lut_out = GND;
+ram[17][7] = DFFEAS(ram[17][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L31, MDR_IN[0], , , VCC);
+
+
+--A1L95 is MDR_OUT~842 at LC_X23_Y22_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][7]_qfbk = ram[21][7];
+A1L95 = MAR[1] & MAR[2] # !MAR[1] & (MAR[2] & ram[21][7]_qfbk # !MAR[2] & (ram[17][7]));
+
+--ram[21][7] is ram[21][7] at LC_X23_Y22_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][7] = DFFEAS(A1L95, GLOBAL(cs), GLOBAL(reset), , A1L29, MDR_IN[0], , , VCC);
+
+
+--ram[23][7] is ram[23][7] at LC_X24_Y21_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][7]_lut_out = GND;
+ram[23][7] = DFFEAS(ram[23][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L33, MDR_IN[0], , , VCC);
+
+
+--A1L96 is MDR_OUT~843 at LC_X23_Y22_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][7]_qfbk = ram[19][7];
+A1L96 = MAR[1] & (A1L95 & (ram[23][7]) # !A1L95 & ram[19][7]_qfbk) # !MAR[1] & A1L95;
+
+--ram[19][7] is ram[19][7] at LC_X23_Y22_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][7] = DFFEAS(A1L96, GLOBAL(cs), GLOBAL(reset), , A1L27, MDR_IN[0], , , VCC);
+
+
+--ram[9][7] is ram[9][7] at LC_X25_Y26_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][7]_lut_out = GND;
+ram[9][7] = DFFEAS(ram[9][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L39, MDR_IN[0], , , VCC);
+
+
+--A1L97 is MDR_OUT~844 at LC_X25_Y23_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][7]_qfbk = ram[13][7];
+A1L97 = MAR[2] & (MAR[1] # ram[13][7]_qfbk) # !MAR[2] & !MAR[1] & (ram[9][7]);
+
+--ram[13][7] is ram[13][7] at LC_X25_Y23_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][7] = DFFEAS(A1L97, GLOBAL(cs), GLOBAL(reset), , A1L37, MDR_IN[0], , , VCC);
+
+
+--ram[15][7] is ram[15][7] at LC_X24_Y25_N6
+--operation mode is normal
+
+ram[15][7]_lut_out = MDR_IN[0];
+ram[15][7] = DFFEAS(ram[15][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L41, , , , );
+
+
+--A1L98 is MDR_OUT~845 at LC_X24_Y25_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][7]_qfbk = ram[11][7];
+A1L98 = MAR[1] & (A1L97 & (ram[15][7]) # !A1L97 & ram[11][7]_qfbk) # !MAR[1] & A1L97;
+
+--ram[11][7] is ram[11][7] at LC_X24_Y25_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][7] = DFFEAS(A1L98, GLOBAL(cs), GLOBAL(reset), , A1L35, MDR_IN[0], , , VCC);
+
+
+--ram[1][7] is ram[1][7] at LC_X29_Y26_N9
+--operation mode is normal
+
+ram[1][7]_lut_out = !MDR_IN[0];
+ram[1][7] = DFFEAS(ram[1][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L44, , , , );
+
+
+--A1L99 is MDR_OUT~846 at LC_X24_Y26_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[5][7]_qfbk = ram[5][7];
+A1L99 = MAR[1] & MAR[2] # !MAR[1] & (MAR[2] & ram[5][7]_qfbk # !MAR[2] & (!ram[1][7]));
+
+--ram[5][7] is ram[5][7] at LC_X24_Y26_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[5][7] = DFFEAS(A1L99, GLOBAL(cs), GLOBAL(reset), , A1L43, MDR_IN[0], , , VCC);
+
+
+--ram[7][7] is ram[7][7] at LC_X24_Y26_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[7][7]_lut_out = GND;
+ram[7][7] = DFFEAS(ram[7][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L45, MDR_IN[0], , , VCC);
+
+
+--A1L100 is MDR_OUT~847 at LC_X25_Y26_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[3][7]_qfbk = ram[3][7];
+A1L100 = MAR[1] & (A1L99 & (ram[7][7]) # !A1L99 & ram[3][7]_qfbk) # !MAR[1] & A1L99;
+
+--ram[3][7] is ram[3][7] at LC_X25_Y26_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[3][7] = DFFEAS(A1L100, GLOBAL(cs), GLOBAL(reset), , A1L42, MDR_IN[0], , , VCC);
+
+
+--A1L101 is MDR_OUT~848 at LC_X24_Y24_N7
+--operation mode is normal
+
+A1L101 = MAR[4] & (MAR[3]) # !MAR[4] & (MAR[3] & A1L98 # !MAR[3] & (A1L100));
+
+
+--ram[25][7] is ram[25][7] at LC_X25_Y22_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[25][7]_lut_out = GND;
+ram[25][7] = DFFEAS(ram[25][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L48, MDR_IN[0], , , VCC);
+
+
+--A1L102 is MDR_OUT~849 at LC_X24_Y21_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[29][7]_qfbk = ram[29][7];
+A1L102 = MAR[1] & MAR[2] # !MAR[1] & (MAR[2] & ram[29][7]_qfbk # !MAR[2] & (ram[25][7]));
+
+--ram[29][7] is ram[29][7] at LC_X24_Y21_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[29][7] = DFFEAS(A1L102, GLOBAL(cs), GLOBAL(reset), , A1L47, MDR_IN[0], , , VCC);
+
+
+--ram[31][7] is ram[31][7] at LC_X23_Y26_N3
+--operation mode is normal
+
+ram[31][7]_lut_out = MDR_IN[0];
+ram[31][7] = DFFEAS(ram[31][7]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L49, , , , );
+
+
+--A1L103 is MDR_OUT~850 at LC_X23_Y21_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[27][7]_qfbk = ram[27][7];
+A1L103 = MAR[1] & (A1L102 & ram[31][7] # !A1L102 & (ram[27][7]_qfbk)) # !MAR[1] & (A1L102);
+
+--ram[27][7] is ram[27][7] at LC_X23_Y21_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[27][7] = DFFEAS(A1L103, GLOBAL(cs), GLOBAL(reset), , A1L46, MDR_IN[0], , , VCC);
+
+
+--A1L104 is MDR_OUT~851 at LC_X24_Y24_N8
+--operation mode is normal
+
+A1L104 = MAR[4] & (A1L101 & (A1L103) # !A1L101 & A1L96) # !MAR[4] & (A1L101);
+
+
+--ram[16][6] is ram[16][6] at LC_X27_Y22_N9
+--operation mode is normal
+
+ram[16][6]_lut_out = MDR_IN[1];
+ram[16][6] = DFFEAS(ram[16][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L15, , , , );
+
+
+--A1L105 is MDR_OUT~852 at LC_X25_Y25_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[24][6]_qfbk = ram[24][6];
+A1L105 = MAR[3] & (ram[24][6]_qfbk # MAR[1]) # !MAR[3] & ram[16][6] & (!MAR[1]);
+
+--ram[24][6] is ram[24][6] at LC_X25_Y25_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[24][6] = DFFEAS(A1L105, GLOBAL(cs), GLOBAL(reset), , A1L13, MDR_IN[1], , , VCC);
+
+
+--ram[26][6] is ram[26][6] at LC_X28_Y25_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][6]_lut_out = GND;
+ram[26][6] = DFFEAS(ram[26][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L22, MDR_IN[1], , , VCC);
+
+
+--A1L106 is MDR_OUT~853 at LC_X28_Y25_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][6]_qfbk = ram[18][6];
+A1L106 = MAR[1] & (A1L105 & (ram[26][6]) # !A1L105 & ram[18][6]_qfbk) # !MAR[1] & A1L105;
+
+--ram[18][6] is ram[18][6] at LC_X28_Y25_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][6] = DFFEAS(A1L106, GLOBAL(cs), GLOBAL(reset), , A1L24, MDR_IN[1], , , VCC);
+
+
+--ram[6][6] is ram[6][6] at LC_X23_Y24_N5
+--operation mode is normal
+
+ram[6][6]_lut_out = !MDR_IN[1];
+ram[6][6] = DFFEAS(ram[6][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L3, , , , );
+
+
+--ram[4][6] is ram[4][6] at LC_X25_Y25_N6
+--operation mode is normal
+
+ram[4][6]_lut_out = !MDR_IN[1];
+ram[4][6] = DFFEAS(ram[4][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L18, , , , );
+
+
+--A1L107 is MDR_OUT~854 at LC_X25_Y24_N6
+--operation mode is normal
+
+A1L107 = MAR[1] & (MAR[3] # !ram[6][6]) # !MAR[1] & (!MAR[3] & !ram[4][6]);
+
+
+--ram[14][6] is ram[14][6] at LC_X29_Y24_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[14][6]_lut_out = GND;
+ram[14][6] = DFFEAS(ram[14][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L9, MDR_IN[1], , , VCC);
+
+
+--A1L108 is MDR_OUT~855 at LC_X25_Y24_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][6]_qfbk = ram[12][6];
+A1L108 = MAR[3] & (A1L107 & ram[14][6] # !A1L107 & (ram[12][6]_qfbk)) # !MAR[3] & (A1L107);
+
+--ram[12][6] is ram[12][6] at LC_X25_Y24_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][6] = DFFEAS(A1L108, GLOBAL(cs), GLOBAL(reset), , A1L21, MDR_IN[1], , , VCC);
+
+
+--ram[0][6] is ram[0][6] at LC_X30_Y22_N2
+--operation mode is normal
+
+ram[0][6]_lut_out = MDR_IN[1];
+ram[0][6] = DFFEAS(ram[0][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L20, , , , );
+
+
+--A1L109 is MDR_OUT~856 at LC_X28_Y22_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][6]_qfbk = ram[2][6];
+A1L109 = MAR[3] & (MAR[1]) # !MAR[3] & (MAR[1] & (ram[2][6]_qfbk) # !MAR[1] & ram[0][6]);
+
+--ram[2][6] is ram[2][6] at LC_X28_Y22_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][6] = DFFEAS(A1L109, GLOBAL(cs), GLOBAL(reset), , A1L7, MDR_IN[1], , , VCC);
+
+
+--ram[10][6] is ram[10][6] at LC_X23_Y24_N7
+--operation mode is normal
+
+ram[10][6]_lut_out = MDR_IN[1];
+ram[10][6] = DFFEAS(ram[10][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L5, , , , );
+
+
+--A1L110 is MDR_OUT~857 at LC_X25_Y24_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[8][6]_qfbk = ram[8][6];
+A1L110 = A1L109 & (ram[10][6] # !MAR[3]) # !A1L109 & MAR[3] & ram[8][6]_qfbk;
+
+--ram[8][6] is ram[8][6] at LC_X25_Y24_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[8][6] = DFFEAS(A1L110, GLOBAL(cs), GLOBAL(reset), , A1L19, MDR_IN[1], , , VCC);
+
+
+--A1L111 is MDR_OUT~858 at LC_X25_Y24_N3
+--operation mode is normal
+
+A1L111 = MAR[2] & (MAR[4] # A1L108) # !MAR[2] & A1L110 & !MAR[4];
+
+
+--ram[20][6] is ram[20][6] at LC_X29_Y27_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][6]_lut_out = GND;
+ram[20][6] = DFFEAS(ram[20][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L11, MDR_IN[1], , , VCC);
+
+
+--A1L112 is MDR_OUT~859 at LC_X29_Y22_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[22][6]_qfbk = ram[22][6];
+A1L112 = MAR[3] & MAR[1] # !MAR[3] & (MAR[1] & ram[22][6]_qfbk # !MAR[1] & (ram[20][6]));
+
+--ram[22][6] is ram[22][6] at LC_X29_Y22_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[22][6] = DFFEAS(A1L112, GLOBAL(cs), GLOBAL(reset), , A1L23, MDR_IN[1], , , VCC);
+
+
+--ram[30][6] is ram[30][6] at LC_X29_Y22_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[30][6]_lut_out = GND;
+ram[30][6] = DFFEAS(ram[30][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L25, MDR_IN[1], , , VCC);
+
+
+--A1L113 is MDR_OUT~860 at LC_X29_Y23_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][6]_qfbk = ram[28][6];
+A1L113 = MAR[3] & (A1L112 & (ram[30][6]) # !A1L112 & ram[28][6]_qfbk) # !MAR[3] & A1L112;
+
+--ram[28][6] is ram[28][6] at LC_X29_Y23_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][6] = DFFEAS(A1L113, GLOBAL(cs), GLOBAL(reset), , A1L17, MDR_IN[1], , , VCC);
+
+
+--A1L114 is MDR_OUT~861 at LC_X24_Y24_N5
+--operation mode is normal
+
+A1L114 = A1L111 & (A1L113 # !MAR[4]) # !A1L111 & A1L106 & (MAR[4]);
+
+
+--ram[17][6] is ram[17][6] at LC_X22_Y22_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[17][6]_lut_out = GND;
+ram[17][6] = DFFEAS(ram[17][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L31, MDR_IN[1], , , VCC);
+
+
+--A1L115 is MDR_OUT~862 at LC_X23_Y23_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[25][6]_qfbk = ram[25][6];
+A1L115 = MAR[3] & (MAR[2] # ram[25][6]_qfbk) # !MAR[3] & !MAR[2] & (ram[17][6]);
+
+--ram[25][6] is ram[25][6] at LC_X23_Y23_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[25][6] = DFFEAS(A1L115, GLOBAL(cs), GLOBAL(reset), , A1L48, MDR_IN[1], , , VCC);
+
+
+--ram[29][6] is ram[29][6] at LC_X24_Y21_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[29][6]_lut_out = GND;
+ram[29][6] = DFFEAS(ram[29][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L47, MDR_IN[1], , , VCC);
+
+
+--A1L116 is MDR_OUT~863 at LC_X23_Y22_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][6]_qfbk = ram[21][6];
+A1L116 = A1L115 & (ram[29][6] # !MAR[2]) # !A1L115 & MAR[2] & ram[21][6]_qfbk;
+
+--ram[21][6] is ram[21][6] at LC_X23_Y22_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][6] = DFFEAS(A1L116, GLOBAL(cs), GLOBAL(reset), , A1L29, MDR_IN[1], , , VCC);
+
+
+--ram[3][6] is ram[3][6] at LC_X25_Y26_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[3][6]_lut_out = GND;
+ram[3][6] = DFFEAS(ram[3][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L42, MDR_IN[1], , , VCC);
+
+
+--A1L117 is MDR_OUT~864 at LC_X24_Y22_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][6]_qfbk = ram[11][6];
+A1L117 = MAR[3] & (MAR[2] # ram[11][6]_qfbk) # !MAR[3] & !MAR[2] & (ram[3][6]);
+
+--ram[11][6] is ram[11][6] at LC_X24_Y22_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][6] = DFFEAS(A1L117, GLOBAL(cs), GLOBAL(reset), , A1L35, MDR_IN[1], , , VCC);
+
+
+--ram[15][6] is ram[15][6] at LC_X24_Y25_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[15][6]_lut_out = GND;
+ram[15][6] = DFFEAS(ram[15][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L41, MDR_IN[1], , , VCC);
+
+
+--A1L118 is MDR_OUT~865 at LC_X24_Y26_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[7][6]_qfbk = ram[7][6];
+A1L118 = MAR[2] & (A1L117 & ram[15][6] # !A1L117 & (ram[7][6]_qfbk)) # !MAR[2] & (A1L117);
+
+--ram[7][6] is ram[7][6] at LC_X24_Y26_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[7][6] = DFFEAS(A1L118, GLOBAL(cs), GLOBAL(reset), , A1L45, MDR_IN[1], , , VCC);
+
+
+--ram[5][6] is ram[5][6] at LC_X24_Y26_N1
+--operation mode is normal
+
+ram[5][6]_lut_out = !MDR_IN[1];
+ram[5][6] = DFFEAS(ram[5][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L43, , , , );
+
+
+--ram[1][6] is ram[1][6] at LC_X29_Y26_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[1][6]_lut_out = GND;
+ram[1][6] = DFFEAS(ram[1][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L44, MDR_IN[1], , , VCC);
+
+
+--A1L119 is MDR_OUT~866 at LC_X25_Y26_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][6]_qfbk = ram[9][6];
+A1L119 = MAR[3] & (MAR[2] # ram[9][6]_qfbk) # !MAR[3] & !MAR[2] & (ram[1][6]);
+
+--ram[9][6] is ram[9][6] at LC_X25_Y26_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][6] = DFFEAS(A1L119, GLOBAL(cs), GLOBAL(reset), , A1L39, MDR_IN[1], , , VCC);
+
+
+--A1L120 is MDR_OUT~867 at LC_X23_Y23_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][6]_qfbk = ram[13][6];
+A1L120 = A1L119 & (ram[13][6]_qfbk # !MAR[2]) # !A1L119 & MAR[2] & (!ram[5][6]);
+
+--ram[13][6] is ram[13][6] at LC_X23_Y23_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][6] = DFFEAS(A1L120, GLOBAL(cs), GLOBAL(reset), , A1L37, MDR_IN[1], , , VCC);
+
+
+--A1L121 is MDR_OUT~868 at LC_X24_Y24_N1
+--operation mode is normal
+
+A1L121 = MAR[4] & MAR[1] # !MAR[4] & (MAR[1] & A1L118 # !MAR[1] & (A1L120));
+
+
+--ram[19][6] is ram[19][6] at LC_X23_Y22_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][6]_lut_out = GND;
+ram[19][6] = DFFEAS(ram[19][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L27, MDR_IN[1], , , VCC);
+
+
+--A1L122 is MDR_OUT~869 at LC_X23_Y21_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[27][6]_qfbk = ram[27][6];
+A1L122 = MAR[3] & (MAR[2] # ram[27][6]_qfbk) # !MAR[3] & !MAR[2] & (ram[19][6]);
+
+--ram[27][6] is ram[27][6] at LC_X23_Y21_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[27][6] = DFFEAS(A1L122, GLOBAL(cs), GLOBAL(reset), , A1L46, MDR_IN[1], , , VCC);
+
+
+--ram[31][6] is ram[31][6] at LC_X23_Y26_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[31][6]_lut_out = GND;
+ram[31][6] = DFFEAS(ram[31][6]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L49, MDR_IN[1], , , VCC);
+
+
+--A1L123 is MDR_OUT~870 at LC_X24_Y21_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][6]_qfbk = ram[23][6];
+A1L123 = MAR[2] & (A1L122 & ram[31][6] # !A1L122 & (ram[23][6]_qfbk)) # !MAR[2] & (A1L122);
+
+--ram[23][6] is ram[23][6] at LC_X24_Y21_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][6] = DFFEAS(A1L123, GLOBAL(cs), GLOBAL(reset), , A1L33, MDR_IN[1], , , VCC);
+
+
+--A1L124 is MDR_OUT~871 at LC_X24_Y24_N2
+--operation mode is normal
+
+A1L124 = MAR[4] & (A1L121 & A1L123 # !A1L121 & (A1L116)) # !MAR[4] & (A1L121);
+
+
+--ram[16][5] is ram[16][5] at LC_X27_Y22_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[16][5]_lut_out = GND;
+ram[16][5] = DFFEAS(ram[16][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L15, MDR_IN[2], , , VCC);
+
+
+--A1L125 is MDR_OUT~872 at LC_X27_Y25_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][5]_qfbk = ram[20][5];
+A1L125 = MAR[2] & (MAR[1] # ram[20][5]_qfbk) # !MAR[2] & !MAR[1] & (ram[16][5]);
+
+--ram[20][5] is ram[20][5] at LC_X27_Y25_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][5] = DFFEAS(A1L125, GLOBAL(cs), GLOBAL(reset), , A1L11, MDR_IN[2], , , VCC);
+
+
+--ram[22][5] is ram[22][5] at LC_X29_Y22_N4
+--operation mode is normal
+
+ram[22][5]_lut_out = MDR_IN[2];
+ram[22][5] = DFFEAS(ram[22][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L23, , , , );
+
+
+--A1L126 is MDR_OUT~873 at LC_X28_Y25_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][5]_qfbk = ram[18][5];
+A1L126 = MAR[1] & (A1L125 & (ram[22][5]) # !A1L125 & ram[18][5]_qfbk) # !MAR[1] & A1L125;
+
+--ram[18][5] is ram[18][5] at LC_X28_Y25_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][5] = DFFEAS(A1L126, GLOBAL(cs), GLOBAL(reset), , A1L24, MDR_IN[2], , , VCC);
+
+
+--ram[8][5] is ram[8][5] at LC_X29_Y24_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[8][5]_lut_out = GND;
+ram[8][5] = DFFEAS(ram[8][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L19, MDR_IN[2], , , VCC);
+
+
+--A1L127 is MDR_OUT~874 at LC_X28_Y24_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][5]_qfbk = ram[12][5];
+A1L127 = MAR[2] & (ram[12][5]_qfbk # MAR[1]) # !MAR[2] & ram[8][5] & (!MAR[1]);
+
+--ram[12][5] is ram[12][5] at LC_X28_Y24_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][5] = DFFEAS(A1L127, GLOBAL(cs), GLOBAL(reset), , A1L21, MDR_IN[2], , , VCC);
+
+
+--ram[14][5] is ram[14][5] at LC_X29_Y24_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[14][5]_lut_out = GND;
+ram[14][5] = DFFEAS(ram[14][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L9, MDR_IN[2], , , VCC);
+
+
+--A1L128 is MDR_OUT~875 at LC_X28_Y24_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][5]_qfbk = ram[10][5];
+A1L128 = MAR[1] & (A1L127 & ram[14][5] # !A1L127 & (ram[10][5]_qfbk)) # !MAR[1] & (A1L127);
+
+--ram[10][5] is ram[10][5] at LC_X28_Y24_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][5] = DFFEAS(A1L128, GLOBAL(cs), GLOBAL(reset), , A1L5, MDR_IN[2], , , VCC);
+
+
+--ram[4][5] is ram[4][5] at LC_X25_Y25_N3
+--operation mode is normal
+
+ram[4][5]_lut_out = !MDR_IN[2];
+ram[4][5] = DFFEAS(ram[4][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L18, , , , );
+
+
+--A1L129 is MDR_OUT~876 at LC_X27_Y25_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[0][5]_qfbk = ram[0][5];
+A1L129 = MAR[2] & (MAR[1] # !ram[4][5]) # !MAR[2] & !MAR[1] & ram[0][5]_qfbk;
+
+--ram[0][5] is ram[0][5] at LC_X27_Y25_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[0][5] = DFFEAS(A1L129, GLOBAL(cs), GLOBAL(reset), , A1L20, MDR_IN[2], , , VCC);
+
+
+--ram[6][5] is ram[6][5] at LC_X23_Y24_N9
+--operation mode is normal
+
+ram[6][5]_lut_out = MDR_IN[2];
+ram[6][5] = DFFEAS(ram[6][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L3, , , , );
+
+
+--A1L130 is MDR_OUT~877 at LC_X28_Y22_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][5]_qfbk = ram[2][5];
+A1L130 = MAR[1] & (A1L129 & (ram[6][5]) # !A1L129 & ram[2][5]_qfbk) # !MAR[1] & A1L129;
+
+--ram[2][5] is ram[2][5] at LC_X28_Y22_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][5] = DFFEAS(A1L130, GLOBAL(cs), GLOBAL(reset), , A1L7, MDR_IN[2], , , VCC);
+
+
+--A1L131 is MDR_OUT~878 at LC_X28_Y24_N3
+--operation mode is normal
+
+A1L131 = MAR[3] & (A1L128 # MAR[4]) # !MAR[3] & (!MAR[4] & A1L130);
+
+
+--ram[24][5] is ram[24][5] at LC_X25_Y25_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[24][5]_lut_out = GND;
+ram[24][5] = DFFEAS(ram[24][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L13, MDR_IN[2], , , VCC);
+
+
+--A1L132 is MDR_OUT~879 at LC_X28_Y21_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][5]_qfbk = ram[28][5];
+A1L132 = MAR[1] & MAR[2] # !MAR[1] & (MAR[2] & ram[28][5]_qfbk # !MAR[2] & (ram[24][5]));
+
+--ram[28][5] is ram[28][5] at LC_X28_Y21_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][5] = DFFEAS(A1L132, GLOBAL(cs), GLOBAL(reset), , A1L17, MDR_IN[2], , , VCC);
+
+
+--ram[30][5] is ram[30][5] at LC_X29_Y23_N7
+--operation mode is normal
+
+ram[30][5]_lut_out = MDR_IN[2];
+ram[30][5] = DFFEAS(ram[30][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L25, , , , );
+
+
+--A1L133 is MDR_OUT~880 at LC_X28_Y21_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][5]_qfbk = ram[26][5];
+A1L133 = A1L132 & (ram[30][5] # !MAR[1]) # !A1L132 & (ram[26][5]_qfbk & MAR[1]);
+
+--ram[26][5] is ram[26][5] at LC_X28_Y21_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][5] = DFFEAS(A1L133, GLOBAL(cs), GLOBAL(reset), , A1L22, MDR_IN[2], , , VCC);
+
+
+--A1L134 is MDR_OUT~881 at LC_X24_Y23_N9
+--operation mode is normal
+
+A1L134 = MAR[4] & (A1L131 & (A1L133) # !A1L131 & A1L126) # !MAR[4] & (A1L131);
+
+
+--ram[17][5] is ram[17][5] at LC_X22_Y22_N6
+--operation mode is normal
+
+ram[17][5]_lut_out = MDR_IN[2];
+ram[17][5] = DFFEAS(ram[17][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L31, , , , );
+
+
+--A1L135 is MDR_OUT~882 at LC_X23_Y22_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][5]_qfbk = ram[19][5];
+A1L135 = MAR[3] & (MAR[1]) # !MAR[3] & (MAR[1] & (ram[19][5]_qfbk) # !MAR[1] & ram[17][5]);
+
+--ram[19][5] is ram[19][5] at LC_X23_Y22_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][5] = DFFEAS(A1L135, GLOBAL(cs), GLOBAL(reset), , A1L27, MDR_IN[2], , , VCC);
+
+
+--ram[27][5] is ram[27][5] at LC_X23_Y21_N1
+--operation mode is normal
+
+ram[27][5]_lut_out = MDR_IN[2];
+ram[27][5] = DFFEAS(ram[27][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L46, , , , );
+
+
+--A1L136 is MDR_OUT~883 at LC_X23_Y23_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[25][5]_qfbk = ram[25][5];
+A1L136 = MAR[3] & (A1L135 & (ram[27][5]) # !A1L135 & ram[25][5]_qfbk) # !MAR[3] & A1L135;
+
+--ram[25][5] is ram[25][5] at LC_X23_Y23_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[25][5] = DFFEAS(A1L136, GLOBAL(cs), GLOBAL(reset), , A1L48, MDR_IN[2], , , VCC);
+
+
+--ram[5][5] is ram[5][5] at LC_X25_Y21_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[5][5]_lut_out = GND;
+ram[5][5] = DFFEAS(ram[5][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L43, MDR_IN[2], , , VCC);
+
+
+--A1L137 is MDR_OUT~884 at LC_X25_Y23_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[7][5]_qfbk = ram[7][5];
+A1L137 = MAR[3] & MAR[1] # !MAR[3] & (MAR[1] & ram[7][5]_qfbk # !MAR[1] & (ram[5][5]));
+
+--ram[7][5] is ram[7][5] at LC_X25_Y23_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[7][5] = DFFEAS(A1L137, GLOBAL(cs), GLOBAL(reset), , A1L45, MDR_IN[2], , , VCC);
+
+
+--ram[15][5] is ram[15][5] at LC_X24_Y25_N2
+--operation mode is normal
+
+ram[15][5]_lut_out = MDR_IN[2];
+ram[15][5] = DFFEAS(ram[15][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L41, , , , );
+
+
+--A1L138 is MDR_OUT~885 at LC_X25_Y23_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][5]_qfbk = ram[13][5];
+A1L138 = MAR[3] & (A1L137 & (ram[15][5]) # !A1L137 & ram[13][5]_qfbk) # !MAR[3] & A1L137;
+
+--ram[13][5] is ram[13][5] at LC_X25_Y23_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][5] = DFFEAS(A1L138, GLOBAL(cs), GLOBAL(reset), , A1L37, MDR_IN[2], , , VCC);
+
+
+--ram[1][5] is ram[1][5] at LC_X29_Y26_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[1][5]_lut_out = GND;
+ram[1][5] = DFFEAS(ram[1][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L44, MDR_IN[2], , , VCC);
+
+
+--A1L139 is MDR_OUT~886 at LC_X25_Y26_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[3][5]_qfbk = ram[3][5];
+A1L139 = MAR[1] & (ram[3][5]_qfbk # MAR[3]) # !MAR[1] & ram[1][5] & (!MAR[3]);
+
+--ram[3][5] is ram[3][5] at LC_X25_Y26_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[3][5] = DFFEAS(A1L139, GLOBAL(cs), GLOBAL(reset), , A1L42, MDR_IN[2], , , VCC);
+
+
+--ram[11][5] is ram[11][5] at LC_X24_Y25_N8
+--operation mode is normal
+
+ram[11][5]_lut_out = MDR_IN[2];
+ram[11][5] = DFFEAS(ram[11][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L35, , , , );
+
+
+--A1L140 is MDR_OUT~887 at LC_X25_Y26_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][5]_qfbk = ram[9][5];
+A1L140 = MAR[3] & (A1L139 & (ram[11][5]) # !A1L139 & ram[9][5]_qfbk) # !MAR[3] & A1L139;
+
+--ram[9][5] is ram[9][5] at LC_X25_Y26_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][5] = DFFEAS(A1L140, GLOBAL(cs), GLOBAL(reset), , A1L39, MDR_IN[2], , , VCC);
+
+
+--A1L141 is MDR_OUT~888 at LC_X24_Y23_N7
+--operation mode is normal
+
+A1L141 = MAR[4] & (MAR[2]) # !MAR[4] & (MAR[2] & A1L138 # !MAR[2] & (A1L140));
+
+
+--ram[21][5] is ram[21][5] at LC_X23_Y22_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][5]_lut_out = GND;
+ram[21][5] = DFFEAS(ram[21][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L29, MDR_IN[2], , , VCC);
+
+
+--A1L142 is MDR_OUT~889 at LC_X24_Y21_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][5]_qfbk = ram[23][5];
+A1L142 = MAR[3] & (MAR[1]) # !MAR[3] & (MAR[1] & (ram[23][5]_qfbk) # !MAR[1] & ram[21][5]);
+
+--ram[23][5] is ram[23][5] at LC_X24_Y21_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][5] = DFFEAS(A1L142, GLOBAL(cs), GLOBAL(reset), , A1L33, MDR_IN[2], , , VCC);
+
+
+--ram[31][5] is ram[31][5] at LC_X22_Y22_N2
+--operation mode is normal
+
+ram[31][5]_lut_out = MDR_IN[2];
+ram[31][5] = DFFEAS(ram[31][5]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L49, , , , );
+
+
+--A1L143 is MDR_OUT~890 at LC_X24_Y21_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[29][5]_qfbk = ram[29][5];
+A1L143 = MAR[3] & (A1L142 & ram[31][5] # !A1L142 & (ram[29][5]_qfbk)) # !MAR[3] & (A1L142);
+
+--ram[29][5] is ram[29][5] at LC_X24_Y21_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[29][5] = DFFEAS(A1L143, GLOBAL(cs), GLOBAL(reset), , A1L47, MDR_IN[2], , , VCC);
+
+
+--A1L144 is MDR_OUT~891 at LC_X24_Y23_N5
+--operation mode is normal
+
+A1L144 = MAR[4] & (A1L141 & (A1L143) # !A1L141 & A1L136) # !MAR[4] & (A1L141);
+
+
+--ram[16][4] is ram[16][4] at LC_X27_Y22_N3
+--operation mode is normal
+
+ram[16][4]_lut_out = MDR_IN[3];
+ram[16][4] = DFFEAS(ram[16][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L15, , , , );
+
+
+--A1L145 is MDR_OUT~892 at LC_X25_Y25_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[24][4]_qfbk = ram[24][4];
+A1L145 = MAR[2] & MAR[3] # !MAR[2] & (MAR[3] & ram[24][4]_qfbk # !MAR[3] & (ram[16][4]));
+
+--ram[24][4] is ram[24][4] at LC_X25_Y25_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[24][4] = DFFEAS(A1L145, GLOBAL(cs), GLOBAL(reset), , A1L13, MDR_IN[3], , , VCC);
+
+
+--ram[28][4] is ram[28][4] at LC_X28_Y21_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][4]_lut_out = GND;
+ram[28][4] = DFFEAS(ram[28][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L17, MDR_IN[3], , , VCC);
+
+
+--A1L146 is MDR_OUT~893 at LC_X27_Y25_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][4]_qfbk = ram[20][4];
+A1L146 = MAR[2] & (A1L145 & (ram[28][4]) # !A1L145 & ram[20][4]_qfbk) # !MAR[2] & A1L145;
+
+--ram[20][4] is ram[20][4] at LC_X27_Y25_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][4] = DFFEAS(A1L146, GLOBAL(cs), GLOBAL(reset), , A1L11, MDR_IN[3], , , VCC);
+
+
+--ram[2][4] is ram[2][4] at LC_X22_Y26_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][4]_lut_out = GND;
+ram[2][4] = DFFEAS(ram[2][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L7, MDR_IN[3], , , VCC);
+
+
+--A1L147 is MDR_OUT~894 at LC_X23_Y24_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][4]_qfbk = ram[10][4];
+A1L147 = MAR[3] & (MAR[2] # ram[10][4]_qfbk) # !MAR[3] & !MAR[2] & (ram[2][4]);
+
+--ram[10][4] is ram[10][4] at LC_X23_Y24_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][4] = DFFEAS(A1L147, GLOBAL(cs), GLOBAL(reset), , A1L5, MDR_IN[3], , , VCC);
+
+
+--ram[14][4] is ram[14][4] at LC_X29_Y24_N5
+--operation mode is normal
+
+ram[14][4]_lut_out = MDR_IN[3];
+ram[14][4] = DFFEAS(ram[14][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L9, , , , );
+
+
+--A1L148 is MDR_OUT~895 at LC_X23_Y24_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[6][4]_qfbk = ram[6][4];
+A1L148 = MAR[2] & (A1L147 & ram[14][4] # !A1L147 & (ram[6][4]_qfbk)) # !MAR[2] & (A1L147);
+
+--ram[6][4] is ram[6][4] at LC_X23_Y24_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[6][4] = DFFEAS(A1L148, GLOBAL(cs), GLOBAL(reset), , A1L3, MDR_IN[3], , , VCC);
+
+
+--ram[0][4] is ram[0][4] at LC_X27_Y25_N3
+--operation mode is normal
+
+ram[0][4]_lut_out = MDR_IN[3];
+ram[0][4] = DFFEAS(ram[0][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L20, , , , );
+
+
+--A1L149 is MDR_OUT~896 at LC_X25_Y24_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[8][4]_qfbk = ram[8][4];
+A1L149 = MAR[2] & MAR[3] # !MAR[2] & (MAR[3] & ram[8][4]_qfbk # !MAR[3] & (ram[0][4]));
+
+--ram[8][4] is ram[8][4] at LC_X25_Y24_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[8][4] = DFFEAS(A1L149, GLOBAL(cs), GLOBAL(reset), , A1L19, MDR_IN[3], , , VCC);
+
+
+--ram[12][4] is ram[12][4] at LC_X25_Y24_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][4]_lut_out = GND;
+ram[12][4] = DFFEAS(ram[12][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L21, MDR_IN[3], , , VCC);
+
+
+--A1L150 is MDR_OUT~897 at LC_X25_Y25_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[4][4]_qfbk = ram[4][4];
+A1L150 = MAR[2] & (A1L149 & (ram[12][4]) # !A1L149 & ram[4][4]_qfbk) # !MAR[2] & A1L149;
+
+--ram[4][4] is ram[4][4] at LC_X25_Y25_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[4][4] = DFFEAS(A1L150, GLOBAL(cs), GLOBAL(reset), , A1L18, MDR_IN[3], , , VCC);
+
+
+--A1L151 is MDR_OUT~898 at LC_X23_Y25_N3
+--operation mode is normal
+
+A1L151 = MAR[4] & MAR[1] # !MAR[4] & (MAR[1] & A1L148 # !MAR[1] & (A1L150));
+
+
+--ram[18][4] is ram[18][4] at LC_X28_Y25_N4
+--operation mode is normal
+
+ram[18][4]_lut_out = MDR_IN[3];
+ram[18][4] = DFFEAS(ram[18][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L24, , , , );
+
+
+--A1L152 is MDR_OUT~899 at LC_X28_Y21_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][4]_qfbk = ram[26][4];
+A1L152 = MAR[3] & (MAR[2] # ram[26][4]_qfbk) # !MAR[3] & !MAR[2] & (ram[18][4]);
+
+--ram[26][4] is ram[26][4] at LC_X28_Y21_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][4] = DFFEAS(A1L152, GLOBAL(cs), GLOBAL(reset), , A1L22, MDR_IN[3], , , VCC);
+
+
+--ram[30][4] is ram[30][4] at LC_X29_Y22_N0
+--operation mode is normal
+
+ram[30][4]_lut_out = MDR_IN[3];
+ram[30][4] = DFFEAS(ram[30][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L25, , , , );
+
+
+--A1L153 is MDR_OUT~900 at LC_X29_Y22_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[22][4]_qfbk = ram[22][4];
+A1L153 = A1L152 & (ram[30][4] # !MAR[2]) # !A1L152 & MAR[2] & ram[22][4]_qfbk;
+
+--ram[22][4] is ram[22][4] at LC_X29_Y22_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[22][4] = DFFEAS(A1L153, GLOBAL(cs), GLOBAL(reset), , A1L23, MDR_IN[3], , , VCC);
+
+
+--A1L154 is MDR_OUT~901 at LC_X23_Y25_N6
+--operation mode is normal
+
+A1L154 = MAR[4] & (A1L151 & (A1L153) # !A1L151 & A1L146) # !MAR[4] & (A1L151);
+
+
+--ram[17][4] is ram[17][4] at LC_X22_Y22_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[17][4]_lut_out = GND;
+ram[17][4] = DFFEAS(ram[17][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L31, MDR_IN[3], , , VCC);
+
+
+--A1L155 is MDR_OUT~902 at LC_X23_Y22_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][4]_qfbk = ram[21][4];
+A1L155 = MAR[1] & MAR[2] # !MAR[1] & (MAR[2] & ram[21][4]_qfbk # !MAR[2] & (ram[17][4]));
+
+--ram[21][4] is ram[21][4] at LC_X23_Y22_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][4] = DFFEAS(A1L155, GLOBAL(cs), GLOBAL(reset), , A1L29, MDR_IN[3], , , VCC);
+
+
+--ram[23][4] is ram[23][4] at LC_X24_Y21_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][4]_lut_out = GND;
+ram[23][4] = DFFEAS(ram[23][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L33, MDR_IN[3], , , VCC);
+
+
+--A1L156 is MDR_OUT~903 at LC_X23_Y22_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][4]_qfbk = ram[19][4];
+A1L156 = MAR[1] & (A1L155 & ram[23][4] # !A1L155 & (ram[19][4]_qfbk)) # !MAR[1] & (A1L155);
+
+--ram[19][4] is ram[19][4] at LC_X23_Y22_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][4] = DFFEAS(A1L156, GLOBAL(cs), GLOBAL(reset), , A1L27, MDR_IN[3], , , VCC);
+
+
+--ram[9][4] is ram[9][4] at LC_X25_Y22_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][4]_lut_out = GND;
+ram[9][4] = DFFEAS(ram[9][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L39, MDR_IN[3], , , VCC);
+
+
+--A1L157 is MDR_OUT~904 at LC_X25_Y23_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][4]_qfbk = ram[13][4];
+A1L157 = MAR[2] & (MAR[1] # ram[13][4]_qfbk) # !MAR[2] & !MAR[1] & (ram[9][4]);
+
+--ram[13][4] is ram[13][4] at LC_X25_Y23_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][4] = DFFEAS(A1L157, GLOBAL(cs), GLOBAL(reset), , A1L37, MDR_IN[3], , , VCC);
+
+
+--ram[15][4] is ram[15][4] at LC_X24_Y25_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[15][4]_lut_out = GND;
+ram[15][4] = DFFEAS(ram[15][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L41, MDR_IN[3], , , VCC);
+
+
+--A1L158 is MDR_OUT~905 at LC_X24_Y25_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][4]_qfbk = ram[11][4];
+A1L158 = MAR[1] & (A1L157 & ram[15][4] # !A1L157 & (ram[11][4]_qfbk)) # !MAR[1] & (A1L157);
+
+--ram[11][4] is ram[11][4] at LC_X24_Y25_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][4] = DFFEAS(A1L158, GLOBAL(cs), GLOBAL(reset), , A1L35, MDR_IN[3], , , VCC);
+
+
+--ram[3][4] is ram[3][4] at LC_X30_Y22_N1
+--operation mode is normal
+
+ram[3][4]_lut_out = !MDR_IN[3];
+ram[3][4] = DFFEAS(ram[3][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L42, , , , );
+
+
+--ram[1][4] is ram[1][4] at LC_X22_Y26_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[1][4]_lut_out = GND;
+ram[1][4] = DFFEAS(ram[1][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L44, MDR_IN[3], , , VCC);
+
+
+--A1L159 is MDR_OUT~906 at LC_X24_Y26_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[5][4]_qfbk = ram[5][4];
+A1L159 = MAR[1] & MAR[2] # !MAR[1] & (MAR[2] & ram[5][4]_qfbk # !MAR[2] & (ram[1][4]));
+
+--ram[5][4] is ram[5][4] at LC_X24_Y26_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[5][4] = DFFEAS(A1L159, GLOBAL(cs), GLOBAL(reset), , A1L43, MDR_IN[3], , , VCC);
+
+
+--A1L160 is MDR_OUT~907 at LC_X24_Y26_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[7][4]_qfbk = ram[7][4];
+A1L160 = MAR[1] & (A1L159 & ram[7][4]_qfbk # !A1L159 & (!ram[3][4])) # !MAR[1] & A1L159;
+
+--ram[7][4] is ram[7][4] at LC_X24_Y26_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[7][4] = DFFEAS(A1L160, GLOBAL(cs), GLOBAL(reset), , A1L45, MDR_IN[3], , , VCC);
+
+
+--A1L161 is MDR_OUT~908 at LC_X23_Y25_N0
+--operation mode is normal
+
+A1L161 = MAR[4] & MAR[3] # !MAR[4] & (MAR[3] & (A1L158) # !MAR[3] & A1L160);
+
+
+--ram[25][4] is ram[25][4] at LC_X25_Y22_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[25][4]_lut_out = GND;
+ram[25][4] = DFFEAS(ram[25][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L48, MDR_IN[3], , , VCC);
+
+
+--A1L162 is MDR_OUT~909 at LC_X24_Y21_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[29][4]_qfbk = ram[29][4];
+A1L162 = MAR[1] & MAR[2] # !MAR[1] & (MAR[2] & ram[29][4]_qfbk # !MAR[2] & (ram[25][4]));
+
+--ram[29][4] is ram[29][4] at LC_X24_Y21_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[29][4] = DFFEAS(A1L162, GLOBAL(cs), GLOBAL(reset), , A1L47, MDR_IN[3], , , VCC);
+
+
+--ram[31][4] is ram[31][4] at LC_X23_Y21_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[31][4]_lut_out = GND;
+ram[31][4] = DFFEAS(ram[31][4]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L49, MDR_IN[3], , , VCC);
+
+
+--A1L163 is MDR_OUT~910 at LC_X23_Y21_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[27][4]_qfbk = ram[27][4];
+A1L163 = A1L162 & (ram[31][4] # !MAR[1]) # !A1L162 & MAR[1] & ram[27][4]_qfbk;
+
+--ram[27][4] is ram[27][4] at LC_X23_Y21_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[27][4] = DFFEAS(A1L163, GLOBAL(cs), GLOBAL(reset), , A1L46, MDR_IN[3], , , VCC);
+
+
+--A1L164 is MDR_OUT~911 at LC_X23_Y25_N7
+--operation mode is normal
+
+A1L164 = MAR[4] & (A1L161 & (A1L163) # !A1L161 & A1L156) # !MAR[4] & A1L161;
+
+
+--ram[16][3] is ram[16][3] at LC_X27_Y22_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[16][3]_lut_out = GND;
+ram[16][3] = DFFEAS(ram[16][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L15, MDR_IN[4], , , VCC);
+
+
+--A1L165 is MDR_OUT~912 at LC_X28_Y25_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][3]_qfbk = ram[18][3];
+A1L165 = MAR[3] & (MAR[1]) # !MAR[3] & (MAR[1] & (ram[18][3]_qfbk) # !MAR[1] & ram[16][3]);
+
+--ram[18][3] is ram[18][3] at LC_X28_Y25_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][3] = DFFEAS(A1L165, GLOBAL(cs), GLOBAL(reset), , A1L24, MDR_IN[4], , , VCC);
+
+
+--ram[26][3] is ram[26][3] at LC_X28_Y25_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][3]_lut_out = GND;
+ram[26][3] = DFFEAS(ram[26][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L22, MDR_IN[4], , , VCC);
+
+
+--A1L166 is MDR_OUT~913 at LC_X25_Y25_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[24][3]_qfbk = ram[24][3];
+A1L166 = A1L165 & (ram[26][3] # !MAR[3]) # !A1L165 & MAR[3] & ram[24][3]_qfbk;
+
+--ram[24][3] is ram[24][3] at LC_X25_Y25_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[24][3] = DFFEAS(A1L166, GLOBAL(cs), GLOBAL(reset), , A1L13, MDR_IN[4], , , VCC);
+
+
+--ram[4][3] is ram[4][3] at LC_X25_Y25_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[4][3]_lut_out = GND;
+ram[4][3] = DFFEAS(ram[4][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L18, MDR_IN[4], , , VCC);
+
+
+--A1L167 is MDR_OUT~914 at LC_X23_Y24_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[6][3]_qfbk = ram[6][3];
+A1L167 = MAR[3] & MAR[1] # !MAR[3] & (MAR[1] & ram[6][3]_qfbk # !MAR[1] & (ram[4][3]));
+
+--ram[6][3] is ram[6][3] at LC_X23_Y24_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[6][3] = DFFEAS(A1L167, GLOBAL(cs), GLOBAL(reset), , A1L3, MDR_IN[4], , , VCC);
+
+
+--ram[14][3] is ram[14][3] at LC_X29_Y24_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[14][3]_lut_out = GND;
+ram[14][3] = DFFEAS(ram[14][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L9, MDR_IN[4], , , VCC);
+
+
+--A1L168 is MDR_OUT~915 at LC_X25_Y24_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][3]_qfbk = ram[12][3];
+A1L168 = MAR[3] & (A1L167 & ram[14][3] # !A1L167 & (ram[12][3]_qfbk)) # !MAR[3] & (A1L167);
+
+--ram[12][3] is ram[12][3] at LC_X25_Y24_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][3] = DFFEAS(A1L168, GLOBAL(cs), GLOBAL(reset), , A1L21, MDR_IN[4], , , VCC);
+
+
+--ram[0][3] is ram[0][3] at LC_X30_Y22_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[0][3]_lut_out = GND;
+ram[0][3] = DFFEAS(ram[0][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L20, MDR_IN[4], , , VCC);
+
+
+--A1L169 is MDR_OUT~916 at LC_X28_Y22_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][3]_qfbk = ram[2][3];
+A1L169 = MAR[3] & (MAR[1]) # !MAR[3] & (MAR[1] & (ram[2][3]_qfbk) # !MAR[1] & ram[0][3]);
+
+--ram[2][3] is ram[2][3] at LC_X28_Y22_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][3] = DFFEAS(A1L169, GLOBAL(cs), GLOBAL(reset), , A1L7, MDR_IN[4], , , VCC);
+
+
+--ram[10][3] is ram[10][3] at LC_X23_Y24_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][3]_lut_out = GND;
+ram[10][3] = DFFEAS(ram[10][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L5, MDR_IN[4], , , VCC);
+
+
+--A1L170 is MDR_OUT~917 at LC_X25_Y24_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[8][3]_qfbk = ram[8][3];
+A1L170 = A1L169 & (ram[10][3] # !MAR[3]) # !A1L169 & MAR[3] & ram[8][3]_qfbk;
+
+--ram[8][3] is ram[8][3] at LC_X25_Y24_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[8][3] = DFFEAS(A1L170, GLOBAL(cs), GLOBAL(reset), , A1L19, MDR_IN[4], , , VCC);
+
+
+--A1L171 is MDR_OUT~918 at LC_X24_Y23_N1
+--operation mode is normal
+
+A1L171 = MAR[4] & (MAR[2]) # !MAR[4] & (MAR[2] & A1L168 # !MAR[2] & (A1L170));
+
+
+--ram[20][3] is ram[20][3] at LC_X29_Y27_N2
+--operation mode is normal
+
+ram[20][3]_lut_out = MDR_IN[4];
+ram[20][3] = DFFEAS(ram[20][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L11, , , , );
+
+
+--A1L172 is MDR_OUT~919 at LC_X29_Y22_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[22][3]_qfbk = ram[22][3];
+A1L172 = MAR[3] & MAR[1] # !MAR[3] & (MAR[1] & ram[22][3]_qfbk # !MAR[1] & (ram[20][3]));
+
+--ram[22][3] is ram[22][3] at LC_X29_Y22_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[22][3] = DFFEAS(A1L172, GLOBAL(cs), GLOBAL(reset), , A1L23, MDR_IN[4], , , VCC);
+
+
+--ram[30][3] is ram[30][3] at LC_X29_Y23_N8
+--operation mode is normal
+
+ram[30][3]_lut_out = MDR_IN[4];
+ram[30][3] = DFFEAS(ram[30][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L25, , , , );
+
+
+--A1L173 is MDR_OUT~920 at LC_X29_Y23_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][3]_qfbk = ram[28][3];
+A1L173 = MAR[3] & (A1L172 & (ram[30][3]) # !A1L172 & ram[28][3]_qfbk) # !MAR[3] & A1L172;
+
+--ram[28][3] is ram[28][3] at LC_X29_Y23_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][3] = DFFEAS(A1L173, GLOBAL(cs), GLOBAL(reset), , A1L17, MDR_IN[4], , , VCC);
+
+
+--A1L174 is MDR_OUT~921 at LC_X24_Y23_N8
+--operation mode is normal
+
+A1L174 = MAR[4] & (A1L171 & A1L173 # !A1L171 & (A1L166)) # !MAR[4] & (A1L171);
+
+
+--ram[5][3] is ram[5][3] at LC_X25_Y21_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[5][3]_lut_out = GND;
+ram[5][3] = DFFEAS(ram[5][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L43, MDR_IN[4], , , VCC);
+
+
+--A1L175 is MDR_OUT~922 at LC_X25_Y23_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][3]_qfbk = ram[13][3];
+A1L175 = MAR[3] & (MAR[4] # ram[13][3]_qfbk) # !MAR[3] & !MAR[4] & (ram[5][3]);
+
+--ram[13][3] is ram[13][3] at LC_X25_Y23_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][3] = DFFEAS(A1L175, GLOBAL(cs), GLOBAL(reset), , A1L37, MDR_IN[4], , , VCC);
+
+
+--ram[29][3] is ram[29][3] at LC_X27_Y23_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[29][3]_lut_out = GND;
+ram[29][3] = DFFEAS(ram[29][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L47, MDR_IN[4], , , VCC);
+
+
+--A1L176 is MDR_OUT~923 at LC_X27_Y23_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][3]_qfbk = ram[21][3];
+A1L176 = A1L175 & (ram[29][3] # !MAR[4]) # !A1L175 & MAR[4] & ram[21][3]_qfbk;
+
+--ram[21][3] is ram[21][3] at LC_X27_Y23_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][3] = DFFEAS(A1L176, GLOBAL(cs), GLOBAL(reset), , A1L29, MDR_IN[4], , , VCC);
+
+
+--ram[3][3] is ram[3][3] at LC_X30_Y22_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[3][3]_lut_out = GND;
+ram[3][3] = DFFEAS(ram[3][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L42, MDR_IN[4], , , VCC);
+
+
+--A1L177 is MDR_OUT~924 at LC_X24_Y22_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][3]_qfbk = ram[11][3];
+A1L177 = MAR[3] & (MAR[4] # ram[11][3]_qfbk) # !MAR[3] & !MAR[4] & (ram[3][3]);
+
+--ram[11][3] is ram[11][3] at LC_X24_Y22_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][3] = DFFEAS(A1L177, GLOBAL(cs), GLOBAL(reset), , A1L35, MDR_IN[4], , , VCC);
+
+
+--ram[27][3] is ram[27][3] at LC_X23_Y21_N8
+--operation mode is normal
+
+ram[27][3]_lut_out = MDR_IN[4];
+ram[27][3] = DFFEAS(ram[27][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L46, , , , );
+
+
+--A1L178 is MDR_OUT~925 at LC_X24_Y22_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][3]_qfbk = ram[19][3];
+A1L178 = MAR[4] & (A1L177 & ram[27][3] # !A1L177 & (ram[19][3]_qfbk)) # !MAR[4] & (A1L177);
+
+--ram[19][3] is ram[19][3] at LC_X24_Y22_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][3] = DFFEAS(A1L178, GLOBAL(cs), GLOBAL(reset), , A1L27, MDR_IN[4], , , VCC);
+
+
+--ram[1][3] is ram[1][3] at LC_X22_Y26_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[1][3]_lut_out = GND;
+ram[1][3] = DFFEAS(ram[1][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L44, MDR_IN[4], , , VCC);
+
+
+--A1L179 is MDR_OUT~926 at LC_X25_Y26_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][3]_qfbk = ram[9][3];
+A1L179 = MAR[3] & (MAR[4] # ram[9][3]_qfbk) # !MAR[3] & !MAR[4] & (ram[1][3]);
+
+--ram[9][3] is ram[9][3] at LC_X25_Y26_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][3] = DFFEAS(A1L179, GLOBAL(cs), GLOBAL(reset), , A1L39, MDR_IN[4], , , VCC);
+
+
+--ram[25][3] is ram[25][3] at LC_X27_Y26_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[25][3]_lut_out = GND;
+ram[25][3] = DFFEAS(ram[25][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L48, MDR_IN[4], , , VCC);
+
+
+--A1L180 is MDR_OUT~927 at LC_X27_Y26_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[17][3]_qfbk = ram[17][3];
+A1L180 = A1L179 & (ram[25][3] # !MAR[4]) # !A1L179 & MAR[4] & ram[17][3]_qfbk;
+
+--ram[17][3] is ram[17][3] at LC_X27_Y26_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[17][3] = DFFEAS(A1L180, GLOBAL(cs), GLOBAL(reset), , A1L31, MDR_IN[4], , , VCC);
+
+
+--A1L181 is MDR_OUT~928 at LC_X24_Y23_N2
+--operation mode is normal
+
+A1L181 = MAR[2] & (MAR[1]) # !MAR[2] & (MAR[1] & (A1L178) # !MAR[1] & A1L180);
+
+
+--ram[7][3] is ram[7][3] at LC_X24_Y26_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[7][3]_lut_out = GND;
+ram[7][3] = DFFEAS(ram[7][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L45, MDR_IN[4], , , VCC);
+
+
+--A1L182 is MDR_OUT~929 at LC_X24_Y25_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[15][3]_qfbk = ram[15][3];
+A1L182 = MAR[4] & MAR[3] # !MAR[4] & (MAR[3] & ram[15][3]_qfbk # !MAR[3] & (ram[7][3]));
+
+--ram[15][3] is ram[15][3] at LC_X24_Y25_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[15][3] = DFFEAS(A1L182, GLOBAL(cs), GLOBAL(reset), , A1L41, MDR_IN[4], , , VCC);
+
+
+--ram[31][3] is ram[31][3] at LC_X22_Y22_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[31][3]_lut_out = GND;
+ram[31][3] = DFFEAS(ram[31][3]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L49, MDR_IN[4], , , VCC);
+
+
+--A1L183 is MDR_OUT~930 at LC_X24_Y21_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][3]_qfbk = ram[23][3];
+A1L183 = A1L182 & (ram[31][3] # !MAR[4]) # !A1L182 & MAR[4] & ram[23][3]_qfbk;
+
+--ram[23][3] is ram[23][3] at LC_X24_Y21_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][3] = DFFEAS(A1L183, GLOBAL(cs), GLOBAL(reset), , A1L33, MDR_IN[4], , , VCC);
+
+
+--A1L184 is MDR_OUT~931 at LC_X24_Y23_N3
+--operation mode is normal
+
+A1L184 = A1L181 & (A1L183 # !MAR[2]) # !A1L181 & A1L176 & MAR[2];
+
+
+--ram[16][2] is ram[16][2] at LC_X27_Y22_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[16][2]_lut_out = GND;
+ram[16][2] = DFFEAS(ram[16][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L15, MDR_IN[5], , , VCC);
+
+
+--A1L185 is MDR_OUT~932 at LC_X28_Y25_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][2]_qfbk = ram[18][2];
+A1L185 = MAR[2] & (MAR[1]) # !MAR[2] & (MAR[1] & (ram[18][2]_qfbk) # !MAR[1] & ram[16][2]);
+
+--ram[18][2] is ram[18][2] at LC_X28_Y25_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][2] = DFFEAS(A1L185, GLOBAL(cs), GLOBAL(reset), , A1L24, MDR_IN[5], , , VCC);
+
+
+--ram[22][2] is ram[22][2] at LC_X29_Y22_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[22][2]_lut_out = GND;
+ram[22][2] = DFFEAS(ram[22][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L23, MDR_IN[5], , , VCC);
+
+
+--A1L186 is MDR_OUT~933 at LC_X27_Y25_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][2]_qfbk = ram[20][2];
+A1L186 = MAR[2] & (A1L185 & (ram[22][2]) # !A1L185 & ram[20][2]_qfbk) # !MAR[2] & A1L185;
+
+--ram[20][2] is ram[20][2] at LC_X27_Y25_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][2] = DFFEAS(A1L186, GLOBAL(cs), GLOBAL(reset), , A1L11, MDR_IN[5], , , VCC);
+
+
+--ram[8][2] is ram[8][2] at LC_X28_Y27_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[8][2]_lut_out = GND;
+ram[8][2] = DFFEAS(ram[8][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L19, MDR_IN[5], , , VCC);
+
+
+--A1L187 is MDR_OUT~934 at LC_X28_Y24_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][2]_qfbk = ram[12][2];
+A1L187 = MAR[2] & (ram[12][2]_qfbk # MAR[1]) # !MAR[2] & ram[8][2] & (!MAR[1]);
+
+--ram[12][2] is ram[12][2] at LC_X28_Y24_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][2] = DFFEAS(A1L187, GLOBAL(cs), GLOBAL(reset), , A1L21, MDR_IN[5], , , VCC);
+
+
+--ram[14][2] is ram[14][2] at LC_X29_Y24_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[14][2]_lut_out = GND;
+ram[14][2] = DFFEAS(ram[14][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L9, MDR_IN[5], , , VCC);
+
+
+--A1L188 is MDR_OUT~935 at LC_X28_Y24_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][2]_qfbk = ram[10][2];
+A1L188 = MAR[1] & (A1L187 & (ram[14][2]) # !A1L187 & ram[10][2]_qfbk) # !MAR[1] & A1L187;
+
+--ram[10][2] is ram[10][2] at LC_X28_Y24_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][2] = DFFEAS(A1L188, GLOBAL(cs), GLOBAL(reset), , A1L5, MDR_IN[5], , , VCC);
+
+
+--ram[0][2] is ram[0][2] at LC_X30_Y22_N6
+--operation mode is normal
+
+ram[0][2]_lut_out = !MDR_IN[5];
+ram[0][2] = DFFEAS(ram[0][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L20, , , , );
+
+
+--A1L189 is MDR_OUT~936 at LC_X28_Y22_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][2]_qfbk = ram[2][2];
+A1L189 = MAR[2] & MAR[1] # !MAR[2] & (MAR[1] & ram[2][2]_qfbk # !MAR[1] & (!ram[0][2]));
+
+--ram[2][2] is ram[2][2] at LC_X28_Y22_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][2] = DFFEAS(A1L189, GLOBAL(cs), GLOBAL(reset), , A1L7, MDR_IN[5], , , VCC);
+
+
+--ram[6][2] is ram[6][2] at LC_X23_Y24_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[6][2]_lut_out = GND;
+ram[6][2] = DFFEAS(ram[6][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L3, MDR_IN[5], , , VCC);
+
+
+--A1L190 is MDR_OUT~937 at LC_X28_Y22_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[4][2]_qfbk = ram[4][2];
+A1L190 = MAR[2] & (A1L189 & ram[6][2] # !A1L189 & (ram[4][2]_qfbk)) # !MAR[2] & (A1L189);
+
+--ram[4][2] is ram[4][2] at LC_X28_Y22_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[4][2] = DFFEAS(A1L190, GLOBAL(cs), GLOBAL(reset), , A1L18, MDR_IN[5], , , VCC);
+
+
+--A1L191 is MDR_OUT~938 at LC_X27_Y24_N9
+--operation mode is normal
+
+A1L191 = MAR[3] & (MAR[4] # A1L188) # !MAR[3] & !MAR[4] & (A1L190);
+
+
+--ram[24][2] is ram[24][2] at LC_X25_Y21_N8
+--operation mode is normal
+
+ram[24][2]_lut_out = MDR_IN[5];
+ram[24][2] = DFFEAS(ram[24][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L13, , , , );
+
+
+--A1L192 is MDR_OUT~939 at LC_X28_Y21_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][2]_qfbk = ram[26][2];
+A1L192 = MAR[1] & (MAR[2] # ram[26][2]_qfbk) # !MAR[1] & !MAR[2] & (ram[24][2]);
+
+--ram[26][2] is ram[26][2] at LC_X28_Y21_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][2] = DFFEAS(A1L192, GLOBAL(cs), GLOBAL(reset), , A1L22, MDR_IN[5], , , VCC);
+
+
+--ram[30][2] is ram[30][2] at LC_X29_Y23_N3
+--operation mode is normal
+
+ram[30][2]_lut_out = MDR_IN[5];
+ram[30][2] = DFFEAS(ram[30][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L25, , , , );
+
+
+--A1L193 is MDR_OUT~940 at LC_X28_Y21_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][2]_qfbk = ram[28][2];
+A1L193 = MAR[2] & (A1L192 & ram[30][2] # !A1L192 & (ram[28][2]_qfbk)) # !MAR[2] & (A1L192);
+
+--ram[28][2] is ram[28][2] at LC_X28_Y21_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][2] = DFFEAS(A1L193, GLOBAL(cs), GLOBAL(reset), , A1L17, MDR_IN[5], , , VCC);
+
+
+--A1L194 is MDR_OUT~941 at LC_X27_Y24_N6
+--operation mode is normal
+
+A1L194 = A1L191 & (A1L193 # !MAR[4]) # !A1L191 & A1L186 & MAR[4];
+
+
+--ram[3][2] is ram[3][2] at LC_X30_Y22_N4
+--operation mode is normal
+
+ram[3][2]_lut_out = !MDR_IN[5];
+ram[3][2] = DFFEAS(ram[3][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L42, , , , );
+
+
+--A1L195 is MDR_OUT~942 at LC_X24_Y22_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][2]_qfbk = ram[11][2];
+A1L195 = MAR[3] & (MAR[4] # ram[11][2]_qfbk) # !MAR[3] & !MAR[4] & (!ram[3][2]);
+
+--ram[11][2] is ram[11][2] at LC_X24_Y22_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][2] = DFFEAS(A1L195, GLOBAL(cs), GLOBAL(reset), , A1L35, MDR_IN[5], , , VCC);
+
+
+--ram[27][2] is ram[27][2] at LC_X23_Y21_N2
+--operation mode is normal
+
+ram[27][2]_lut_out = MDR_IN[5];
+ram[27][2] = DFFEAS(ram[27][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L46, , , , );
+
+
+--A1L196 is MDR_OUT~943 at LC_X24_Y22_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][2]_qfbk = ram[19][2];
+A1L196 = A1L195 & (ram[27][2] # !MAR[4]) # !A1L195 & (ram[19][2]_qfbk & MAR[4]);
+
+--ram[19][2] is ram[19][2] at LC_X24_Y22_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][2] = DFFEAS(A1L196, GLOBAL(cs), GLOBAL(reset), , A1L27, MDR_IN[5], , , VCC);
+
+
+--ram[5][2] is ram[5][2] at LC_X25_Y21_N4
+--operation mode is normal
+
+ram[5][2]_lut_out = !MDR_IN[5];
+ram[5][2] = DFFEAS(ram[5][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L43, , , , );
+
+
+--A1L197 is MDR_OUT~944 at LC_X25_Y23_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][2]_qfbk = ram[13][2];
+A1L197 = MAR[3] & (MAR[4] # ram[13][2]_qfbk) # !MAR[3] & !MAR[4] & (!ram[5][2]);
+
+--ram[13][2] is ram[13][2] at LC_X25_Y23_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][2] = DFFEAS(A1L197, GLOBAL(cs), GLOBAL(reset), , A1L37, MDR_IN[5], , , VCC);
+
+
+--ram[29][2] is ram[29][2] at LC_X27_Y23_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[29][2]_lut_out = GND;
+ram[29][2] = DFFEAS(ram[29][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L47, MDR_IN[5], , , VCC);
+
+
+--A1L198 is MDR_OUT~945 at LC_X27_Y23_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][2]_qfbk = ram[21][2];
+A1L198 = A1L197 & (ram[29][2] # !MAR[4]) # !A1L197 & MAR[4] & ram[21][2]_qfbk;
+
+--ram[21][2] is ram[21][2] at LC_X27_Y23_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][2] = DFFEAS(A1L198, GLOBAL(cs), GLOBAL(reset), , A1L29, MDR_IN[5], , , VCC);
+
+
+--ram[1][2] is ram[1][2] at LC_X22_Y26_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[1][2]_lut_out = GND;
+ram[1][2] = DFFEAS(ram[1][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L44, MDR_IN[5], , , VCC);
+
+
+--A1L199 is MDR_OUT~946 at LC_X25_Y26_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][2]_qfbk = ram[9][2];
+A1L199 = MAR[3] & (MAR[4] # ram[9][2]_qfbk) # !MAR[3] & !MAR[4] & (ram[1][2]);
+
+--ram[9][2] is ram[9][2] at LC_X25_Y26_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][2] = DFFEAS(A1L199, GLOBAL(cs), GLOBAL(reset), , A1L39, MDR_IN[5], , , VCC);
+
+
+--ram[25][2] is ram[25][2] at LC_X27_Y26_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[25][2]_lut_out = GND;
+ram[25][2] = DFFEAS(ram[25][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L48, MDR_IN[5], , , VCC);
+
+
+--A1L200 is MDR_OUT~947 at LC_X27_Y26_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[17][2]_qfbk = ram[17][2];
+A1L200 = A1L199 & (ram[25][2] # !MAR[4]) # !A1L199 & MAR[4] & ram[17][2]_qfbk;
+
+--ram[17][2] is ram[17][2] at LC_X27_Y26_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[17][2] = DFFEAS(A1L200, GLOBAL(cs), GLOBAL(reset), , A1L31, MDR_IN[5], , , VCC);
+
+
+--A1L201 is MDR_OUT~948 at LC_X27_Y24_N3
+--operation mode is normal
+
+A1L201 = MAR[1] & (MAR[2]) # !MAR[1] & (MAR[2] & A1L198 # !MAR[2] & (A1L200));
+
+
+--ram[7][2] is ram[7][2] at LC_X24_Y26_N3
+--operation mode is normal
+
+ram[7][2]_lut_out = MDR_IN[5];
+ram[7][2] = DFFEAS(ram[7][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L45, , , , );
+
+
+--A1L202 is MDR_OUT~949 at LC_X24_Y25_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[15][2]_qfbk = ram[15][2];
+A1L202 = MAR[4] & MAR[3] # !MAR[4] & (MAR[3] & ram[15][2]_qfbk # !MAR[3] & (ram[7][2]));
+
+--ram[15][2] is ram[15][2] at LC_X24_Y25_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[15][2] = DFFEAS(A1L202, GLOBAL(cs), GLOBAL(reset), , A1L41, MDR_IN[5], , , VCC);
+
+
+--ram[31][2] is ram[31][2] at LC_X22_Y22_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[31][2]_lut_out = GND;
+ram[31][2] = DFFEAS(ram[31][2]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L49, MDR_IN[5], , , VCC);
+
+
+--A1L203 is MDR_OUT~950 at LC_X24_Y21_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][2]_qfbk = ram[23][2];
+A1L203 = MAR[4] & (A1L202 & ram[31][2] # !A1L202 & (ram[23][2]_qfbk)) # !MAR[4] & (A1L202);
+
+--ram[23][2] is ram[23][2] at LC_X24_Y21_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][2] = DFFEAS(A1L203, GLOBAL(cs), GLOBAL(reset), , A1L33, MDR_IN[5], , , VCC);
+
+
+--A1L204 is MDR_OUT~951 at LC_X27_Y24_N8
+--operation mode is normal
+
+A1L204 = A1L201 & (A1L203 # !MAR[1]) # !A1L201 & MAR[1] & A1L196;
+
+
+--ram[16][1] is ram[16][1] at LC_X27_Y22_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[16][1]_lut_out = GND;
+ram[16][1] = DFFEAS(ram[16][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L15, MDR_IN[6], , , VCC);
+
+
+--A1L205 is MDR_OUT~952 at LC_X27_Y25_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][1]_qfbk = ram[20][1];
+A1L205 = MAR[1] & (MAR[2]) # !MAR[1] & (MAR[2] & (ram[20][1]_qfbk) # !MAR[2] & ram[16][1]);
+
+--ram[20][1] is ram[20][1] at LC_X27_Y25_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][1] = DFFEAS(A1L205, GLOBAL(cs), GLOBAL(reset), , A1L11, MDR_IN[6], , , VCC);
+
+
+--ram[22][1] is ram[22][1] at LC_X29_Y22_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[22][1]_lut_out = GND;
+ram[22][1] = DFFEAS(ram[22][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L23, MDR_IN[6], , , VCC);
+
+
+--A1L206 is MDR_OUT~953 at LC_X28_Y25_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][1]_qfbk = ram[18][1];
+A1L206 = MAR[1] & (A1L205 & (ram[22][1]) # !A1L205 & ram[18][1]_qfbk) # !MAR[1] & A1L205;
+
+--ram[18][1] is ram[18][1] at LC_X28_Y25_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][1] = DFFEAS(A1L206, GLOBAL(cs), GLOBAL(reset), , A1L24, MDR_IN[6], , , VCC);
+
+
+--ram[8][1] is ram[8][1] at LC_X29_Y24_N8
+--operation mode is normal
+
+ram[8][1]_lut_out = MDR_IN[6];
+ram[8][1] = DFFEAS(ram[8][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L19, , , , );
+
+
+--A1L207 is MDR_OUT~954 at LC_X28_Y24_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][1]_qfbk = ram[10][1];
+A1L207 = MAR[2] & (MAR[1]) # !MAR[2] & (MAR[1] & (ram[10][1]_qfbk) # !MAR[1] & ram[8][1]);
+
+--ram[10][1] is ram[10][1] at LC_X28_Y24_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][1] = DFFEAS(A1L207, GLOBAL(cs), GLOBAL(reset), , A1L5, MDR_IN[6], , , VCC);
+
+
+--ram[14][1] is ram[14][1] at LC_X29_Y24_N3
+--operation mode is normal
+
+ram[14][1]_lut_out = MDR_IN[6];
+ram[14][1] = DFFEAS(ram[14][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L9, , , , );
+
+
+--A1L208 is MDR_OUT~955 at LC_X28_Y24_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][1]_qfbk = ram[12][1];
+A1L208 = MAR[2] & (A1L207 & (ram[14][1]) # !A1L207 & ram[12][1]_qfbk) # !MAR[2] & A1L207;
+
+--ram[12][1] is ram[12][1] at LC_X28_Y24_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][1] = DFFEAS(A1L208, GLOBAL(cs), GLOBAL(reset), , A1L21, MDR_IN[6], , , VCC);
+
+
+--ram[0][1] is ram[0][1] at LC_X27_Y25_N5
+--operation mode is normal
+
+ram[0][1]_lut_out = !MDR_IN[6];
+ram[0][1] = DFFEAS(ram[0][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L20, , , , );
+
+
+--A1L209 is MDR_OUT~956 at LC_X28_Y22_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][1]_qfbk = ram[2][1];
+A1L209 = MAR[2] & MAR[1] # !MAR[2] & (MAR[1] & ram[2][1]_qfbk # !MAR[1] & (!ram[0][1]));
+
+--ram[2][1] is ram[2][1] at LC_X28_Y22_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][1] = DFFEAS(A1L209, GLOBAL(cs), GLOBAL(reset), , A1L7, MDR_IN[6], , , VCC);
+
+
+--ram[6][1] is ram[6][1] at LC_X23_Y24_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[6][1]_lut_out = GND;
+ram[6][1] = DFFEAS(ram[6][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L3, MDR_IN[6], , , VCC);
+
+
+--A1L210 is MDR_OUT~957 at LC_X28_Y22_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[4][1]_qfbk = ram[4][1];
+A1L210 = MAR[2] & (A1L209 & (ram[6][1]) # !A1L209 & ram[4][1]_qfbk) # !MAR[2] & A1L209;
+
+--ram[4][1] is ram[4][1] at LC_X28_Y22_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[4][1] = DFFEAS(A1L210, GLOBAL(cs), GLOBAL(reset), , A1L18, MDR_IN[6], , , VCC);
+
+
+--A1L211 is MDR_OUT~958 at LC_X28_Y23_N5
+--operation mode is normal
+
+A1L211 = MAR[4] & (MAR[3]) # !MAR[4] & (MAR[3] & A1L208 # !MAR[3] & (A1L210));
+
+
+--ram[24][1] is ram[24][1] at LC_X25_Y21_N9
+--operation mode is normal
+
+ram[24][1]_lut_out = MDR_IN[6];
+ram[24][1] = DFFEAS(ram[24][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L13, , , , );
+
+
+--A1L212 is MDR_OUT~959 at LC_X28_Y21_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][1]_qfbk = ram[28][1];
+A1L212 = MAR[1] & MAR[2] # !MAR[1] & (MAR[2] & ram[28][1]_qfbk # !MAR[2] & (ram[24][1]));
+
+--ram[28][1] is ram[28][1] at LC_X28_Y21_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][1] = DFFEAS(A1L212, GLOBAL(cs), GLOBAL(reset), , A1L17, MDR_IN[6], , , VCC);
+
+
+--ram[30][1] is ram[30][1] at LC_X29_Y23_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[30][1]_lut_out = GND;
+ram[30][1] = DFFEAS(ram[30][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L25, MDR_IN[6], , , VCC);
+
+
+--A1L213 is MDR_OUT~960 at LC_X28_Y21_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][1]_qfbk = ram[26][1];
+A1L213 = MAR[1] & (A1L212 & ram[30][1] # !A1L212 & (ram[26][1]_qfbk)) # !MAR[1] & (A1L212);
+
+--ram[26][1] is ram[26][1] at LC_X28_Y21_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][1] = DFFEAS(A1L213, GLOBAL(cs), GLOBAL(reset), , A1L22, MDR_IN[6], , , VCC);
+
+
+--A1L214 is MDR_OUT~961 at LC_X28_Y23_N8
+--operation mode is normal
+
+A1L214 = MAR[4] & (A1L211 & (A1L213) # !A1L211 & A1L206) # !MAR[4] & (A1L211);
+
+
+--ram[5][1] is ram[5][1] at LC_X25_Y21_N3
+--operation mode is normal
+
+ram[5][1]_lut_out = !MDR_IN[6];
+ram[5][1] = DFFEAS(ram[5][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L43, , , , );
+
+
+--A1L215 is MDR_OUT~962 at LC_X25_Y23_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][1]_qfbk = ram[13][1];
+A1L215 = MAR[3] & (MAR[4] # ram[13][1]_qfbk) # !MAR[3] & !MAR[4] & (!ram[5][1]);
+
+--ram[13][1] is ram[13][1] at LC_X25_Y23_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][1] = DFFEAS(A1L215, GLOBAL(cs), GLOBAL(reset), , A1L37, MDR_IN[6], , , VCC);
+
+
+--ram[29][1] is ram[29][1] at LC_X27_Y23_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[29][1]_lut_out = GND;
+ram[29][1] = DFFEAS(ram[29][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L47, MDR_IN[6], , , VCC);
+
+
+--A1L216 is MDR_OUT~963 at LC_X27_Y23_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][1]_qfbk = ram[21][1];
+A1L216 = A1L215 & (ram[29][1] # !MAR[4]) # !A1L215 & MAR[4] & ram[21][1]_qfbk;
+
+--ram[21][1] is ram[21][1] at LC_X27_Y23_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][1] = DFFEAS(A1L216, GLOBAL(cs), GLOBAL(reset), , A1L29, MDR_IN[6], , , VCC);
+
+
+--ram[3][1] is ram[3][1] at LC_X30_Y22_N0
+--operation mode is normal
+
+ram[3][1]_lut_out = !MDR_IN[6];
+ram[3][1] = DFFEAS(ram[3][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L42, , , , );
+
+
+--A1L217 is MDR_OUT~964 at LC_X24_Y22_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][1]_qfbk = ram[11][1];
+A1L217 = MAR[3] & (MAR[4] # ram[11][1]_qfbk) # !MAR[3] & !MAR[4] & (!ram[3][1]);
+
+--ram[11][1] is ram[11][1] at LC_X24_Y22_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][1] = DFFEAS(A1L217, GLOBAL(cs), GLOBAL(reset), , A1L35, MDR_IN[6], , , VCC);
+
+
+--ram[27][1] is ram[27][1] at LC_X23_Y21_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[27][1]_lut_out = GND;
+ram[27][1] = DFFEAS(ram[27][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L46, MDR_IN[6], , , VCC);
+
+
+--A1L218 is MDR_OUT~965 at LC_X24_Y22_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][1]_qfbk = ram[19][1];
+A1L218 = MAR[4] & (A1L217 & ram[27][1] # !A1L217 & (ram[19][1]_qfbk)) # !MAR[4] & (A1L217);
+
+--ram[19][1] is ram[19][1] at LC_X24_Y22_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][1] = DFFEAS(A1L218, GLOBAL(cs), GLOBAL(reset), , A1L27, MDR_IN[6], , , VCC);
+
+
+--ram[1][1] is ram[1][1] at LC_X22_Y26_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[1][1]_lut_out = GND;
+ram[1][1] = DFFEAS(ram[1][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L44, MDR_IN[6], , , VCC);
+
+
+--A1L219 is MDR_OUT~966 at LC_X25_Y26_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][1]_qfbk = ram[9][1];
+A1L219 = MAR[3] & (MAR[4] # ram[9][1]_qfbk) # !MAR[3] & !MAR[4] & (ram[1][1]);
+
+--ram[9][1] is ram[9][1] at LC_X25_Y26_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][1] = DFFEAS(A1L219, GLOBAL(cs), GLOBAL(reset), , A1L39, MDR_IN[6], , , VCC);
+
+
+--ram[25][1] is ram[25][1] at LC_X27_Y26_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[25][1]_lut_out = GND;
+ram[25][1] = DFFEAS(ram[25][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L48, MDR_IN[6], , , VCC);
+
+
+--A1L220 is MDR_OUT~967 at LC_X27_Y26_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[17][1]_qfbk = ram[17][1];
+A1L220 = MAR[4] & (A1L219 & ram[25][1] # !A1L219 & (ram[17][1]_qfbk)) # !MAR[4] & (A1L219);
+
+--ram[17][1] is ram[17][1] at LC_X27_Y26_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[17][1] = DFFEAS(A1L220, GLOBAL(cs), GLOBAL(reset), , A1L31, MDR_IN[6], , , VCC);
+
+
+--A1L221 is MDR_OUT~968 at LC_X28_Y23_N6
+--operation mode is normal
+
+A1L221 = MAR[1] & (A1L218 # MAR[2]) # !MAR[1] & (A1L220 & !MAR[2]);
+
+
+--ram[7][1] is ram[7][1] at LC_X24_Y26_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[7][1]_lut_out = GND;
+ram[7][1] = DFFEAS(ram[7][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L45, MDR_IN[6], , , VCC);
+
+
+--A1L222 is MDR_OUT~969 at LC_X24_Y25_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[15][1]_qfbk = ram[15][1];
+A1L222 = MAR[4] & MAR[3] # !MAR[4] & (MAR[3] & ram[15][1]_qfbk # !MAR[3] & (ram[7][1]));
+
+--ram[15][1] is ram[15][1] at LC_X24_Y25_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[15][1] = DFFEAS(A1L222, GLOBAL(cs), GLOBAL(reset), , A1L41, MDR_IN[6], , , VCC);
+
+
+--ram[31][1] is ram[31][1] at LC_X23_Y26_N6
+--operation mode is normal
+
+ram[31][1]_lut_out = MDR_IN[6];
+ram[31][1] = DFFEAS(ram[31][1]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L49, , , , );
+
+
+--A1L223 is MDR_OUT~970 at LC_X23_Y26_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][1]_qfbk = ram[23][1];
+A1L223 = A1L222 & (ram[31][1] # !MAR[4]) # !A1L222 & MAR[4] & ram[23][1]_qfbk;
+
+--ram[23][1] is ram[23][1] at LC_X23_Y26_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][1] = DFFEAS(A1L223, GLOBAL(cs), GLOBAL(reset), , A1L33, MDR_IN[6], , , VCC);
+
+
+--A1L224 is MDR_OUT~971 at LC_X28_Y23_N9
+--operation mode is normal
+
+A1L224 = MAR[2] & (A1L221 & A1L223 # !A1L221 & (A1L216)) # !MAR[2] & A1L221;
+
+
+--ram[16][0] is ram[16][0] at LC_X27_Y22_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[16][0]_lut_out = GND;
+ram[16][0] = DFFEAS(ram[16][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L15, MDR_IN[7], , , VCC);
+
+
+--A1L225 is MDR_OUT~972 at LC_X28_Y25_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][0]_qfbk = ram[18][0];
+A1L225 = MAR[2] & (MAR[1]) # !MAR[2] & (MAR[1] & (ram[18][0]_qfbk) # !MAR[1] & ram[16][0]);
+
+--ram[18][0] is ram[18][0] at LC_X28_Y25_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[18][0] = DFFEAS(A1L225, GLOBAL(cs), GLOBAL(reset), , A1L24, MDR_IN[7], , , VCC);
+
+
+--ram[22][0] is ram[22][0] at LC_X28_Y27_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[22][0]_lut_out = GND;
+ram[22][0] = DFFEAS(ram[22][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L23, MDR_IN[7], , , VCC);
+
+
+--A1L226 is MDR_OUT~973 at LC_X27_Y25_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][0]_qfbk = ram[20][0];
+A1L226 = A1L225 & (ram[22][0] # !MAR[2]) # !A1L225 & MAR[2] & ram[20][0]_qfbk;
+
+--ram[20][0] is ram[20][0] at LC_X27_Y25_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[20][0] = DFFEAS(A1L226, GLOBAL(cs), GLOBAL(reset), , A1L11, MDR_IN[7], , , VCC);
+
+
+--ram[8][0] is ram[8][0] at LC_X28_Y27_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[8][0]_lut_out = GND;
+ram[8][0] = DFFEAS(ram[8][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L19, MDR_IN[7], , , VCC);
+
+
+--A1L227 is MDR_OUT~974 at LC_X28_Y24_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][0]_qfbk = ram[12][0];
+A1L227 = MAR[2] & (ram[12][0]_qfbk # MAR[1]) # !MAR[2] & ram[8][0] & (!MAR[1]);
+
+--ram[12][0] is ram[12][0] at LC_X28_Y24_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[12][0] = DFFEAS(A1L227, GLOBAL(cs), GLOBAL(reset), , A1L21, MDR_IN[7], , , VCC);
+
+
+--ram[14][0] is ram[14][0] at LC_X29_Y24_N9
+--operation mode is normal
+
+ram[14][0]_lut_out = MDR_IN[7];
+ram[14][0] = DFFEAS(ram[14][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L9, , , , );
+
+
+--A1L228 is MDR_OUT~975 at LC_X28_Y24_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][0]_qfbk = ram[10][0];
+A1L228 = MAR[1] & (A1L227 & ram[14][0] # !A1L227 & (ram[10][0]_qfbk)) # !MAR[1] & (A1L227);
+
+--ram[10][0] is ram[10][0] at LC_X28_Y24_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[10][0] = DFFEAS(A1L228, GLOBAL(cs), GLOBAL(reset), , A1L5, MDR_IN[7], , , VCC);
+
+
+--ram[0][0] is ram[0][0] at LC_X30_Y22_N3
+--operation mode is normal
+
+ram[0][0]_lut_out = !MDR_IN[7];
+ram[0][0] = DFFEAS(ram[0][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L20, , , , );
+
+
+--A1L229 is MDR_OUT~976 at LC_X28_Y22_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[4][0]_qfbk = ram[4][0];
+A1L229 = MAR[2] & (MAR[1] # ram[4][0]_qfbk) # !MAR[2] & !MAR[1] & (!ram[0][0]);
+
+--ram[4][0] is ram[4][0] at LC_X28_Y22_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[4][0] = DFFEAS(A1L229, GLOBAL(cs), GLOBAL(reset), , A1L18, MDR_IN[7], , , VCC);
+
+
+--ram[6][0] is ram[6][0] at LC_X27_Y21_N2
+--operation mode is normal
+
+ram[6][0]_lut_out = MDR_IN[7];
+ram[6][0] = DFFEAS(ram[6][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L3, , , , );
+
+
+--A1L230 is MDR_OUT~977 at LC_X28_Y22_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][0]_qfbk = ram[2][0];
+A1L230 = MAR[1] & (A1L229 & ram[6][0] # !A1L229 & (ram[2][0]_qfbk)) # !MAR[1] & (A1L229);
+
+--ram[2][0] is ram[2][0] at LC_X28_Y22_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[2][0] = DFFEAS(A1L230, GLOBAL(cs), GLOBAL(reset), , A1L7, MDR_IN[7], , , VCC);
+
+
+--A1L231 is MDR_OUT~978 at LC_X28_Y26_N6
+--operation mode is normal
+
+A1L231 = MAR[3] & (MAR[4] # A1L228) # !MAR[3] & A1L230 & !MAR[4];
+
+
+--ram[24][0] is ram[24][0] at LC_X25_Y21_N7
+--operation mode is normal
+
+ram[24][0]_lut_out = MDR_IN[7];
+ram[24][0] = DFFEAS(ram[24][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L13, , , , );
+
+
+--A1L232 is MDR_OUT~979 at LC_X28_Y21_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][0]_qfbk = ram[26][0];
+A1L232 = MAR[1] & (MAR[2] # ram[26][0]_qfbk) # !MAR[1] & !MAR[2] & (ram[24][0]);
+
+--ram[26][0] is ram[26][0] at LC_X28_Y21_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[26][0] = DFFEAS(A1L232, GLOBAL(cs), GLOBAL(reset), , A1L22, MDR_IN[7], , , VCC);
+
+
+--ram[30][0] is ram[30][0] at LC_X29_Y23_N2
+--operation mode is normal
+
+ram[30][0]_lut_out = MDR_IN[7];
+ram[30][0] = DFFEAS(ram[30][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L25, , , , );
+
+
+--A1L233 is MDR_OUT~980 at LC_X28_Y21_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][0]_qfbk = ram[28][0];
+A1L233 = MAR[2] & (A1L232 & ram[30][0] # !A1L232 & (ram[28][0]_qfbk)) # !MAR[2] & (A1L232);
+
+--ram[28][0] is ram[28][0] at LC_X28_Y21_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[28][0] = DFFEAS(A1L233, GLOBAL(cs), GLOBAL(reset), , A1L17, MDR_IN[7], , , VCC);
+
+
+--A1L234 is MDR_OUT~981 at LC_X28_Y26_N9
+--operation mode is normal
+
+A1L234 = MAR[4] & (A1L231 & (A1L233) # !A1L231 & A1L226) # !MAR[4] & (A1L231);
+
+
+--ram[3][0] is ram[3][0] at LC_X30_Y22_N5
+--operation mode is normal
+
+ram[3][0]_lut_out = !MDR_IN[7];
+ram[3][0] = DFFEAS(ram[3][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L42, , , , );
+
+
+--A1L235 is MDR_OUT~982 at LC_X24_Y22_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][0]_qfbk = ram[11][0];
+A1L235 = MAR[3] & (MAR[4] # ram[11][0]_qfbk) # !MAR[3] & !MAR[4] & (!ram[3][0]);
+
+--ram[11][0] is ram[11][0] at LC_X24_Y22_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[11][0] = DFFEAS(A1L235, GLOBAL(cs), GLOBAL(reset), , A1L35, MDR_IN[7], , , VCC);
+
+
+--ram[27][0] is ram[27][0] at LC_X23_Y21_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[27][0]_lut_out = GND;
+ram[27][0] = DFFEAS(ram[27][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L46, MDR_IN[7], , , VCC);
+
+
+--A1L236 is MDR_OUT~983 at LC_X24_Y22_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][0]_qfbk = ram[19][0];
+A1L236 = MAR[4] & (A1L235 & ram[27][0] # !A1L235 & (ram[19][0]_qfbk)) # !MAR[4] & (A1L235);
+
+--ram[19][0] is ram[19][0] at LC_X24_Y22_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[19][0] = DFFEAS(A1L236, GLOBAL(cs), GLOBAL(reset), , A1L27, MDR_IN[7], , , VCC);
+
+
+--ram[5][0] is ram[5][0] at LC_X25_Y21_N5
+--operation mode is normal
+
+ram[5][0]_lut_out = !MDR_IN[7];
+ram[5][0] = DFFEAS(ram[5][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L43, , , , );
+
+
+--A1L237 is MDR_OUT~984 at LC_X25_Y23_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][0]_qfbk = ram[13][0];
+A1L237 = MAR[3] & (MAR[4] # ram[13][0]_qfbk) # !MAR[3] & !MAR[4] & (!ram[5][0]);
+
+--ram[13][0] is ram[13][0] at LC_X25_Y23_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[13][0] = DFFEAS(A1L237, GLOBAL(cs), GLOBAL(reset), , A1L37, MDR_IN[7], , , VCC);
+
+
+--ram[29][0] is ram[29][0] at LC_X27_Y23_N0
+--operation mode is normal
+
+ram[29][0]_lut_out = MDR_IN[7];
+ram[29][0] = DFFEAS(ram[29][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L47, , , , );
+
+
+--A1L238 is MDR_OUT~985 at LC_X27_Y23_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][0]_qfbk = ram[21][0];
+A1L238 = A1L237 & (ram[29][0] # !MAR[4]) # !A1L237 & MAR[4] & ram[21][0]_qfbk;
+
+--ram[21][0] is ram[21][0] at LC_X27_Y23_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[21][0] = DFFEAS(A1L238, GLOBAL(cs), GLOBAL(reset), , A1L29, MDR_IN[7], , , VCC);
+
+
+--ram[1][0] is ram[1][0] at LC_X22_Y26_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[1][0]_lut_out = GND;
+ram[1][0] = DFFEAS(ram[1][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L44, MDR_IN[7], , , VCC);
+
+
+--A1L239 is MDR_OUT~986 at LC_X25_Y26_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][0]_qfbk = ram[9][0];
+A1L239 = MAR[3] & (MAR[4] # ram[9][0]_qfbk) # !MAR[3] & !MAR[4] & (ram[1][0]);
+
+--ram[9][0] is ram[9][0] at LC_X25_Y26_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[9][0] = DFFEAS(A1L239, GLOBAL(cs), GLOBAL(reset), , A1L39, MDR_IN[7], , , VCC);
+
+
+--ram[25][0] is ram[25][0] at LC_X27_Y26_N0
+--operation mode is normal
+
+ram[25][0]_lut_out = MDR_IN[7];
+ram[25][0] = DFFEAS(ram[25][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L48, , , , );
+
+
+--A1L240 is MDR_OUT~987 at LC_X27_Y26_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[17][0]_qfbk = ram[17][0];
+A1L240 = A1L239 & (ram[25][0] # !MAR[4]) # !A1L239 & MAR[4] & ram[17][0]_qfbk;
+
+--ram[17][0] is ram[17][0] at LC_X27_Y26_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[17][0] = DFFEAS(A1L240, GLOBAL(cs), GLOBAL(reset), , A1L31, MDR_IN[7], , , VCC);
+
+
+--A1L241 is MDR_OUT~988 at LC_X28_Y26_N7
+--operation mode is normal
+
+A1L241 = MAR[1] & (MAR[2]) # !MAR[1] & (MAR[2] & A1L238 # !MAR[2] & (A1L240));
+
+
+--ram[7][0] is ram[7][0] at LC_X24_Y26_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[7][0]_lut_out = GND;
+ram[7][0] = DFFEAS(ram[7][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L45, MDR_IN[7], , , VCC);
+
+
+--A1L242 is MDR_OUT~989 at LC_X27_Y22_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[15][0]_qfbk = ram[15][0];
+A1L242 = MAR[3] & (MAR[4] # ram[15][0]_qfbk) # !MAR[3] & !MAR[4] & (ram[7][0]);
+
+--ram[15][0] is ram[15][0] at LC_X27_Y22_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[15][0] = DFFEAS(A1L242, GLOBAL(cs), GLOBAL(reset), , A1L41, MDR_IN[7], , , VCC);
+
+
+--ram[31][0] is ram[31][0] at LC_X23_Y26_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[31][0]_lut_out = GND;
+ram[31][0] = DFFEAS(ram[31][0]_lut_out, GLOBAL(cs), GLOBAL(reset), , A1L49, MDR_IN[7], , , VCC);
+
+
+--A1L243 is MDR_OUT~990 at LC_X23_Y26_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][0]_qfbk = ram[23][0];
+A1L243 = A1L242 & (ram[31][0] # !MAR[4]) # !A1L242 & MAR[4] & ram[23][0]_qfbk;
+
+--ram[23][0] is ram[23][0] at LC_X23_Y26_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+ram[23][0] = DFFEAS(A1L243, GLOBAL(cs), GLOBAL(reset), , A1L33, MDR_IN[7], , , VCC);
+
+
+--A1L244 is MDR_OUT~991 at LC_X28_Y26_N8
+--operation mode is normal
+
+A1L244 = MAR[1] & (A1L241 & (A1L243) # !A1L241 & A1L236) # !MAR[1] & (A1L241);
+
+
+--A1L2 is Decoder~532 at LC_X27_Y24_N2
+--operation mode is normal
+
+A1L2 = !MAR[0] & MAR[2] & !MAR[3] & MAR[1];
+
+
+--A1L3 is Decoder~533 at LC_X27_Y24_N1
+--operation mode is normal
+
+A1L3 = !R_NW & !MAR[4] & A1L2;
+
+
+--A1L4 is Decoder~534 at LC_X27_Y24_N5
+--operation mode is normal
+
+A1L4 = !MAR[0] & !MAR[2] & MAR[3] & MAR[1];
+
+
+--A1L5 is Decoder~535 at LC_X27_Y24_N7
+--operation mode is normal
+
+A1L5 = !R_NW & !MAR[4] & A1L4;
+
+
+--A1L6 is Decoder~536 at LC_X28_Y23_N0
+--operation mode is normal
+
+A1L6 = !MAR[2] & !MAR[0] & !MAR[3] & MAR[1];
+
+
+--A1L7 is Decoder~537 at LC_X28_Y23_N1
+--operation mode is normal
+
+A1L7 = !MAR[4] & !R_NW & (A1L6);
+
+
+--A1L8 is Decoder~538 at LC_X28_Y23_N7
+--operation mode is normal
+
+A1L8 = MAR[2] & !MAR[0] & MAR[3] & MAR[1];
+
+
+--A1L9 is Decoder~539 at LC_X28_Y23_N2
+--operation mode is normal
+
+A1L9 = !MAR[4] & !R_NW & A1L8;
+
+
+--A1L10 is Decoder~540 at LC_X28_Y26_N5
+--operation mode is normal
+
+A1L10 = !MAR[3] & !MAR[1] & MAR[2] & !MAR[0];
+
+
+--A1L11 is Decoder~541 at LC_X28_Y26_N0
+--operation mode is normal
+
+A1L11 = MAR[4] & (A1L10 & !R_NW);
+
+
+--A1L12 is Decoder~542 at LC_X28_Y26_N2
+--operation mode is normal
+
+A1L12 = MAR[3] & !MAR[1] & !MAR[2] & !MAR[0];
+
+
+--A1L13 is Decoder~543 at LC_X28_Y26_N1
+--operation mode is normal
+
+A1L13 = MAR[4] & (!R_NW & A1L12);
+
+
+--A1L14 is Decoder~544 at LC_X23_Y25_N8
+--operation mode is normal
+
+A1L14 = !MAR[3] & !MAR[1] & !MAR[2] & !MAR[0];
+
+
+--A1L15 is Decoder~545 at LC_X23_Y25_N9
+--operation mode is normal
+
+A1L15 = MAR[4] & (!R_NW & A1L14);
+
+
+--A1L16 is Decoder~546 at LC_X23_Y25_N5
+--operation mode is normal
+
+A1L16 = MAR[3] & !MAR[1] & MAR[2] & !MAR[0];
+
+
+--A1L17 is Decoder~547 at LC_X23_Y25_N1
+--operation mode is normal
+
+A1L17 = MAR[4] & A1L16 & !R_NW;
+
+
+--A1L18 is Decoder~548 at LC_X28_Y26_N4
+--operation mode is normal
+
+A1L18 = !MAR[4] & (A1L10 & !R_NW);
+
+
+--A1L19 is Decoder~549 at LC_X27_Y22_N4
+--operation mode is normal
+
+A1L19 = !MAR[4] & !R_NW & A1L12;
+
+
+--A1L20 is Decoder~550 at LC_X23_Y25_N4
+--operation mode is normal
+
+A1L20 = !MAR[4] & (!R_NW & A1L14);
+
+
+--A1L21 is Decoder~551 at LC_X29_Y26_N0
+--operation mode is normal
+
+A1L21 = !R_NW & !MAR[4] & (A1L16);
+
+
+--A1L22 is Decoder~552 at LC_X29_Y26_N6
+--operation mode is normal
+
+A1L22 = !R_NW & MAR[4] & (A1L4);
+
+
+--A1L23 is Decoder~553 at LC_X27_Y24_N0
+--operation mode is normal
+
+A1L23 = !R_NW & MAR[4] & A1L2;
+
+
+--A1L24 is Decoder~554 at LC_X28_Y23_N4
+--operation mode is normal
+
+A1L24 = MAR[4] & !R_NW & (A1L6);
+
+
+--A1L25 is Decoder~555 at LC_X29_Y26_N4
+--operation mode is normal
+
+A1L25 = !R_NW & MAR[4] & (A1L8);
+
+
+--A1L26 is Decoder~556 at LC_X23_Y23_N7
+--operation mode is normal
+
+A1L26 = !MAR[3] & !MAR[2] & MAR[1] & MAR[0];
+
+
+--A1L27 is Decoder~557 at LC_X23_Y22_N6
+--operation mode is normal
+
+A1L27 = MAR[4] & !R_NW & A1L26;
+
+
+--A1L28 is Decoder~558 at LC_X23_Y23_N8
+--operation mode is normal
+
+A1L28 = !MAR[3] & MAR[2] & !MAR[1] & MAR[0];
+
+
+--A1L29 is Decoder~559 at LC_X27_Y23_N3
+--operation mode is normal
+
+A1L29 = !R_NW & (MAR[4] & A1L28);
+
+
+--A1L30 is Decoder~560 at LC_X23_Y23_N0
+--operation mode is normal
+
+A1L30 = !MAR[3] & !MAR[2] & !MAR[1] & MAR[0];
+
+
+--A1L31 is Decoder~561 at LC_X27_Y26_N3
+--operation mode is normal
+
+A1L31 = MAR[4] & !R_NW & A1L30;
+
+
+--A1L32 is Decoder~562 at LC_X23_Y23_N5
+--operation mode is normal
+
+A1L32 = !MAR[3] & MAR[2] & MAR[1] & MAR[0];
+
+
+--A1L33 is Decoder~563 at LC_X23_Y26_N9
+--operation mode is normal
+
+A1L33 = MAR[4] & !R_NW & A1L32;
+
+
+--A1L34 is Decoder~564 at LC_X23_Y23_N6
+--operation mode is normal
+
+A1L34 = MAR[3] & !MAR[2] & MAR[1] & MAR[0];
+
+
+--A1L35 is Decoder~565 at LC_X24_Y22_N7
+--operation mode is normal
+
+A1L35 = !MAR[4] & A1L34 & !R_NW;
+
+
+--A1L36 is Decoder~566 at LC_X25_Y23_N7
+--operation mode is normal
+
+A1L36 = MAR[3] & MAR[0] & !MAR[1] & MAR[2];
+
+
+--A1L37 is Decoder~567 at LC_X25_Y23_N8
+--operation mode is normal
+
+A1L37 = !R_NW & (!MAR[4] & A1L36);
+
+
+--A1L38 is Decoder~568 at LC_X23_Y23_N1
+--operation mode is normal
+
+A1L38 = MAR[3] & !MAR[2] & !MAR[1] & MAR[0];
+
+
+--A1L39 is Decoder~569 at LC_X29_Y26_N2
+--operation mode is normal
+
+A1L39 = !R_NW & (A1L38 & !MAR[4]);
+
+
+--A1L40 is Decoder~570 at LC_X23_Y23_N9
+--operation mode is normal
+
+A1L40 = MAR[3] & MAR[2] & MAR[1] & MAR[0];
+
+
+--A1L41 is Decoder~571 at LC_X23_Y26_N1
+--operation mode is normal
+
+A1L41 = A1L40 & !MAR[4] & !R_NW;
+
+
+--A1L42 is Decoder~572 at LC_X23_Y22_N0
+--operation mode is normal
+
+A1L42 = !MAR[4] & !R_NW & A1L26;
+
+
+--A1L43 is Decoder~573 at LC_X29_Y26_N5
+--operation mode is normal
+
+A1L43 = !R_NW & (A1L28 & !MAR[4]);
+
+
+--A1L44 is Decoder~574 at LC_X29_Y26_N7
+--operation mode is normal
+
+A1L44 = !R_NW & !MAR[4] & (A1L30);
+
+
+--A1L45 is Decoder~575 at LC_X23_Y26_N4
+--operation mode is normal
+
+A1L45 = !MAR[4] & !R_NW & A1L32;
+
+
+--A1L46 is Decoder~576 at LC_X23_Y21_N7
+--operation mode is normal
+
+A1L46 = MAR[4] & (!R_NW & A1L34);
+
+
+--A1L47 is Decoder~577 at LC_X27_Y23_N7
+--operation mode is normal
+
+A1L47 = !R_NW & (MAR[4] & A1L36);
+
+
+--A1L48 is Decoder~578 at LC_X27_Y26_N7
+--operation mode is normal
+
+A1L48 = MAR[4] & !R_NW & A1L38;
+
+
+--A1L49 is Decoder~579 at LC_X23_Y26_N7
+--operation mode is normal
+
+A1L49 = A1L40 & MAR[4] & !R_NW;
+
+
+--MAR[5] is MAR[5] at PIN_W18
+--operation mode is input
+
+MAR[5] = INPUT();
+
+
+--MAR[6] is MAR[6] at PIN_E5
+--operation mode is input
+
+MAR[6] = INPUT();
+
+
+--MAR[7] is MAR[7] at PIN_M8
+--operation mode is input
+
+MAR[7] = INPUT();
+
+
+--cs is cs at PIN_L2
+--operation mode is input
+
+cs = INPUT();
+
+
+--MAR[2] is MAR[2] at PIN_B13
+--operation mode is input
+
+MAR[2] = INPUT();
+
+
+--MAR[3] is MAR[3] at PIN_B11
+--operation mode is input
+
+MAR[3] = INPUT();
+
+
+--MAR[1] is MAR[1] at PIN_B12
+--operation mode is input
+
+MAR[1] = INPUT();
+
+
+--MAR[4] is MAR[4] at PIN_L6
+--operation mode is input
+
+MAR[4] = INPUT();
+
+
+--MDR_IN[0] is MDR_IN[0] at PIN_C12
+--operation mode is input
+
+MDR_IN[0] = INPUT();
+
+
+--MAR[0] is MAR[0] at PIN_A12
+--operation mode is input
+
+MAR[0] = INPUT();
+
+
+--reset is reset at PIN_L3
+--operation mode is input
+
+reset = INPUT();
+
+
+--R_NW is R_NW at PIN_K6
+--operation mode is input
+
+R_NW = INPUT();
+
+
+--MDR_IN[1] is MDR_IN[1] at PIN_A11
+--operation mode is input
+
+MDR_IN[1] = INPUT();
+
+
+--MDR_IN[2] is MDR_IN[2] at PIN_AB11
+--operation mode is input
+
+MDR_IN[2] = INPUT();
+
+
+--MDR_IN[3] is MDR_IN[3] at PIN_F22
+--operation mode is input
+
+MDR_IN[3] = INPUT();
+
+
+--MDR_IN[4] is MDR_IN[4] at PIN_C13
+--operation mode is input
+
+MDR_IN[4] = INPUT();
+
+
+--MDR_IN[5] is MDR_IN[5] at PIN_B14
+--operation mode is input
+
+MDR_IN[5] = INPUT();
+
+
+--MDR_IN[6] is MDR_IN[6] at PIN_W12
+--operation mode is input
+
+MDR_IN[6] = INPUT();
+
+
+--MDR_IN[7] is MDR_IN[7] at PIN_Y12
+--operation mode is input
+
+MDR_IN[7] = INPUT();
+
+
+--MDR_OUT[0] is MDR_OUT[0] at PIN_D13
+--operation mode is output
+
+MDR_OUT[0] = OUTPUT(A1L70Q);
+
+
+--MDR_OUT[1] is MDR_OUT[1] at PIN_D12
+--operation mode is output
+
+MDR_OUT[1] = OUTPUT(A1L72Q);
+
+
+--MDR_OUT[2] is MDR_OUT[2] at PIN_Y13
+--operation mode is output
+
+MDR_OUT[2] = OUTPUT(A1L74Q);
+
+
+--MDR_OUT[3] is MDR_OUT[3] at PIN_B7
+--operation mode is output
+
+MDR_OUT[3] = OUTPUT(A1L76Q);
+
+
+--MDR_OUT[4] is MDR_OUT[4] at PIN_M15
+--operation mode is output
+
+MDR_OUT[4] = OUTPUT(A1L78Q);
+
+
+--MDR_OUT[5] is MDR_OUT[5] at PIN_H4
+--operation mode is output
+
+MDR_OUT[5] = OUTPUT(A1L80Q);
+
+
+--MDR_OUT[6] is MDR_OUT[6] at PIN_K17
+--operation mode is output
+
+MDR_OUT[6] = OUTPUT(A1L82Q);
+
+
+--MDR_OUT[7] is MDR_OUT[7] at PIN_G9
+--operation mode is output
+
+MDR_OUT[7] = OUTPUT(A1L84Q);
+
+
+

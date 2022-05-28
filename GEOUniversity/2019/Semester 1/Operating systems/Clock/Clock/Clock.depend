@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1575969632 source:d:\clock\clock\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1577782174 source:f:\学习用的课件什么乱七八糟的\大三上学期\操作系统-张翠军\clock\clock\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

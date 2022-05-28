@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.071 ns
+From           : MDR_Bus
+To             : pc:PC|q[2]
+From Clock     : --
+To Clock       : load_PC
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.360 ns
+From           : pc:PC|q[3]
+To             : pin_q[3]
+From Clock     : load_PC
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.071 ns
+From           : MDR_Bus
+To             : pin_q[3]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -2.137 ns
+From           : d2[3]
+To             : MDR:MDR|q[3]
+From Clock     : --
+To Clock       : load_MDR
+Failed Paths   : 0
+
+Type           : Clock Setup: 'load_PC'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 219.39 MHz ( period = 4.558 ns )
+From           : pc:PC|q[4]
+To             : pc:PC|q[4]
+From Clock     : load_PC
+To Clock       : load_PC
+Failed Paths   : 0
+
+Type           : Clock Setup: 'load_MDR'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 378.07 MHz ( period = 2.645 ns )
+From           : MDR:MDR|q[6]
+To             : MDR:MDR|q[6]
+From Clock     : load_MDR
+To Clock       : load_MDR
+Failed Paths   : 0
+
+Type           : Clock Setup: 'IR_cp'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 422.12 MHz ( period = 2.369 ns )
+From           : reg:IR|q[7]
+To             : reg:IR|q[7]
+From Clock     : IR_cp
+To Clock       : IR_cp
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,785 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1_q[7] is reg:MAR|q[7]
+--operation mode is normal
+
+B1_q[7]_lut_out = A1L34;
+B1_q[7] = DFFEAS(B1_q[7]_lut_out, MAR_cp, reset, , , , , , );
+
+
+--B1_q[6] is reg:MAR|q[6]
+--operation mode is normal
+
+B1_q[6]_lut_out = A1L30;
+B1_q[6] = DFFEAS(B1_q[6]_lut_out, MAR_cp, reset, , , , , , );
+
+
+--B1_q[5] is reg:MAR|q[5]
+--operation mode is normal
+
+B1_q[5]_lut_out = A1L27;
+B1_q[5] = DFFEAS(B1_q[5]_lut_out, MAR_cp, reset, , , , , , );
+
+
+--B1_q[4] is reg:MAR|q[4]
+--operation mode is normal
+
+B1_q[4]_lut_out = A1L24;
+B1_q[4] = DFFEAS(B1_q[4]_lut_out, MAR_cp, reset, , , , , , );
+
+
+--B1_q[3] is reg:MAR|q[3]
+--operation mode is normal
+
+B1_q[3]_lut_out = A1L21;
+B1_q[3] = DFFEAS(B1_q[3]_lut_out, MAR_cp, reset, , , , , , );
+
+
+--B1_q[2] is reg:MAR|q[2]
+--operation mode is normal
+
+B1_q[2]_lut_out = A1L18;
+B1_q[2] = DFFEAS(B1_q[2]_lut_out, MAR_cp, reset, , , , , , );
+
+
+--B1_q[1] is reg:MAR|q[1]
+--operation mode is normal
+
+B1_q[1]_lut_out = A1L15;
+B1_q[1] = DFFEAS(B1_q[1]_lut_out, MAR_cp, reset, , , , , , );
+
+
+--B1_q[0] is reg:MAR|q[0]
+--operation mode is normal
+
+B1_q[0]_lut_out = A1L12;
+B1_q[0] = DFFEAS(B1_q[0]_lut_out, MAR_cp, reset, , , , , , );
+
+
+--B2_q[7] is reg:IR|q[7]
+--operation mode is normal
+
+B2_q[7]_lut_out = A1L34;
+B2_q[7] = DFFEAS(B2_q[7]_lut_out, IR_cp, reset, , , , , , );
+
+
+--B2_q[6] is reg:IR|q[6]
+--operation mode is normal
+
+B2_q[6]_lut_out = A1L30;
+B2_q[6] = DFFEAS(B2_q[6]_lut_out, IR_cp, reset, , , , , , );
+
+
+--B2_q[5] is reg:IR|q[5]
+--operation mode is normal
+
+B2_q[5]_lut_out = A1L27;
+B2_q[5] = DFFEAS(B2_q[5]_lut_out, IR_cp, reset, , , , , , );
+
+
+--B2_q[4] is reg:IR|q[4]
+--operation mode is normal
+
+B2_q[4]_lut_out = A1L24;
+B2_q[4] = DFFEAS(B2_q[4]_lut_out, IR_cp, reset, , , , , , );
+
+
+--B2_q[3] is reg:IR|q[3]
+--operation mode is normal
+
+B2_q[3]_lut_out = A1L21;
+B2_q[3] = DFFEAS(B2_q[3]_lut_out, IR_cp, reset, , , , , , );
+
+
+--B2_q[2] is reg:IR|q[2]
+--operation mode is normal
+
+B2_q[2]_lut_out = A1L18;
+B2_q[2] = DFFEAS(B2_q[2]_lut_out, IR_cp, reset, , , , , , );
+
+
+--B2_q[1] is reg:IR|q[1]
+--operation mode is normal
+
+B2_q[1]_lut_out = A1L15;
+B2_q[1] = DFFEAS(B2_q[1]_lut_out, IR_cp, reset, , , , , , );
+
+
+--B2_q[0] is reg:IR|q[0]
+--operation mode is normal
+
+B2_q[0]_lut_out = A1L12;
+B2_q[0] = DFFEAS(B2_q[0]_lut_out, IR_cp, reset, , , , , , );
+
+
+--C1_q[7] is MDR:MDR|q[7]
+--operation mode is normal
+
+C1_q[7]_lut_out = R_NW & d2[7] # !R_NW & (A1L34);
+C1_q[7] = DFFEAS(C1_q[7]_lut_out, load_MDR, reset, , , , , , );
+
+
+--C1_q[6] is MDR:MDR|q[6]
+--operation mode is normal
+
+C1_q[6]_lut_out = R_NW & d2[6] # !R_NW & (A1L30);
+C1_q[6] = DFFEAS(C1_q[6]_lut_out, load_MDR, reset, , , , , , );
+
+
+--C1_q[5] is MDR:MDR|q[5]
+--operation mode is normal
+
+C1_q[5]_lut_out = R_NW & d2[5] # !R_NW & (A1L27);
+C1_q[5] = DFFEAS(C1_q[5]_lut_out, load_MDR, reset, , , , , , );
+
+
+--C1_q[4] is MDR:MDR|q[4]
+--operation mode is normal
+
+C1_q[4]_lut_out = R_NW & d2[4] # !R_NW & (A1L24);
+C1_q[4] = DFFEAS(C1_q[4]_lut_out, load_MDR, reset, , , , , , );
+
+
+--C1_q[3] is MDR:MDR|q[3]
+--operation mode is normal
+
+C1_q[3]_lut_out = R_NW & d2[3] # !R_NW & (A1L21);
+C1_q[3] = DFFEAS(C1_q[3]_lut_out, load_MDR, reset, , , , , , );
+
+
+--C1_q[2] is MDR:MDR|q[2]
+--operation mode is normal
+
+C1_q[2]_lut_out = R_NW & d2[2] # !R_NW & (A1L18);
+C1_q[2] = DFFEAS(C1_q[2]_lut_out, load_MDR, reset, , , , , , );
+
+
+--C1_q[1] is MDR:MDR|q[1]
+--operation mode is normal
+
+C1_q[1]_lut_out = R_NW & d2[1] # !R_NW & (A1L15);
+C1_q[1] = DFFEAS(C1_q[1]_lut_out, load_MDR, reset, , , , , , );
+
+
+--C1_q[0] is MDR:MDR|q[0]
+--operation mode is normal
+
+C1_q[0]_lut_out = R_NW & d2[0] # !R_NW & (A1L12);
+C1_q[0] = DFFEAS(C1_q[0]_lut_out, load_MDR, reset, , , , , , );
+
+
+--D1_q[7] is pc:PC|q[7]
+--operation mode is normal
+
+D1_q[7]_carry_eqn = D1L15;
+D1_q[7]_lut_out = D1_q[7] $ (D1_q[7]_carry_eqn);
+D1_q[7] = DFFEAS(D1_q[7]_lut_out, load_PC, reset, , , A1L34, , , !INC_PC);
+
+
+--D1_q[6] is pc:PC|q[6]
+--operation mode is arithmetic
+
+D1_q[6]_carry_eqn = D1L13;
+D1_q[6]_lut_out = D1_q[6] $ (!D1_q[6]_carry_eqn);
+D1_q[6] = DFFEAS(D1_q[6]_lut_out, load_PC, reset, , , A1L30, , , !INC_PC);
+
+--D1L15 is pc:PC|q[6]~173
+--operation mode is arithmetic
+
+D1L15 = CARRY(D1_q[6] & (!D1L13));
+
+
+--D1_q[5] is pc:PC|q[5]
+--operation mode is arithmetic
+
+D1_q[5]_carry_eqn = D1L11;
+D1_q[5]_lut_out = D1_q[5] $ (D1_q[5]_carry_eqn);
+D1_q[5] = DFFEAS(D1_q[5]_lut_out, load_PC, reset, , , A1L27, , , !INC_PC);
+
+--D1L13 is pc:PC|q[5]~177
+--operation mode is arithmetic
+
+D1L13 = CARRY(!D1L11 # !D1_q[5]);
+
+
+--D1_q[4] is pc:PC|q[4]
+--operation mode is arithmetic
+
+D1_q[4]_carry_eqn = D1L9;
+D1_q[4]_lut_out = D1_q[4] $ (!D1_q[4]_carry_eqn);
+D1_q[4] = DFFEAS(D1_q[4]_lut_out, load_PC, reset, , , A1L24, , , !INC_PC);
+
+--D1L11 is pc:PC|q[4]~181
+--operation mode is arithmetic
+
+D1L11 = CARRY(D1_q[4] & (!D1L9));
+
+
+--D1_q[3] is pc:PC|q[3]
+--operation mode is arithmetic
+
+D1_q[3]_carry_eqn = D1L7;
+D1_q[3]_lut_out = D1_q[3] $ (D1_q[3]_carry_eqn);
+D1_q[3] = DFFEAS(D1_q[3]_lut_out, load_PC, reset, , , A1L21, , , !INC_PC);
+
+--D1L9 is pc:PC|q[3]~185
+--operation mode is arithmetic
+
+D1L9 = CARRY(!D1L7 # !D1_q[3]);
+
+
+--D1_q[2] is pc:PC|q[2]
+--operation mode is arithmetic
+
+D1_q[2]_carry_eqn = D1L5;
+D1_q[2]_lut_out = D1_q[2] $ (!D1_q[2]_carry_eqn);
+D1_q[2] = DFFEAS(D1_q[2]_lut_out, load_PC, reset, , , A1L18, , , !INC_PC);
+
+--D1L7 is pc:PC|q[2]~189
+--operation mode is arithmetic
+
+D1L7 = CARRY(D1_q[2] & (!D1L5));
+
+
+--D1_q[1] is pc:PC|q[1]
+--operation mode is arithmetic
+
+D1_q[1]_carry_eqn = D1L3;
+D1_q[1]_lut_out = D1_q[1] $ (D1_q[1]_carry_eqn);
+D1_q[1] = DFFEAS(D1_q[1]_lut_out, load_PC, reset, , , A1L15, , , !INC_PC);
+
+--D1L5 is pc:PC|q[1]~193
+--operation mode is arithmetic
+
+D1L5 = CARRY(!D1L3 # !D1_q[1]);
+
+
+--D1_q[0] is pc:PC|q[0]
+--operation mode is arithmetic
+
+D1_q[0]_lut_out = !D1_q[0];
+D1_q[0] = DFFEAS(D1_q[0]_lut_out, load_PC, reset, , , A1L12, , , !INC_PC);
+
+--D1L3 is pc:PC|q[0]~197
+--operation mode is arithmetic
+
+D1L3 = CARRY(D1_q[0]);
+
+
+--A1L32 is inst7[7]~661
+--operation mode is normal
+
+A1L32 = D1_q[7] & (C1_q[7] # !MDR_Bus) # !D1_q[7] & !PC_Bus & (C1_q[7] # !MDR_Bus);
+
+
+--A1L33 is inst7[7]~662
+--operation mode is normal
+
+A1L33 = MDR_Bus # PC_Bus # IR_Bus;
+
+
+--A1L34 is inst7[7]~663
+--operation mode is normal
+
+A1L34 = A1L32 & (B2_q[7] # !IR_Bus) # !A1L33;
+
+
+--A1L29 is inst7[6]~664
+--operation mode is normal
+
+A1L29 = D1_q[6] & (C1_q[6] # !MDR_Bus) # !D1_q[6] & !PC_Bus & (C1_q[6] # !MDR_Bus);
+
+
+--A1L30 is inst7[6]~665
+--operation mode is normal
+
+A1L30 = A1L29 & (B2_q[6] # !IR_Bus) # !A1L33;
+
+
+--A1L26 is inst7[5]~666
+--operation mode is normal
+
+A1L26 = D1_q[5] & (C1_q[5] # !MDR_Bus) # !D1_q[5] & !PC_Bus & (C1_q[5] # !MDR_Bus);
+
+
+--A1L27 is inst7[5]~667
+--operation mode is normal
+
+A1L27 = A1L26 & (B2_q[5] # !IR_Bus) # !A1L33;
+
+
+--A1L23 is inst7[4]~668
+--operation mode is normal
+
+A1L23 = D1_q[4] & (C1_q[4] # !MDR_Bus) # !D1_q[4] & !PC_Bus & (C1_q[4] # !MDR_Bus);
+
+
+--A1L24 is inst7[4]~669
+--operation mode is normal
+
+A1L24 = A1L23 & (B2_q[4] # !IR_Bus) # !A1L33;
+
+
+--A1L20 is inst7[3]~670
+--operation mode is normal
+
+A1L20 = D1_q[3] & (C1_q[3] # !MDR_Bus) # !D1_q[3] & !PC_Bus & (C1_q[3] # !MDR_Bus);
+
+
+--A1L21 is inst7[3]~671
+--operation mode is normal
+
+A1L21 = A1L20 & (B2_q[3] # !IR_Bus) # !A1L33;
+
+
+--A1L17 is inst7[2]~672
+--operation mode is normal
+
+A1L17 = D1_q[2] & (C1_q[2] # !MDR_Bus) # !D1_q[2] & !PC_Bus & (C1_q[2] # !MDR_Bus);
+
+
+--A1L18 is inst7[2]~673
+--operation mode is normal
+
+A1L18 = A1L17 & (B2_q[2] # !IR_Bus) # !A1L33;
+
+
+--A1L14 is inst7[1]~674
+--operation mode is normal
+
+A1L14 = D1_q[1] & (C1_q[1] # !MDR_Bus) # !D1_q[1] & !PC_Bus & (C1_q[1] # !MDR_Bus);
+
+
+--A1L15 is inst7[1]~675
+--operation mode is normal
+
+A1L15 = A1L14 & (B2_q[1] # !IR_Bus) # !A1L33;
+
+
+--A1L11 is inst7[0]~676
+--operation mode is normal
+
+A1L11 = D1_q[0] & (C1_q[0] # !MDR_Bus) # !D1_q[0] & !PC_Bus & (C1_q[0] # !MDR_Bus);
+
+
+--A1L12 is inst7[0]~677
+--operation mode is normal
+
+A1L12 = A1L11 & (B2_q[0] # !IR_Bus) # !A1L33;
+
+
+--A1L35 is inst7[7]~678
+--operation mode is normal
+
+A1L35 = A1L32 & (B2_q[7] # !IR_Bus);
+
+
+--A1L31 is inst7[6]~679
+--operation mode is normal
+
+A1L31 = A1L29 & (B2_q[6] # !IR_Bus);
+
+
+--A1L28 is inst7[5]~680
+--operation mode is normal
+
+A1L28 = A1L26 & (B2_q[5] # !IR_Bus);
+
+
+--A1L25 is inst7[4]~681
+--operation mode is normal
+
+A1L25 = A1L23 & (B2_q[4] # !IR_Bus);
+
+
+--A1L22 is inst7[3]~682
+--operation mode is normal
+
+A1L22 = A1L20 & (B2_q[3] # !IR_Bus);
+
+
+--A1L19 is inst7[2]~683
+--operation mode is normal
+
+A1L19 = A1L17 & (B2_q[2] # !IR_Bus);
+
+
+--A1L16 is inst7[1]~684
+--operation mode is normal
+
+A1L16 = A1L14 & (B2_q[1] # !IR_Bus);
+
+
+--A1L13 is inst7[0]~685
+--operation mode is normal
+
+A1L13 = A1L11 & (B2_q[0] # !IR_Bus);
+
+
+--MDR_Bus is MDR_Bus
+--operation mode is input
+
+MDR_Bus = INPUT();
+
+
+--PC_Bus is PC_Bus
+--operation mode is input
+
+PC_Bus = INPUT();
+
+
+--IR_Bus is IR_Bus
+--operation mode is input
+
+IR_Bus = INPUT();
+
+
+--MAR_cp is MAR_cp
+--operation mode is input
+
+MAR_cp = INPUT();
+
+
+--reset is reset
+--operation mode is input
+
+reset = INPUT();
+
+
+--IR_cp is IR_cp
+--operation mode is input
+
+IR_cp = INPUT();
+
+
+--d2[7] is d2[7]
+--operation mode is input
+
+d2[7] = INPUT();
+
+
+--R_NW is R_NW
+--operation mode is input
+
+R_NW = INPUT();
+
+
+--load_MDR is load_MDR
+--operation mode is input
+
+load_MDR = INPUT();
+
+
+--d2[6] is d2[6]
+--operation mode is input
+
+d2[6] = INPUT();
+
+
+--d2[5] is d2[5]
+--operation mode is input
+
+d2[5] = INPUT();
+
+
+--d2[4] is d2[4]
+--operation mode is input
+
+d2[4] = INPUT();
+
+
+--d2[3] is d2[3]
+--operation mode is input
+
+d2[3] = INPUT();
+
+
+--d2[2] is d2[2]
+--operation mode is input
+
+d2[2] = INPUT();
+
+
+--d2[1] is d2[1]
+--operation mode is input
+
+d2[1] = INPUT();
+
+
+--d2[0] is d2[0]
+--operation mode is input
+
+d2[0] = INPUT();
+
+
+--load_PC is load_PC
+--operation mode is input
+
+load_PC = INPUT();
+
+
+--INC_PC is INC_PC
+--operation mode is input
+
+INC_PC = INPUT();
+
+
+--MAR_q[7] is MAR_q[7]
+--operation mode is output
+
+MAR_q[7] = OUTPUT(B1_q[7]);
+
+
+--MAR_q[6] is MAR_q[6]
+--operation mode is output
+
+MAR_q[6] = OUTPUT(B1_q[6]);
+
+
+--MAR_q[5] is MAR_q[5]
+--operation mode is output
+
+MAR_q[5] = OUTPUT(B1_q[5]);
+
+
+--MAR_q[4] is MAR_q[4]
+--operation mode is output
+
+MAR_q[4] = OUTPUT(B1_q[4]);
+
+
+--MAR_q[3] is MAR_q[3]
+--operation mode is output
+
+MAR_q[3] = OUTPUT(B1_q[3]);
+
+
+--MAR_q[2] is MAR_q[2]
+--operation mode is output
+
+MAR_q[2] = OUTPUT(B1_q[2]);
+
+
+--MAR_q[1] is MAR_q[1]
+--operation mode is output
+
+MAR_q[1] = OUTPUT(B1_q[1]);
+
+
+--MAR_q[0] is MAR_q[0]
+--operation mode is output
+
+MAR_q[0] = OUTPUT(B1_q[0]);
+
+
+--OUT_IR[7] is OUT_IR[7]
+--operation mode is output
+
+OUT_IR[7] = OUTPUT(B2_q[7]);
+
+
+--OUT_IR[6] is OUT_IR[6]
+--operation mode is output
+
+OUT_IR[6] = OUTPUT(B2_q[6]);
+
+
+--OUT_IR[5] is OUT_IR[5]
+--operation mode is output
+
+OUT_IR[5] = OUTPUT(B2_q[5]);
+
+
+--OUT_IR[4] is OUT_IR[4]
+--operation mode is output
+
+OUT_IR[4] = OUTPUT(B2_q[4]);
+
+
+--OUT_IR[3] is OUT_IR[3]
+--operation mode is output
+
+OUT_IR[3] = OUTPUT(B2_q[3]);
+
+
+--OUT_IR[2] is OUT_IR[2]
+--operation mode is output
+
+OUT_IR[2] = OUTPUT(B2_q[2]);
+
+
+--OUT_IR[1] is OUT_IR[1]
+--operation mode is output
+
+OUT_IR[1] = OUTPUT(B2_q[1]);
+
+
+--OUT_IR[0] is OUT_IR[0]
+--operation mode is output
+
+OUT_IR[0] = OUTPUT(B2_q[0]);
+
+
+--OUT_MDR[7] is OUT_MDR[7]
+--operation mode is output
+
+OUT_MDR[7] = OUTPUT(C1_q[7]);
+
+
+--OUT_MDR[6] is OUT_MDR[6]
+--operation mode is output
+
+OUT_MDR[6] = OUTPUT(C1_q[6]);
+
+
+--OUT_MDR[5] is OUT_MDR[5]
+--operation mode is output
+
+OUT_MDR[5] = OUTPUT(C1_q[5]);
+
+
+--OUT_MDR[4] is OUT_MDR[4]
+--operation mode is output
+
+OUT_MDR[4] = OUTPUT(C1_q[4]);
+
+
+--OUT_MDR[3] is OUT_MDR[3]
+--operation mode is output
+
+OUT_MDR[3] = OUTPUT(C1_q[3]);
+
+
+--OUT_MDR[2] is OUT_MDR[2]
+--operation mode is output
+
+OUT_MDR[2] = OUTPUT(C1_q[2]);
+
+
+--OUT_MDR[1] is OUT_MDR[1]
+--operation mode is output
+
+OUT_MDR[1] = OUTPUT(C1_q[1]);
+
+
+--OUT_MDR[0] is OUT_MDR[0]
+--operation mode is output
+
+OUT_MDR[0] = OUTPUT(C1_q[0]);
+
+
+--OUT_PC[7] is OUT_PC[7]
+--operation mode is output
+
+OUT_PC[7] = OUTPUT(D1_q[7]);
+
+
+--OUT_PC[6] is OUT_PC[6]
+--operation mode is output
+
+OUT_PC[6] = OUTPUT(D1_q[6]);
+
+
+--OUT_PC[5] is OUT_PC[5]
+--operation mode is output
+
+OUT_PC[5] = OUTPUT(D1_q[5]);
+
+
+--OUT_PC[4] is OUT_PC[4]
+--operation mode is output
+
+OUT_PC[4] = OUTPUT(D1_q[4]);
+
+
+--OUT_PC[3] is OUT_PC[3]
+--operation mode is output
+
+OUT_PC[3] = OUTPUT(D1_q[3]);
+
+
+--OUT_PC[2] is OUT_PC[2]
+--operation mode is output
+
+OUT_PC[2] = OUTPUT(D1_q[2]);
+
+
+--OUT_PC[1] is OUT_PC[1]
+--operation mode is output
+
+OUT_PC[1] = OUTPUT(D1_q[1]);
+
+
+--OUT_PC[0] is OUT_PC[0]
+--operation mode is output
+
+OUT_PC[0] = OUTPUT(D1_q[0]);
+
+
+--pin_q[7] is pin_q[7]
+--operation mode is output
+
+pin_q[7]_tri_out = TRI(A1L35, A1L33);
+pin_q[7] = OUTPUT(pin_q[7]_tri_out);
+
+
+--pin_q[6] is pin_q[6]
+--operation mode is output
+
+pin_q[6]_tri_out = TRI(A1L31, A1L33);
+pin_q[6] = OUTPUT(pin_q[6]_tri_out);
+
+
+--pin_q[5] is pin_q[5]
+--operation mode is output
+
+pin_q[5]_tri_out = TRI(A1L28, A1L33);
+pin_q[5] = OUTPUT(pin_q[5]_tri_out);
+
+
+--pin_q[4] is pin_q[4]
+--operation mode is output
+
+pin_q[4]_tri_out = TRI(A1L25, A1L33);
+pin_q[4] = OUTPUT(pin_q[4]_tri_out);
+
+
+--pin_q[3] is pin_q[3]
+--operation mode is output
+
+pin_q[3]_tri_out = TRI(A1L22, A1L33);
+pin_q[3] = OUTPUT(pin_q[3]_tri_out);
+
+
+--pin_q[2] is pin_q[2]
+--operation mode is output
+
+pin_q[2]_tri_out = TRI(A1L19, A1L33);
+pin_q[2] = OUTPUT(pin_q[2]_tri_out);
+
+
+--pin_q[1] is pin_q[1]
+--operation mode is output
+
+pin_q[1]_tri_out = TRI(A1L16, A1L33);
+pin_q[1] = OUTPUT(pin_q[1]_tri_out);
+
+
+--pin_q[0] is pin_q[0]
+--operation mode is output
+
+pin_q[0]_tri_out = TRI(A1L13, A1L33);
+pin_q[0] = OUTPUT(pin_q[0]_tri_out);
+
+

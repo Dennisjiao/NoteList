@@ -1,0 +1,444 @@
+Timing Analyzer report for yang
+Fri Nov 08 16:25:05 2019
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'load_ACC'
+  6. tsu
+  7. tco
+  8. tpd
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                               ;
++------------------------------+-------+---------------+------------------------------------------------+-------------------+-------------------+------------+-----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From              ; To                ; From Clock ; To Clock  ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+-------------------+-------------------+------------+-----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 7.214 ns                                       ; choice[0]         ; ALU:inst|c1[8]    ; --         ; choice[1] ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 10.918 ns                                      ; ALU:inst|c1[7]    ; flag              ; choice[1]  ; --        ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 13.390 ns                                      ; choice[0]         ; flag              ; --         ; --        ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -0.136 ns                                      ; choice[1]         ; yang:inst4|ACC[4] ; --         ; load_ACC  ; 0            ;
+; Clock Setup: 'load_ACC'      ; N/A   ; None          ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; yang:inst4|ACC[0] ; yang:inst4|ACC[0] ; load_ACC   ; load_ACC  ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                   ;                   ;            ;           ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+-------------------+-------------------+------------+-----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP1S10F484C5       ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
+; Default hold multicycle                               ; Same As Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; load_ACC        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; choice[1]       ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'load_ACC'                                                                                                                                                                                    ;
++-------+------------------------------------------------+-------------------+-------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From              ; To                ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------+-------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; yang:inst4|ACC[3] ; yang:inst4|ACC[3] ; load_ACC   ; load_ACC ; None                        ; None                      ; 0.389 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; yang:inst4|ACC[1] ; yang:inst4|ACC[1] ; load_ACC   ; load_ACC ; None                        ; None                      ; 0.389 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; yang:inst4|ACC[7] ; yang:inst4|ACC[7] ; load_ACC   ; load_ACC ; None                        ; None                      ; 0.389 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; yang:inst4|ACC[4] ; yang:inst4|ACC[4] ; load_ACC   ; load_ACC ; None                        ; None                      ; 0.389 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; yang:inst4|ACC[5] ; yang:inst4|ACC[5] ; load_ACC   ; load_ACC ; None                        ; None                      ; 0.389 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; yang:inst4|ACC[6] ; yang:inst4|ACC[6] ; load_ACC   ; load_ACC ; None                        ; None                      ; 0.389 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; yang:inst4|ACC[2] ; yang:inst4|ACC[2] ; load_ACC   ; load_ACC ; None                        ; None                      ; 0.389 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; yang:inst4|ACC[0] ; yang:inst4|ACC[0] ; load_ACC   ; load_ACC ; None                        ; None                      ; 0.389 ns                ;
++-------+------------------------------------------------+-------------------+-------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------+
+; tsu                                                                           ;
++-------+--------------+------------+-----------+-------------------+-----------+
+; Slack ; Required tsu ; Actual tsu ; From      ; To                ; To Clock  ;
++-------+--------------+------------+-----------+-------------------+-----------+
+; N/A   ; None         ; 7.214 ns   ; choice[0] ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A   ; None         ; 7.213 ns   ; choice[0] ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A   ; None         ; 7.197 ns   ; choice[0] ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A   ; None         ; 7.122 ns   ; choice[0] ; ALU:inst|c1[3]    ; choice[1] ;
+; N/A   ; None         ; 6.936 ns   ; choice[0] ; ALU:inst|c1[2]    ; choice[1] ;
+; N/A   ; None         ; 6.901 ns   ; choice[0] ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A   ; None         ; 6.755 ns   ; choice[0] ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A   ; None         ; 6.702 ns   ; choice[0] ; ALU:inst|c1[1]    ; choice[1] ;
+; N/A   ; None         ; 6.038 ns   ; choice[0] ; ALU:inst|c1[0]    ; choice[1] ;
+; N/A   ; None         ; 5.826 ns   ; a[1]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A   ; None         ; 5.825 ns   ; a[1]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A   ; None         ; 5.809 ns   ; a[1]      ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A   ; None         ; 5.723 ns   ; a[1]      ; ALU:inst|c1[3]    ; choice[1] ;
+; N/A   ; None         ; 5.710 ns   ; a[2]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A   ; None         ; 5.709 ns   ; a[2]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A   ; None         ; 5.693 ns   ; a[2]      ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A   ; None         ; 5.624 ns   ; a[4]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A   ; None         ; 5.605 ns   ; a[2]      ; ALU:inst|c1[3]    ; choice[1] ;
+; N/A   ; None         ; 5.563 ns   ; a[4]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A   ; None         ; 5.537 ns   ; a[1]      ; ALU:inst|c1[2]    ; choice[1] ;
+; N/A   ; None         ; 5.513 ns   ; a[1]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A   ; None         ; 5.495 ns   ; a[0]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A   ; None         ; 5.494 ns   ; a[0]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A   ; None         ; 5.478 ns   ; a[0]      ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A   ; None         ; 5.443 ns   ; a[6]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A   ; None         ; 5.427 ns   ; a[4]      ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A   ; None         ; 5.397 ns   ; a[2]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A   ; None         ; 5.394 ns   ; a[0]      ; ALU:inst|c1[3]    ; choice[1] ;
+; N/A   ; None         ; 5.382 ns   ; a[6]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A   ; None         ; 5.367 ns   ; a[1]      ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A   ; None         ; 5.364 ns   ; a[0]      ; ALU:inst|c1[1]    ; choice[1] ;
+; N/A   ; None         ; 5.327 ns   ; a[1]      ; ALU:inst|c1[1]    ; choice[1] ;
+; N/A   ; None         ; 5.319 ns   ; a[3]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A   ; None         ; 5.318 ns   ; a[3]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A   ; None         ; 5.302 ns   ; a[3]      ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A   ; None         ; 5.277 ns   ; a[5]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A   ; None         ; 5.271 ns   ; a[7]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A   ; None         ; 5.251 ns   ; a[2]      ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A   ; None         ; 5.216 ns   ; a[5]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A   ; None         ; 5.208 ns   ; a[0]      ; ALU:inst|c1[2]    ; choice[1] ;
+; N/A   ; None         ; 5.191 ns   ; a[4]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A   ; None         ; 5.182 ns   ; a[0]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A   ; None         ; 5.053 ns   ; a[2]      ; ALU:inst|c1[2]    ; choice[1] ;
+; N/A   ; None         ; 5.036 ns   ; a[0]      ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A   ; None         ; 5.006 ns   ; a[3]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A   ; None         ; 4.860 ns   ; a[3]      ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A   ; None         ; 4.844 ns   ; a[5]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A   ; None         ; 4.820 ns   ; a[7]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A   ; None         ; 4.819 ns   ; a[3]      ; ALU:inst|c1[3]    ; choice[1] ;
+; N/A   ; None         ; 4.727 ns   ; a[0]      ; ALU:inst|c1[0]    ; choice[1] ;
+; N/A   ; None         ; 4.714 ns   ; a[5]      ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A   ; None         ; 4.620 ns   ; a[6]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A   ; None         ; 4.535 ns   ; a[4]      ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A   ; None         ; 4.257 ns   ; choice[1] ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A   ; None         ; 4.256 ns   ; choice[1] ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A   ; None         ; 4.240 ns   ; choice[1] ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A   ; None         ; 4.163 ns   ; choice[1] ; ALU:inst|c1[3]    ; choice[1] ;
+; N/A   ; None         ; 3.977 ns   ; choice[1] ; ALU:inst|c1[1]    ; choice[1] ;
+; N/A   ; None         ; 3.944 ns   ; choice[1] ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A   ; None         ; 3.822 ns   ; choice[1] ; ALU:inst|c1[2]    ; choice[1] ;
+; N/A   ; None         ; 3.798 ns   ; choice[1] ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A   ; None         ; 3.653 ns   ; choice[0] ; yang:inst4|ACC[3] ; load_ACC  ;
+; N/A   ; None         ; 3.551 ns   ; choice[0] ; yang:inst4|ACC[5] ; load_ACC  ;
+; N/A   ; None         ; 3.473 ns   ; choice[0] ; yang:inst4|ACC[7] ; load_ACC  ;
+; N/A   ; None         ; 3.471 ns   ; a[0]      ; yang:inst4|ACC[0] ; load_ACC  ;
+; N/A   ; None         ; 3.469 ns   ; choice[0] ; yang:inst4|ACC[1] ; load_ACC  ;
+; N/A   ; None         ; 3.461 ns   ; a[2]      ; yang:inst4|ACC[2] ; load_ACC  ;
+; N/A   ; None         ; 3.453 ns   ; a[4]      ; yang:inst4|ACC[4] ; load_ACC  ;
+; N/A   ; None         ; 3.451 ns   ; choice[0] ; yang:inst4|ACC[0] ; load_ACC  ;
+; N/A   ; None         ; 3.451 ns   ; choice[0] ; yang:inst4|ACC[4] ; load_ACC  ;
+; N/A   ; None         ; 3.385 ns   ; a[5]      ; yang:inst4|ACC[5] ; load_ACC  ;
+; N/A   ; None         ; 3.340 ns   ; choice[0] ; yang:inst4|ACC[6] ; load_ACC  ;
+; N/A   ; None         ; 3.316 ns   ; choice[1] ; ALU:inst|c1[0]    ; choice[1] ;
+; N/A   ; None         ; 3.228 ns   ; choice[0] ; yang:inst4|ACC[2] ; load_ACC  ;
+; N/A   ; None         ; 3.176 ns   ; a[1]      ; yang:inst4|ACC[1] ; load_ACC  ;
+; N/A   ; None         ; 2.868 ns   ; a[6]      ; yang:inst4|ACC[6] ; load_ACC  ;
+; N/A   ; None         ; 2.779 ns   ; a[3]      ; yang:inst4|ACC[3] ; load_ACC  ;
+; N/A   ; None         ; 2.745 ns   ; a[7]      ; yang:inst4|ACC[7] ; load_ACC  ;
+; N/A   ; None         ; 0.932 ns   ; choice[1] ; yang:inst4|ACC[5] ; load_ACC  ;
+; N/A   ; None         ; 0.917 ns   ; choice[1] ; yang:inst4|ACC[0] ; load_ACC  ;
+; N/A   ; None         ; 0.588 ns   ; choice[1] ; yang:inst4|ACC[2] ; load_ACC  ;
+; N/A   ; None         ; 0.546 ns   ; choice[1] ; yang:inst4|ACC[3] ; load_ACC  ;
+; N/A   ; None         ; 0.533 ns   ; choice[1] ; yang:inst4|ACC[4] ; load_ACC  ;
+; N/A   ; None         ; 0.378 ns   ; choice[1] ; yang:inst4|ACC[1] ; load_ACC  ;
+; N/A   ; None         ; 0.362 ns   ; choice[1] ; yang:inst4|ACC[7] ; load_ACC  ;
+; N/A   ; None         ; 0.350 ns   ; choice[1] ; yang:inst4|ACC[6] ; load_ACC  ;
++-------+--------------+------------+-----------+-------------------+-----------+
+
+
++-----------------------------------------------------------------------------+
+; tco                                                                         ;
++-------+--------------+------------+-------------------+--------+------------+
+; Slack ; Required tco ; Actual tco ; From              ; To     ; From Clock ;
++-------+--------------+------------+-------------------+--------+------------+
+; N/A   ; None         ; 10.918 ns  ; ALU:inst|c1[7]    ; flag   ; choice[1]  ;
+; N/A   ; None         ; 10.461 ns  ; yang:inst4|ACC[7] ; flag   ; load_ACC   ;
+; N/A   ; None         ; 10.337 ns  ; ALU:inst|c1[4]    ; flag   ; choice[1]  ;
+; N/A   ; None         ; 10.295 ns  ; ALU:inst|c1[5]    ; flag   ; choice[1]  ;
+; N/A   ; None         ; 10.257 ns  ; ALU:inst|c1[6]    ; flag   ; choice[1]  ;
+; N/A   ; None         ; 9.951 ns   ; yang:inst4|ACC[6] ; flag   ; load_ACC   ;
+; N/A   ; None         ; 9.839 ns   ; yang:inst4|ACC[5] ; flag   ; load_ACC   ;
+; N/A   ; None         ; 9.772 ns   ; yang:inst4|ACC[4] ; flag   ; load_ACC   ;
+; N/A   ; None         ; 9.346 ns   ; ALU:inst|c1[2]    ; flag   ; choice[1]  ;
+; N/A   ; None         ; 9.156 ns   ; ALU:inst|c1[3]    ; flag   ; choice[1]  ;
+; N/A   ; None         ; 9.135 ns   ; ALU:inst|c1[1]    ; flag   ; choice[1]  ;
+; N/A   ; None         ; 9.044 ns   ; yang:inst4|ACC[0] ; flag   ; load_ACC   ;
+; N/A   ; None         ; 8.862 ns   ; yang:inst4|ACC[2] ; flag   ; load_ACC   ;
+; N/A   ; None         ; 8.721 ns   ; ALU:inst|c1[0]    ; flag   ; choice[1]  ;
+; N/A   ; None         ; 8.692 ns   ; yang:inst4|ACC[3] ; flag   ; load_ACC   ;
+; N/A   ; None         ; 8.681 ns   ; yang:inst4|ACC[1] ; flag   ; load_ACC   ;
+; N/A   ; None         ; 8.669 ns   ; ALU:inst|c1[8]    ; flag   ; choice[1]  ;
+; N/A   ; None         ; 7.733 ns   ; yang:inst4|ACC[4] ; ACC[4] ; load_ACC   ;
+; N/A   ; None         ; 7.571 ns   ; yang:inst4|ACC[1] ; ACC[1] ; load_ACC   ;
+; N/A   ; None         ; 7.557 ns   ; ALU:inst|c1[8]    ; cin    ; choice[1]  ;
+; N/A   ; None         ; 7.514 ns   ; yang:inst4|ACC[5] ; ACC[5] ; load_ACC   ;
+; N/A   ; None         ; 7.113 ns   ; yang:inst4|ACC[2] ; ACC[2] ; load_ACC   ;
+; N/A   ; None         ; 7.103 ns   ; yang:inst4|ACC[6] ; ACC[6] ; load_ACC   ;
+; N/A   ; None         ; 7.083 ns   ; yang:inst4|ACC[7] ; ACC[7] ; load_ACC   ;
+; N/A   ; None         ; 6.921 ns   ; yang:inst4|ACC[3] ; ACC[3] ; load_ACC   ;
+; N/A   ; None         ; 6.870 ns   ; yang:inst4|ACC[0] ; ACC[0] ; load_ACC   ;
++-------+--------------+------------+-------------------+--------+------------+
+
+
++----------------------------------------------------------------+
+; tpd                                                            ;
++-------+-------------------+-----------------+-----------+------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From      ; To   ;
++-------+-------------------+-----------------+-----------+------+
+; N/A   ; None              ; 13.390 ns       ; choice[0] ; flag ;
+; N/A   ; None              ; 12.681 ns       ; a[4]      ; flag ;
+; N/A   ; None              ; 12.662 ns       ; a[7]      ; flag ;
+; N/A   ; None              ; 12.655 ns       ; a[5]      ; flag ;
+; N/A   ; None              ; 12.275 ns       ; a[6]      ; flag ;
+; N/A   ; None              ; 11.941 ns       ; a[0]      ; flag ;
+; N/A   ; None              ; 11.779 ns       ; a[2]      ; flag ;
+; N/A   ; None              ; 11.313 ns       ; a[1]      ; flag ;
+; N/A   ; None              ; 10.927 ns       ; a[3]      ; flag ;
+; N/A   ; None              ; 10.254 ns       ; choice[1] ; flag ;
+; N/A   ; None              ; 6.805 ns        ; choice[1] ; cin  ;
++-------+-------------------+-----------------+-----------+------+
+
+
++-------------------------------------------------------------------------------------+
+; th                                                                                  ;
++---------------+-------------+-----------+-----------+-------------------+-----------+
+; Minimum Slack ; Required th ; Actual th ; From      ; To                ; To Clock  ;
++---------------+-------------+-----------+-----------+-------------------+-----------+
+; N/A           ; None        ; -0.136 ns ; choice[1] ; yang:inst4|ACC[5] ; load_ACC  ;
+; N/A           ; None        ; -0.136 ns ; choice[1] ; yang:inst4|ACC[4] ; load_ACC  ;
+; N/A           ; None        ; -0.139 ns ; choice[1] ; yang:inst4|ACC[6] ; load_ACC  ;
+; N/A           ; None        ; -0.188 ns ; choice[1] ; yang:inst4|ACC[7] ; load_ACC  ;
+; N/A           ; None        ; -0.215 ns ; choice[1] ; yang:inst4|ACC[0] ; load_ACC  ;
+; N/A           ; None        ; -0.216 ns ; choice[1] ; yang:inst4|ACC[2] ; load_ACC  ;
+; N/A           ; None        ; -0.253 ns ; choice[1] ; yang:inst4|ACC[1] ; load_ACC  ;
+; N/A           ; None        ; -0.256 ns ; choice[1] ; yang:inst4|ACC[3] ; load_ACC  ;
+; N/A           ; None        ; -1.263 ns ; choice[1] ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A           ; None        ; -1.881 ns ; choice[1] ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A           ; None        ; -1.944 ns ; choice[1] ; ALU:inst|c1[0]    ; choice[1] ;
+; N/A           ; None        ; -1.974 ns ; choice[1] ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A           ; None        ; -1.983 ns ; choice[1] ; ALU:inst|c1[2]    ; choice[1] ;
+; N/A           ; None        ; -2.067 ns ; choice[1] ; ALU:inst|c1[3]    ; choice[1] ;
+; N/A           ; None        ; -2.147 ns ; choice[1] ; ALU:inst|c1[1]    ; choice[1] ;
+; N/A           ; None        ; -2.150 ns ; choice[1] ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A           ; None        ; -2.343 ns ; choice[1] ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A           ; None        ; -2.635 ns ; a[7]      ; yang:inst4|ACC[7] ; load_ACC  ;
+; N/A           ; None        ; -2.669 ns ; a[3]      ; yang:inst4|ACC[3] ; load_ACC  ;
+; N/A           ; None        ; -2.758 ns ; a[6]      ; yang:inst4|ACC[6] ; load_ACC  ;
+; N/A           ; None        ; -3.066 ns ; a[1]      ; yang:inst4|ACC[1] ; load_ACC  ;
+; N/A           ; None        ; -3.118 ns ; choice[0] ; yang:inst4|ACC[2] ; load_ACC  ;
+; N/A           ; None        ; -3.230 ns ; choice[0] ; yang:inst4|ACC[6] ; load_ACC  ;
+; N/A           ; None        ; -3.275 ns ; a[5]      ; yang:inst4|ACC[5] ; load_ACC  ;
+; N/A           ; None        ; -3.341 ns ; choice[0] ; yang:inst4|ACC[0] ; load_ACC  ;
+; N/A           ; None        ; -3.341 ns ; choice[0] ; yang:inst4|ACC[4] ; load_ACC  ;
+; N/A           ; None        ; -3.343 ns ; a[4]      ; yang:inst4|ACC[4] ; load_ACC  ;
+; N/A           ; None        ; -3.351 ns ; a[2]      ; yang:inst4|ACC[2] ; load_ACC  ;
+; N/A           ; None        ; -3.359 ns ; choice[0] ; yang:inst4|ACC[1] ; load_ACC  ;
+; N/A           ; None        ; -3.361 ns ; a[0]      ; yang:inst4|ACC[0] ; load_ACC  ;
+; N/A           ; None        ; -3.363 ns ; choice[0] ; yang:inst4|ACC[7] ; load_ACC  ;
+; N/A           ; None        ; -3.441 ns ; choice[0] ; yang:inst4|ACC[5] ; load_ACC  ;
+; N/A           ; None        ; -3.543 ns ; choice[0] ; yang:inst4|ACC[3] ; load_ACC  ;
+; N/A           ; None        ; -3.947 ns ; a[4]      ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A           ; None        ; -3.953 ns ; a[5]      ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A           ; None        ; -4.031 ns ; a[6]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A           ; None        ; -4.058 ns ; a[3]      ; ALU:inst|c1[3]    ; choice[1] ;
+; N/A           ; None        ; -4.138 ns ; a[0]      ; ALU:inst|c1[0]    ; choice[1] ;
+; N/A           ; None        ; -4.201 ns ; choice[0] ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A           ; None        ; -4.236 ns ; a[7]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A           ; None        ; -4.251 ns ; a[5]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A           ; None        ; -4.272 ns ; a[3]      ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A           ; None        ; -4.392 ns ; a[2]      ; ALU:inst|c1[2]    ; choice[1] ;
+; N/A           ; None        ; -4.417 ns ; a[3]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A           ; None        ; -4.437 ns ; a[0]      ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A           ; None        ; -4.541 ns ; a[3]      ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A           ; None        ; -4.541 ns ; a[0]      ; ALU:inst|c1[2]    ; choice[1] ;
+; N/A           ; None        ; -4.582 ns ; a[0]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A           ; None        ; -4.585 ns ; a[4]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A           ; None        ; -4.595 ns ; a[7]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A           ; None        ; -4.608 ns ; a[5]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A           ; None        ; -4.625 ns ; a[0]      ; ALU:inst|c1[3]    ; choice[1] ;
+; N/A           ; None        ; -4.626 ns ; a[5]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A           ; None        ; -4.641 ns ; choice[0] ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A           ; None        ; -4.648 ns ; a[2]      ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A           ; None        ; -4.651 ns ; a[4]      ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A           ; None        ; -4.658 ns ; a[3]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A           ; None        ; -4.672 ns ; a[1]      ; ALU:inst|c1[1]    ; choice[1] ;
+; N/A           ; None        ; -4.695 ns ; choice[0] ; ALU:inst|c1[0]    ; choice[1] ;
+; N/A           ; None        ; -4.705 ns ; a[0]      ; ALU:inst|c1[1]    ; choice[1] ;
+; N/A           ; None        ; -4.706 ns ; a[0]      ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A           ; None        ; -4.734 ns ; a[3]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A           ; None        ; -4.734 ns ; choice[0] ; ALU:inst|c1[2]    ; choice[1] ;
+; N/A           ; None        ; -4.765 ns ; a[6]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A           ; None        ; -4.766 ns ; a[1]      ; ALU:inst|c1[4]    ; choice[1] ;
+; N/A           ; None        ; -4.783 ns ; a[6]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A           ; None        ; -4.786 ns ; choice[0] ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A           ; None        ; -4.793 ns ; a[2]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A           ; None        ; -4.818 ns ; choice[0] ; ALU:inst|c1[3]    ; choice[1] ;
+; N/A           ; None        ; -4.823 ns ; a[0]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A           ; None        ; -4.840 ns ; a[2]      ; ALU:inst|c1[3]    ; choice[1] ;
+; N/A           ; None        ; -4.872 ns ; a[1]      ; ALU:inst|c1[2]    ; choice[1] ;
+; N/A           ; None        ; -4.898 ns ; choice[0] ; ALU:inst|c1[1]    ; choice[1] ;
+; N/A           ; None        ; -4.899 ns ; a[0]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A           ; None        ; -4.910 ns ; choice[0] ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A           ; None        ; -4.911 ns ; a[1]      ; ALU:inst|c1[6]    ; choice[1] ;
+; N/A           ; None        ; -4.917 ns ; a[2]      ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A           ; None        ; -4.942 ns ; a[4]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A           ; None        ; -4.956 ns ; a[1]      ; ALU:inst|c1[3]    ; choice[1] ;
+; N/A           ; None        ; -4.960 ns ; a[4]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A           ; None        ; -5.034 ns ; a[2]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A           ; None        ; -5.035 ns ; a[1]      ; ALU:inst|c1[5]    ; choice[1] ;
+; N/A           ; None        ; -5.103 ns ; choice[0] ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A           ; None        ; -5.110 ns ; a[2]      ; ALU:inst|c1[7]    ; choice[1] ;
+; N/A           ; None        ; -5.152 ns ; a[1]      ; ALU:inst|c1[8]    ; choice[1] ;
+; N/A           ; None        ; -5.228 ns ; a[1]      ; ALU:inst|c1[7]    ; choice[1] ;
++---------------+-------------+-----------+-----------+-------------------+-----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 5.1 Build 176 10/26/2005 SJ Full Version
+    Info: Processing started: Fri Nov 08 16:25:05 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off yang -c yang --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "ALU:inst|c1[8]" is a latch
+    Warning: Node "ALU:inst|c1[0]" is a latch
+    Warning: Node "ALU:inst|c1[2]" is a latch
+    Warning: Node "ALU:inst|c1[6]" is a latch
+    Warning: Node "ALU:inst|c1[5]" is a latch
+    Warning: Node "ALU:inst|c1[4]" is a latch
+    Warning: Node "ALU:inst|c1[7]" is a latch
+    Warning: Node "ALU:inst|c1[1]" is a latch
+    Warning: Node "ALU:inst|c1[3]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "load_ACC" is an undefined clock
+    Info: Assuming node "choice[1]" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+Info: Clock "load_ACC" Internal fmax is restricted to 422.12 MHz between source register "yang:inst4|ACC[3]" and destination register "yang:inst4|ACC[3]"
+    Info: fmax restricted to clock pin edge rate 2.369 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 0.389 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X32_Y20_N0; Fanout = 4; REG Node = 'yang:inst4|ACC[3]'
+            Info: 2: + IC(0.000 ns) + CELL(0.389 ns) = 0.389 ns; Loc. = LC_X32_Y20_N0; Fanout = 4; REG Node = 'yang:inst4|ACC[3]'
+            Info: Total cell delay = 0.389 ns ( 100.00 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "load_ACC" to destination register is 2.913 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.828 ns) = 0.828 ns; Loc. = PIN_L3; Fanout = 8; CLK Node = 'load_ACC'
+                Info: 2: + IC(1.543 ns) + CELL(0.542 ns) = 2.913 ns; Loc. = LC_X32_Y20_N0; Fanout = 4; REG Node = 'yang:inst4|ACC[3]'
+                Info: Total cell delay = 1.370 ns ( 47.03 % )
+                Info: Total interconnect delay = 1.543 ns ( 52.97 % )
+            Info: - Longest clock path from clock "load_ACC" to source register is 2.913 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.828 ns) = 0.828 ns; Loc. = PIN_L3; Fanout = 8; CLK Node = 'load_ACC'
+                Info: 2: + IC(1.543 ns) + CELL(0.542 ns) = 2.913 ns; Loc. = LC_X32_Y20_N0; Fanout = 4; REG Node = 'yang:inst4|ACC[3]'
+                Info: Total cell delay = 1.370 ns ( 47.03 % )
+                Info: Total interconnect delay = 1.543 ns ( 52.97 % )
+        Info: + Micro clock to output delay of source is 0.156 ns
+        Info: + Micro setup delay of destination is 0.010 ns
+Info: tsu for register "ALU:inst|c1[8]" (data pin = "choice[0]", clock pin = "choice[1]") is 7.214 ns
+    Info: + Longest pin to register delay is 9.318 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.087 ns) = 1.087 ns; Loc. = PIN_P10; Fanout = 19; PIN Node = 'choice[0]'
+        Info: 2: + IC(4.566 ns) + CELL(0.366 ns) = 6.019 ns; Loc. = LC_X32_Y20_N6; Fanout = 3; COMB Node = 'ALU:inst|add~498'
+        Info: 3: + IC(1.011 ns) + CELL(0.443 ns) = 7.473 ns; Loc. = LC_X33_Y19_N2; Fanout = 2; COMB Node = 'ALU:inst|add~479'
+        Info: 4: + IC(0.000 ns) + CELL(0.058 ns) = 7.531 ns; Loc. = LC_X33_Y19_N3; Fanout = 2; COMB Node = 'ALU:inst|add~454'
+        Info: 5: + IC(0.000 ns) + CELL(0.130 ns) = 7.661 ns; Loc. = LC_X33_Y19_N4; Fanout = 5; COMB Node = 'ALU:inst|add~484'
+        Info: 6: + IC(0.000 ns) + CELL(0.449 ns) = 8.110 ns; Loc. = LC_X33_Y19_N9; Fanout = 1; COMB Node = 'ALU:inst|add~442'
+        Info: 7: + IC(1.025 ns) + CELL(0.183 ns) = 9.318 ns; Loc. = LC_X33_Y20_N9; Fanout = 2; REG Node = 'ALU:inst|c1[8]'
+        Info: Total cell delay = 2.716 ns ( 29.15 % )
+        Info: Total interconnect delay = 6.602 ns ( 70.85 % )
+    Info: + Micro setup delay of destination is 0.661 ns
+    Info: - Shortest clock path from clock "choice[1]" to destination register is 2.765 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 46; CLK Node = 'choice[1]'
+        Info: 2: + IC(1.965 ns) + CELL(0.075 ns) = 2.765 ns; Loc. = LC_X33_Y20_N9; Fanout = 2; REG Node = 'ALU:inst|c1[8]'
+        Info: Total cell delay = 0.800 ns ( 28.93 % )
+        Info: Total interconnect delay = 1.965 ns ( 71.07 % )
+Info: tco from clock "choice[1]" to destination pin "flag" through register "ALU:inst|c1[7]" is 10.918 ns
+    Info: + Longest clock path from clock "choice[1]" to source register is 2.741 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 46; CLK Node = 'choice[1]'
+        Info: 2: + IC(1.941 ns) + CELL(0.075 ns) = 2.741 ns; Loc. = LC_X32_Y20_N5; Fanout = 2; REG Node = 'ALU:inst|c1[7]'
+        Info: Total cell delay = 0.800 ns ( 29.19 % )
+        Info: Total interconnect delay = 1.941 ns ( 70.81 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Longest register to pin delay is 8.177 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X32_Y20_N5; Fanout = 2; REG Node = 'ALU:inst|c1[7]'
+        Info: 2: + IC(0.735 ns) + CELL(0.280 ns) = 1.015 ns; Loc. = LC_X32_Y20_N8; Fanout = 1; COMB Node = 'ALU:inst|process0~1061'
+        Info: 3: + IC(1.235 ns) + CELL(0.075 ns) = 2.325 ns; Loc. = LC_X34_Y19_N0; Fanout = 1; COMB Node = 'ALU:inst|flag~79'
+        Info: 4: + IC(1.038 ns) + CELL(0.280 ns) = 3.643 ns; Loc. = LC_X33_Y20_N6; Fanout = 1; COMB Node = 'ALU:inst|flag'
+        Info: 5: + IC(2.130 ns) + CELL(2.404 ns) = 8.177 ns; Loc. = PIN_N8; Fanout = 0; PIN Node = 'flag'
+        Info: Total cell delay = 3.039 ns ( 37.17 % )
+        Info: Total interconnect delay = 5.138 ns ( 62.83 % )
+Info: Longest tpd from source pin "choice[0]" to destination pin "flag" is 13.390 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.087 ns) = 1.087 ns; Loc. = PIN_P10; Fanout = 19; PIN Node = 'choice[0]'
+    Info: 2: + IC(4.566 ns) + CELL(0.366 ns) = 6.019 ns; Loc. = LC_X32_Y20_N7; Fanout = 2; COMB Node = 'ALU:inst|process0~1060'
+    Info: 3: + IC(0.134 ns) + CELL(0.075 ns) = 6.228 ns; Loc. = LC_X32_Y20_N8; Fanout = 1; COMB Node = 'ALU:inst|process0~1061'
+    Info: 4: + IC(1.235 ns) + CELL(0.075 ns) = 7.538 ns; Loc. = LC_X34_Y19_N0; Fanout = 1; COMB Node = 'ALU:inst|flag~79'
+    Info: 5: + IC(1.038 ns) + CELL(0.280 ns) = 8.856 ns; Loc. = LC_X33_Y20_N6; Fanout = 1; COMB Node = 'ALU:inst|flag'
+    Info: 6: + IC(2.130 ns) + CELL(2.404 ns) = 13.390 ns; Loc. = PIN_N8; Fanout = 0; PIN Node = 'flag'
+    Info: Total cell delay = 4.287 ns ( 32.02 % )
+    Info: Total interconnect delay = 9.103 ns ( 67.98 % )
+Info: th for register "yang:inst4|ACC[5]" (data pin = "choice[1]", clock pin = "load_ACC") is -0.136 ns
+    Info: + Longest clock path from clock "load_ACC" to destination register is 3.019 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.828 ns) = 0.828 ns; Loc. = PIN_L3; Fanout = 8; CLK Node = 'load_ACC'
+        Info: 2: + IC(1.649 ns) + CELL(0.542 ns) = 3.019 ns; Loc. = LC_X34_Y19_N9; Fanout = 4; REG Node = 'yang:inst4|ACC[5]'
+        Info: Total cell delay = 1.370 ns ( 45.38 % )
+        Info: Total interconnect delay = 1.649 ns ( 54.62 % )
+    Info: + Micro hold delay of destination is 0.100 ns
+    Info: - Shortest pin to register delay is 3.255 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 46; CLK Node = 'choice[1]'
+        Info: 2: + IC(2.072 ns) + CELL(0.458 ns) = 3.255 ns; Loc. = LC_X34_Y19_N9; Fanout = 4; REG Node = 'yang:inst4|ACC[5]'
+        Info: Total cell delay = 1.183 ns ( 36.34 % )
+        Info: Total interconnect delay = 2.072 ns ( 63.66 % )
+Info: Quartus II Timing Analyzer was successful. 0 errors, 11 warnings
+    Info: Processing ended: Fri Nov 08 16:25:05 2019
+    Info: Elapsed time: 00:00:00
+
+

@@ -1,0 +1,102 @@
+@CHARSET "UTF-8";
+img{border:0 none}
+a{text-decoration:none;}
+.l{float:left;}
+.r{float:right;}
+.txtleft{text-align:left;}
+.txtcenter{text-align:center;}
+.txtright{text-align:right;}
+.txtIndent{text-indent:30px;}
+li{list-style-type:none;}
+em{font-style:normal}
+.block{display:block;}
+.inline-block{display:inline-block;}
+.none{display:none;}
+/*隐藏*/
+.hidden{display:none;} .overhidden{overflow:hidden;} .block{display:block;}
+/*浮动 清除浮动*/
+.fl{float:left;} .fr{float:right;} .clearfix:after{content:" ";display:table;clear:both;width:0px;height:0px;}  .clearfix{zoom:1;} 
+/*定位*/
+.relative{position:relative;} .absolute{position:absolute;} .fix{position:fixed;} 
+.fontsize12{font-size:12px;}
+.fontsize14{font-size:14px;}
+.fontsize16{font-size:16px;}
+.fontsize18{font-size:18px;}
+.fontsize20{font-size:20px;}
+.fontsize24{font-size:24px;}
+.bold{font-weight:bold;}
+.white{color:#FFFFFF;}
+.red{color:#FF5722;}
+.blue{color:#1E9FFF;}
+.green{color:#5FB878;}
+.gray{color:#393D49;}
+.viridity{color:#009688;}
+.orange{color:#FFB800;}
+.lightbule{color:#01AAED;}
+.blackgray{color:#2F4056;}
+.mtb5{margin-top:5px;margin-bottom:5px;}
+.mt5{margin-top:5px;}
+.mb5{margin-bottom:5px;}
+.ml5{margin-left:5px;}
+.mr5{margin-right:5px;}
+.mtb10{margin-top:10px;margin-bottom:10px;}
+.mt10{margin-top:10px;}
+.mb10{margin-bottom:10px;}
+.ml10{margin-left:10px;}
+.mr10{margin-right:10px;}
+.mtb20{margin-top:20px;margin-bottom:20px;}
+.mt20{margin-top:20px;}
+.mb20{margin-bottom:20px;}
+.ml20{margin-left:20px;}
+.mr20{margin-right:20px;}
+.mtb30{margin-top:30px;margin-bottom:30px;}
+.mt30{margin-top:30px;}
+.mb30{margin-bottom:30px;}
+.ml30{margin-left:30px;}
+.mr30{margin-right:30px;}
+.mtb50{margin-top:50px;margin-bottom:50px;}
+.mt50{margin-top:50px;}
+.mb50{margin-bottom:50px;}
+.ml50{margin-left:50px;}
+.mr50{margin-right:50px;}
+.mt300{margin-top:300px;}
+.warn_orgreg_btn{font-size:16px; display:block;margin:20px auto;text-align:center;width:150px;}
+/*票据发布图片的大小*/
+.bill_release_image{width:140px;height:100px;}
+/*票据发布票号表格设置*/
+.billtable{width:100%;border-collapse:separate;border-spacing:0px 10px;}
+.bill_deletebtn{
+	display:inline-block;
+	background:url(../images/btnSprites.png) no-repeat -415px -265px;
+	position:relative;
+	width:15px;
+	height:15px;
+	right:-6px;
+	top:0px;
+	cursor:pointer;
+}
+/*票据详情图片居中*/
+.bill_detail{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align:center;    
+}
+.regagreement p{
+	font-size:16px;
+}
+.layer-list1{background: url(../images/list1.png) no-repeat; background-size:contain;height: 39px; line-height: 39px; width:100%;}
+.layer-list2{background: url(../images/list2.png) no-repeat; background-size:contain;height: 39px; line-height: 39px; width:100%;}
+.layer-list3{background: url(../images/list3.png) no-repeat; background-size:contain;height: 39px; line-height: 39px; width:100%;}
+.wizard_span{margin: 0 auto;position:relative;text-align:center;}
+
+.close_button{position:relative;font-size:20px; color:#009688;top:-115px;left:23px;}
+
+/*实际显示金额为红色加粗*/
+.redbold{
+	color:#ff0000;
+	font-weight:bold;
+}

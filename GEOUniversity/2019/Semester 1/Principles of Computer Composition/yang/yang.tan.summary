@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.214 ns
+From           : choice[0]
+To             : ALU:inst|c1[8]
+From Clock     : --
+To Clock       : choice[1]
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.918 ns
+From           : ALU:inst|c1[7]
+To             : flag
+From Clock     : choice[1]
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.390 ns
+From           : choice[0]
+To             : flag
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.136 ns
+From           : choice[1]
+To             : yang:inst4|ACC[4]
+From Clock     : --
+To Clock       : load_ACC
+Failed Paths   : 0
+
+Type           : Clock Setup: 'load_ACC'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 422.12 MHz ( period = 2.369 ns )
+From           : yang:inst4|ACC[0]
+To             : yang:inst4|ACC[0]
+From Clock     : load_ACC
+To Clock       : load_ACC
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
